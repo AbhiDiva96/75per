@@ -1,0 +1,14 @@
+.timetable-container {
+    max-width: 600px; /* Set the maximum width of the container */
+    margin: auto; /* Center the container */
+    padding-bottom: 100px;
+  }
+  
+  .timetable-image {
+    width: 100%; /* Set the image width to 100% of its container */
+    height: auto; /* Maintain the image's aspect ratio */
+  }
+  .head{
+     display: flex;
+     justify-content: center;
+  }

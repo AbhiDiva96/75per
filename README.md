@@ -1,4 +1,4 @@
-# All year Books(quantum), Lecture, notes  syllabus, timetable, pyq Website for College Students
+# Centralized platform for all the college to acess their study material
 
 This repository contains the source code for a website designed to help college students access their study matierials like quantum books , lecture, notes, past year questions (PYQ), and many more
 
