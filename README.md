@@ -1,5 +1,8 @@
 # Centralized platform for all the college to acess their study material
 
+
+![alt text](home.png)
+
 This repository contains the source code for a website designed to help college students access their study matierials like quantum books , lecture, notes, past year questions (PYQ), and many more
 
 ## Getting Started
