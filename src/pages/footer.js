@@ -9,7 +9,7 @@ function footer() {
       <div className="fram">
 
       <div className="github">
-         <a href=" ">
+         <a href="https://github.com/AbhiDiva96/75per ">
           <GitHubIcon/>
          </a>
         </div>

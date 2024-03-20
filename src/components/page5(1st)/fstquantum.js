@@ -1,8 +1,16 @@
 import React from 'react'
-import './fstquantum.css';
+// import './fstquantum.css';
 import Header from '../../pages/header.js'
 import Aquantum from '../../assets/5th.png'
-
+import Imgphy from '../../assets/physics.webp';
+import Imgmath1 from '../../assets/math1.jpg';
+import Imgelectrical from '../../assets/electrical.jpg';
+import Imgpps from '../../assets/pps1.jpg';
+import Imgss from '../../assets/softskills1.webp';
+import  Imgchem from '../../assets/chemistry.webp';
+import Imgmath2 from '../../assets/math2.jpg';
+import Imgelectronics from '../../assets/electronics.png';
+import Imgmech from '../../assets/mechanical.jpg';
 
 function quantum() {
         
@@ -25,110 +33,117 @@ function quantum() {
   <h4>1st year quantum book</h4>
       <div className="content">
 
-     <div className="book">
-       <img src={Aquantum} alt="" />  
-        <button onClick={() => handleDownload("cd")}>Download</button>
-       <div className="cover">
-        <p>Engineering Physics</p>
-     </div>
-  </div>
 
   <div className="book">
-       <img src={Aquantum} alt="" />  
-        <button onClick={() => handleDownload("DataAnalytics")}>Download</button>
+    <img src={Imgphy} alt="" />
+       <button onClick={() => handleDownload("physics")}>Download</button>
        <div className="cover">
-        <p>Engineering Mathematics-I</p>
-     </div>
-  </div>
+       <p>Engineering Physics</p>
+       </div>
+</div>
 
-  <div className="book">
-       <img src={Aquantum} alt="" />  
-        <button onClick={() => handleDownload("DatabaseManagementSystem")}>Download</button>
+<div className="book">
+<img src={Imgmath1} alt="" />
+    <button onClick={() => handleDownload("Mathematics1")}>Download</button>
        <div className="cover">
-        <p>Electrical Engineering</p>
-     </div>
-  </div>
-  
-  <div className="book">
-       <img src={Aquantum} alt="" />  
-        <button onClick={() => handleDownload("Design&AnalysisOfAlgorithms")}>Download</button>
-       <div className="cover">
-        <p>PPS</p>
-     </div>
-  </div>
+       <p>Engineering Mathematics-I</p>
+       </div>
+</div>
 
-  <div className="book">
-     <div className="image">
-       <img src={Aquantum} alt="" />
-       </div>  
-        <button  onClick={()=> handleDownload("Machine learning techniques")}>Download</button>
+<div className="book">
+<img src={Imgelectrical} alt="" />  
+<button onClick={() => handleDownload("BasicElectricalEngineering")}>Download</button>
        <div className="cover">
-        <p>Artificial Intelligence</p>
-     </div>
-  </div>
-
-  <div className="book">
-       <img src={Aquantum} alt="" /> 
-       
-        <button  onClick={() => handleDownload(
-          "ComputerNetwork"
-        )}>Download</button>
-    
-       <div className="cover">
-        <p>Soft Skill-I</p>
-     </div>
-  </div>
+       <p>Electrical Engineering</p>
+       </div>
+</div>
 
 
-  <div className="book">
-       <img src={Aquantum} alt="" />  
-        <button  onClick={()=> handleDownload("oopsquantum")}>Download</button>
+<div className="book">
+<img src={Imgpps} alt="" />
+<button onClick={() => handleDownload("ProgrammingforProblemSolving")}>Download</button>
        <div className="cover">
-        <p>Engineering Chemistry</p>
-     </div>
-  </div>
+       <p>PPS</p>
+</div>
+</div>
+ 
 
-  <div className="book">
-       <img src={Aquantum} alt="" />  
-        <button  onClick={() => handleDownload()}>Download</button>
+<div className="book">
+<img src={Aquantum} alt="" />
+<button onClick={() => handleDownload("DatabaseManagementSystem")}>Download</button>
        <div className="cover">
-        <p>Engineering Mathematics-II</p>
-     </div>
-  </div>
+       <p>Artificial Intelligence</p>
+</div>
+</div>
+ 
 
-  <div className="book">
-       <img src={Aquantum} alt="" />  
-        <button  onClick={() => handleDownload()}>Download</button>
+<div className="book">
+<img src={Imgss} alt="" /> 
+<button onClick={() => handleDownload("SoftSkills1")}>Download</button>
        <div className="cover">
-        <p>Electronics Engineering</p>
-     </div>
-  </div>
+       <p>Soft Skill-I</p>
 
-  <div className="book">
-       <img src={Aquantum} alt="" />  
-        <button onClick={() => handleDownload("sequantum")}>Download</button>
+</div>
+</div>
+ 
+
+<div className="book">
+<img src={ Imgchem} alt="" />  
+<button onClick={() => handleDownload("Chemistry")}>Download</button>
        <div className="cover">
-        <p>Mechanical Engineering and Mechatronics</p>
-     </div>
-  </div>
+       <p>Engineering Chemistry</p>
+
+</div>
+</div>
+ 
+
+<div className="book">
+<img src={Imgmath2} alt="" />  
+<button onClick={() => handleDownload("Mathematics2")}>Download</button>
+       <div className="cover">
+       <p>Engineering Mathematics-II</p>
+
+</div>
+</div>
+
 
   
 <div className="book">
-       <img src={Aquantum} alt="" />  
-        <button onClick={() => handleDownload("sequantum")}>Download</button>
+<img src={Imgelectronics} alt="" />
+<button onClick={() => handleDownload("electronics")}>Download</button>
        <div className="cover">
-        <p>Emerging Technology</p>
-     </div>
-  </div>
+       <p>Electronics Engineering</p>
+</div>
+</div>
 
-    
+
 <div className="book">
-       <img src={Aquantum} alt="" />  
-        <button onClick={() => handleDownload("sequantum")}>Download</button>
+<img src={Imgmech} alt="" />  
+<button onClick={() => handleDownload("FundamentalsofMechanicalEnggMechatronics")}>Download</button>
        <div className="cover">
-        <p>soft skll-II</p>
-     </div>
-  </div>
+       <p>Mechanical Engineering and Mechatronics</p>
+</div>
+</div>
+
+
+ 
+<div className="book">
+<img src={Imgmech} alt="" />  
+<button onClick={() => handleDownload("DatabaseManagementSystem")}>Download</button>
+       <div className="cover">
+       <p>Emerging Technology</p>
+</div>
+</div>
+
+
+ 
+<div className="book">
+<img src={Imgmech} alt="" />  
+<button onClick={() => handleDownload("DatabaseManagementSystem")}>Download</button>
+       <div className="cover">
+       <p>soft skll-II</p>
+</div>
+</div>
 
 
   

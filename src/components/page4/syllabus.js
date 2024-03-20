@@ -23,7 +23,7 @@ const Syllabus =() => {
         <Header/>
 
 
-         <h2 className='head'> Downlaod Syllabus</h2>
+         <h2 className='head'> Download Syllabus</h2>
          
          <div class="ag-format-container">
   <div class="ag-courses_box">
@@ -38,9 +38,9 @@ const Syllabus =() => {
         <div class="ag-courses-item_date-box">
          
           <span class="ag-courses-item_date">
-          <button onClick={() => handleDownload(1)} >Downlaod Semester </button>
+          <button onClick={() => handleDownload("1stsem")} >Download</button>
 
-          </span>.
+          </span>
         </div>
       </a>
     </div>
@@ -56,7 +56,7 @@ const Syllabus =() => {
         <div class="ag-courses-item_date-box">
         
           <span class="ag-courses-item_date">
-          <button onClick={() => handleDownload(1)} >Downlaod Semester </button>
+          <button onClick={() => handleDownload("2ndsem")} >Download</button>
           </span>
         </div>
       </a>
@@ -72,7 +72,7 @@ const Syllabus =() => {
 
         <div class="ag-courses-item_date-box">
           <span class="ag-courses-item_date">
-          <button onClick={() => handleDownload(1)} >Downlaod Semester </button>
+          <button onClick={() => handleDownload("3rdsem")} >Download</button>
 
           </span>
         </div>
@@ -90,7 +90,7 @@ const Syllabus =() => {
         <div class="ag-courses-item_date-box">
           
           <span class="ag-courses-item_date">
-          <button onClick={() => handleDownload(1)} >Downlaod Semester </button>
+          <button onClick={() => handleDownload("4thsem")} >Download</button>
           </span>
         </div>
       </a>
@@ -107,7 +107,7 @@ const Syllabus =() => {
         <div class="ag-courses-item_date-box">
           
           <span class="ag-courses-item_date">
-          <button onClick={() => handleDownload(1)} >Downlaod Semester </button>
+          <button onClick={() => handleDownload("5thsem")} >Download</button>
 
           </span>
         </div>
@@ -125,7 +125,7 @@ const Syllabus =() => {
         <div class="ag-courses-item_date-box">
           
           <span class="ag-courses-item_date">
-          <button onClick={() => handleDownload(1)} >Downlaod Semester </button>
+          <button onClick={() => handleDownload("6thsem")} >Download</button>
 
           </span>
         </div>
@@ -143,7 +143,7 @@ const Syllabus =() => {
         <div class="ag-courses-item_date-box">
           
           <span class="ag-courses-item_date">
-          <button onClick={() => handleDownload(1)} >Downlaod Semester </button>
+          <button onClick={() => handleDownload("4thyrsyllabus")} >Download</button>
 
           </span>
         </div>
@@ -161,7 +161,7 @@ const Syllabus =() => {
         <div class="ag-courses-item_date-box">
           
           <span class="ag-courses-item_date">
-          <button onClick={() => handleDownload(1)} >Downlaod Semester </button>
+          <button onClick={() => handleDownload("4thyrsyllabus")} >Download</button>
 
           </span>
         </div>

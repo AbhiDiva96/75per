@@ -6,17 +6,20 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Syllabus from "./components/page4/syllabus";
-import Quantum from "./components/page4/quantum";
+import Quantum from "./components/page4/trdquantum";
 import Timetable from './components/page4/timetable'
 import Frtyear from "./components/page3/1Year";
 import Sndyear from "./components/page3/2Year";
 import Trdyear from "./components/page3/3Year";
 import Fothyear from "./components/page3/4Year";
 import Trdlecture from './components/page4/lecture.js';
-import Notes from './components/page4/notes.js'
+import Notes from './components/page4/notes.js';
+import Pyq from './components/page4/pyq.js';
 import FstQuantum from './components/page5(1st)/fstquantum.js';
-import FstLecture from './components/page5(1st)/sndlecture.js';
-
+import FstLecture from './components/page5(1st)/fstlecture.js';
+import SndQuantum from './components/page6(2nd)/sndquantum.js'
+import SndLecture from './components/page6(2nd)/sndlecture.js'
+import Fsttimetable from './components/page5(1st)/fsttimetable.js'
 import {
   createBrowserRouter,
   RouterProvider,
@@ -53,6 +56,10 @@ const router = createBrowserRouter([
     element: <Notes/>
    },
    {
+    path: "pyq",
+    element: <Pyq />
+   },
+   {
     path: "quantum",
     element: <Quantum/>
    },
@@ -73,7 +80,18 @@ const router = createBrowserRouter([
     path: "fstquantum",
     element: <FstQuantum/>
    },
-
+   {
+     path : "fsttimetable",
+     element: <Fsttimetable/>
+   },
+   {
+    path: "sndquantum",
+    element: <SndQuantum />
+   },
+   {
+   path: "sndlecture",
+   element: <SndLecture/>
+   },
    {
     path: "trdlecture",
     element: <Trdlecture/>

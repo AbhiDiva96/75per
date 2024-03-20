@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import Imgdata from '../imgdata';
 import '../page4/timetable.css';
-
+import Header from "../../pages/header.js"
 function Timetable() {
 
     const [selectedSection, setSelectedSection] = useState(null);
@@ -12,6 +12,14 @@ function Timetable() {
   return (
     <div>
        
+       <Header/>
+
+       <div className="trdyr">
+      <center>
+        <h3> 3rd year timea table</h3>
+        </center>
+     </div>
+
        <div className='secbtn'>
         <button onClick={() => handleSectionClick('sec-3A')} className ="button-86" > Sec-3A</button>
         <button onClick={() => handleSectionClick('sec-3B')}  className ="button-86"> Sec-3B</button>
@@ -21,8 +29,11 @@ function Timetable() {
     
       {/* apering section of timetable */}
       {selectedSection && <Imgdata section={selectedSection}/>}
+
     </div>
   )
+
+
 }
 
 export default Timetable

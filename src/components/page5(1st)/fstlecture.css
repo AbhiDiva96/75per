@@ -1,0 +1,114 @@
+.lecturetrd h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    color: rgb(42, 36, 36);
+    position: relative;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+    gap: 15px;
+    
+    height: 50vh;
+    margin-bottom: 0px;
+  }
+  
+  .container::before,
+  .container::after {
+    content: "";
+    background-color: #fab5704c;
+    position: absolute;
+  }
+  
+  .container::before {
+    border-radius: 50%;
+    width: 6rem;
+    height: 6rem;
+    top: 30%;
+    right: 7%;
+  }
+  
+  .container::after {
+    content: "";
+    position: absolute;
+    height: 3rem;
+    top: 8%;
+    right: 5%;
+    border: 1px solid;
+  }
+  
+  .container .box {
+    width: 17.875em;
+    height: 17.875em;
+    padding: 0rem;
+    background-color: rgba(41, 2, 73, 0.074);
+    border: 1px solid rgba(244, 252, 34, 0.222);
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    border-radius: 0.7rem;
+    transition: all ease 0.3s;
+  }
+  
+  .container .box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .container .box:hover {
+    box-shadow: 0px 0px 20px 1px #ffbb763f;
+    border: 1px solid rgba(255, 255, 255, 0.454);
+  }
+  
+  
+ .container .box .upper img{
+    width: 285px;
+    height: 150px;
+  }
+
+ /* .container .box button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 15px;
+    gap: 15px;
+    background-color: #007ACC;
+    outline: 3px #007ACC solid;
+    outline-offset: -3px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: 400ms;
+    cursor: pointer;
+    color: #fff;
+  } */
+
+ .container .box a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 15px;
+    gap: 15px;
+    background-color: #007ACC;
+    outline: 3px #007ACC solid;
+    outline-offset: -3px;
+    border-radius: 15px;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 400ms;
+    cursor: pointer;
+    color: #fff;
+ }
+  .container .box a:hover{
+    background-color: transparent;
+    color: black;
+  }
+
+  
+
+  

@@ -44,7 +44,7 @@ function fstYear() {
 </div> 
 </Link>
 
-<Link to="/timetable">
+<Link to="/fsttimetable">
 <div class="card syan">
  <img src={timetable} alt="" />
   <p class="second-text">Timetable</p>

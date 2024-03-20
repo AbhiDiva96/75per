@@ -107,6 +107,22 @@
   .ag-courses_item:nth-child(6n) .ag-courses-item_bg {
     background-color: #4c49ea;
   }
+
+  .ag-courses-item_date button{
+    padding: 8px;
+    border-radius: 5px;
+    border: 2px solid #4654cb;
+    background-color: #5931de;
+    color: #f4f4f4;
+    font-weight: 200;
+     
+  }
+
+  .ag-courses-item_date button:hover{
+    background-color: white;
+    color: black;
+    border: 2px solid white;
+  }
   
   
   

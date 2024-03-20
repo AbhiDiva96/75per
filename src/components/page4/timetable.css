@@ -76,3 +76,15 @@
   transition: 0s;
   transform: translate(0, 5%);
 }
+
+@media only screen and(max-width: 767px){
+  .cards{
+      width: calc(100% - 20px);
+  }
+}
+/* laptop views */
+@media only screen and(max-width: 1024px) {
+  .cards{
+      width: calc(50% -20px);
+  }
+}

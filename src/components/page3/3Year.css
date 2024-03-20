@@ -10,12 +10,13 @@
   
   .cards .red {
     background-color: #f43f5e;
-   
+    text-decoration: none;
    
   }
-  img{
-    width: 80px;
+ img{
+    width: 90px;
   }
+  
   
   .cards .blue {
     background-color: #722966;
@@ -63,11 +64,15 @@
   /* .logoyt{
     
   } */
-  
+  .cards .card p{
+    text-decoration: none;
+  }
   .cards .card p.second-text {
     font-size: 1em;
     font-weight: 1000;
     margin: 20px;
+    text-decoration: none;
+
   }
   
    .card:hover {

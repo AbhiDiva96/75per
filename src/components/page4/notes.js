@@ -1,18 +1,21 @@
-import React from 'react'
+import React  from 'react'
+import {Link} from  'react-router-dom';
 import Header from '../../pages/header';
+import ComingSoon from '../../pages/cs.js';
+
+import '../page4/notes.css';
 function notes() {
   return (
-    <div>
-    
-      <Header/>
-      <center>
-      <h1>notes</h1>
-      </center>
-      <div className="notesApp">
-        
-      </div>
-
-
+    <div >
+          {/* <div class="wrapper">
+  <h1>coming soon<span class="dot">.</span></h1>
+  <p>Put some text here.</p>
+<Link to="/">
+<button>back to home page</button>
+</Link>
+ </div> */}
+mai notes hu
+  <ComingSoon/>
     </div>
   )
 }
