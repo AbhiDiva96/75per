@@ -84,6 +84,11 @@
     transform: scale(0.9, 0.9);
   }
 
+  .yr{
+    display: flex;
+    justify-content: center;
+  }
+
 /* mobile user */
 @media only screen and(max-width: 767px){
     .cards{

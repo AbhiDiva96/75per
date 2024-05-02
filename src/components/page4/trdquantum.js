@@ -27,7 +27,10 @@ function quantum() {
 
     <div>
       <Header />
-
+        
+        <div className="title">
+          <h2> Download Quantum</h2> 
+        </div>
       <div className="content">
 
      <div className="book">

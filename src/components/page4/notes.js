@@ -14,7 +14,7 @@ function notes() {
 <button>back to home page</button>
 </Link>
  </div> */}
-mai notes hu
+
   <ComingSoon/>
     </div>
   )

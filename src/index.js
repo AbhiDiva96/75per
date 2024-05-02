@@ -20,6 +20,8 @@ import FstLecture from './components/page5(1st)/fstlecture.js';
 import SndQuantum from './components/page6(2nd)/sndquantum.js'
 import SndLecture from './components/page6(2nd)/sndlecture.js'
 import Fsttimetable from './components/page5(1st)/fsttimetable.js'
+import Sndtimetable from './components/page6(2nd)/sndtimetable.js';
+
 import {
   createBrowserRouter,
   RouterProvider,
@@ -92,6 +94,12 @@ const router = createBrowserRouter([
    path: "sndlecture",
    element: <SndLecture/>
    },
+
+   {
+    path: " sndtimetable",
+    element: <Sndtimetable/>
+    },
+
    {
     path: "trdlecture",
     element: <Trdlecture/>

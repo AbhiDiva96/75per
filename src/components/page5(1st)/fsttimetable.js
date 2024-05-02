@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import Imgdata from '../imgdata';
 import '../page4/timetable.css';
 import Header from "../../pages/header.js"
+import ComingSoon from '../../pages/cs.js';
 
 function  Fsttimetable() {
 
@@ -15,8 +16,11 @@ function  Fsttimetable() {
        
        <Header/>
 
-       <div className="trdyr">
-      <center>
+
+        <ComingSoon />
+       {/* <div className="trdyr"> */}
+
+      {/* <center>
         <h3> 1st year timeatable</h3>
         </center>
      </div>
@@ -32,7 +36,7 @@ function  Fsttimetable() {
        </div>
     
       {/* apering section of timetable */}
-      {selectedSection && <Imgdata section={selectedSection}/>}
+      {/* {selectedSection && <Imgdata section={selectedSection}/>} */} 
 
     </div>
   )

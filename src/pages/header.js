@@ -33,7 +33,7 @@ function Header() {
 
            {/* Dark mode */}
             
-       
+{/*        
      <div className="swi">
         <label class="ui-switch">
              <input type="checkbox" 
@@ -45,7 +45,7 @@ function Header() {
            <div class="circle"></div>
           </div>
        </label>
-       </div>
+       </div> */}
        
       
   

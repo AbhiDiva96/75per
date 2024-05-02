@@ -4,7 +4,7 @@ import ComingSoon from '../../pages/cs.js';
 function pyq() {
   return (
     <div>
-      mai pyq hu
+  
       <ComingSoon/>
     </div>
   )
