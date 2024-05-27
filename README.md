@@ -13,27 +13,8 @@ To get a local copy up and running, follow these simple steps:
 2. Navigate into the project directory: `cd Project-Name`
 3. Install NPM packages: `npm install`
 
-This project uses several dependencies, including:
 
-```json
-"dependencies": {
-  "@emotion/react": "^11.11.4",
-  "@emotion/styled": "^11.11.0",
-  "@mui/icons-material": "^5.15.11",
-  "@mui/material": "^5.15.11",
-  "@testing-library/jest-dom": "^5.17.0",
-  "@testing-library/react": "^13.4.0",
-  "@testing-library/user-event": "^13.5.0",
-  "bootstrap": "^5.3.3",
-  "react": "^18.2.0",
-  "react-bootstrap": "^2.10.1",
-  "react-dom": "^18.2.0",
-  "react-router-dom": "^6.22.2",
-  "react-scripts": "5.0.1",
-  "web-vitals": "^2.1.4"
-}
 
-```
 
 ## Usage
 
@@ -46,9 +27,18 @@ npm run start
 
 Navigate to `http://localhost:3000` in your web browser to view the application.
 
+## shoots
+
+
+![Screenshot 2024-05-27 164550](https://github.com/AbhiDiva96/75per/assets/112077897/2dc722e8-db1a-40bd-876a-5c276733460f)
+
+## Home page
+
+![Screenshot 2024-05-27 164516](https://github.com/AbhiDiva96/75per/assets/112077897/a531bb02-b568-45e2-b686-91182945401e)
+
 ## Features
 
-This website is designed to help college students manage their notes, past year questions (PYQ), and lectures. It allows users to:
+This website is designed to help college students manage their notes, past-year questions (PYQ), and lectures. It allows users to:
 
 - access quantum books
 - lecture for the year-wise student
