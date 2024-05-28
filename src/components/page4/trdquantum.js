@@ -25,13 +25,16 @@ function quantum() {
 
   return (
 
-    <div>
+    <div >
       <Header />
-        
-        <div className="title">
+        <div style={{  background: "#c6a677",overflow:"auto"}}>
+        <div className="quantum-head">
           <h2> Download Quantum</h2> 
         </div>
-      <div className="content">
+      <div className="content" style={{  background: "#c6a677",
+    height: "auto",overflow:"auto"}}
+  
+>
 
      <div className="book">
        <img src={Imgcd} alt="" />  
@@ -121,6 +124,7 @@ function quantum() {
   </div>
 
 </div>
+    </div>
     </div>
   )
 }
