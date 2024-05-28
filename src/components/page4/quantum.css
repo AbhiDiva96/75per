@@ -4,6 +4,12 @@
     align-items: center;
     
 }
+.link1{
+  
+    text-decoration: none;
+    color: black;
+
+}
 .quantum-head{
  
   border-bottom: 2px solid #9a5959;
