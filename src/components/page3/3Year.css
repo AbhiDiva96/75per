@@ -1,15 +1,31 @@
 .cards {
-    display: flex;
+    display: grid;
     justify-content: center;
-    /* flex-direction: row; */
-    flex-wrap: wrap;
+    flex-direction: column;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 15px;
-    height: 50vh;
-    margin-bottom: 100px;
+    
+  }
+  @media (max-width:950px) {
+    .cards{
+      grid-template-columns: 1fr 1fr ;
+    }
+    
+  }
+  @media (max-width:650px) {
+    .cards{
+      grid-template-columns: 1fr  ;
+    }
+    
   }
   
   .cards .red {
-    background-color: #f43f5e;
+    background-color: #fa536f;
+    text-decoration: none;
+    transition: ease-in 2s;
+  }
+  .cards .red:hover{
+    background-color: #ff002b;
     text-decoration: none;
    
   }
@@ -23,18 +39,30 @@
     flex-direction: column;
     flex-wrap: nowrap;
   }
+  .cards .blue:hover{
+    background-color: #be009c;
+  }
   
   .cards .green {
     background-color: #22c55e;
   }
+  .cards .green:hover{
+    background-color: #00732a;
+  }
   .cards .yellow{
     background-color: rgb(198, 198, 45);
+  }
+  .cards .yellow:hover{
+    background-color: rgb(222, 222, 0);
   }
 
   .cards .pink{
     background-color: rgb(49, 44, 38);
     flex-direction: column;
     flex-wrap: nowrap;
+  }
+  .cards .pink:hover{
+    background-color: rgb(78, 77, 75);
   }
   
   .cards .syan {
@@ -43,13 +71,16 @@
     flex-wrap: nowrap;
  
   }
+  .cards .syan:hover {
+    background-color: #399059;
+  }
   .cards .card {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     text-align: center;
-    height: 100px;
+   
     width: 250px;
     border-radius: 10px;
     color: white;
