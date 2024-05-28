@@ -3,36 +3,43 @@
     justify-content: center;
    
 }
-
+.content{
+  height: auto;
+}
+.background{
+  margin: 20px 15px;
+  
+  border-radius: 10px;
+  background-color: aquamarine;
+  box-shadow: 5px 5px 10px #bebebe;
+}
 .container{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     height: 50vh;
-    margin-bottom: 100px;
+    margin-bottom: 10px;
 
 }
-
+.link{
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 300;
+}
 .card {
     width: 250px;
-    height: 150px;
+   padding: 50px 0px;
     margin: 10px;
     border-radius: 20px;
-    background: #e0e0e0;
-    box-shadow: 15px 15px 30px #bebebe,
-               -15px -15px 30px #ffffff;
+   
+    box-shadow: 5px 5px 10px #383232;
+              
+  height: 100px;
+}
 
-               display: -webkit-box;
-               display: -ms-flexbox;
-               display: flex;
-               -webkit-box-align: start;
-               -ms-flex-align: start;
-               align-items: flex-start;
-               -ms-flex-wrap: wrap;
-               flex-wrap: wrap;
-             
-               padding: 50px 0;
+  .card img{
+    width: 64px;
   }
 
   /* mobile device viewers */
