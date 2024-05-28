@@ -20,24 +20,25 @@ import ssii from '../../assets/ssii.jpg';
 
 function sndlecture() {
   return (
-    <div>
+    <div class="lecture">
       <Header/>
+      <div class="background" >
      <div className="lecturetrd">
-       <h1> 2nd year lecture</h1>
+       <h1> 2nd Year Lecture</h1>
 
      </div>
 
      {/* <div className="lecturelink"> */}
     
          
-        <div class="container">
+        <div class="container" style={{overflow:"auto"}}>
        
        {/* compiler Design */}
         <div class="box">
          <div className="upper">
                 <img src={Imgmath4} alt="img" />
                 </div>
-              <span>Engineering mathematics-4</span>
+              <span className='lec-desc' >Engineering mathematics-4</span>
              <a href="https://www.youtube.com/watch?v=14bNduEh9ag&list=PL5Dqs90qDljXYjZ8kDHtpMqPGKNGb2dxu">
                  View Content
             </a>
@@ -48,7 +49,7 @@ function sndlecture() {
          <div className="upper">
                 <img src={Imgdsa} alt="img" />
                 </div>
-              <span>Data Structure</span>
+              <span className='lec-desc'>Data Structure</span>
              <a href="https://www.youtube.com/watch?v=ouWefOMkMJA&list=PL-JvKqQx2AtcnX8uPrdjvCplAmwTSFhMO">
                  View Content
             </a>
@@ -60,7 +61,7 @@ function sndlecture() {
          <div className="upper">
                 <img src={Imgcoa} alt="img" />
                 </div>
-              <span>Computer Organization & Architecture</span>
+              <span className='lec-desc'>Computer Organization & Architecture</span>
              <a href="https://www.youtube.com/watch?v=8msCz6Nb6nk&list=PL-JvKqQx2Atfuxo1LR0m9RQramPymoBsj">
                  View Content
             </a>
@@ -71,7 +72,7 @@ function sndlecture() {
          <div className="upper">
                 <img src={Imgdstl} alt="img" />
                 </div>
-              <span>Discrete Structure & theory of logic</span>
+              <span className='lec-desc'>Discrete Structure & theory of logic</span>
              <a href="https://www.youtube.com/watch?v=QW2qyX9YU3g&list=PL-JvKqQx2AtcaCRa_z-JeH4FKh1_ZTs_0">
                  View Content
             </a>
@@ -83,7 +84,7 @@ function sndlecture() {
          <div className="upper">
                 <img src={Imges} alt="img" />
                 </div>
-              <span>Energy Science</span>
+              <span className='lec-desc'>Energy Science</span>
              <a href="https://www.youtube.com/watch?v=PcmtbcyDIyg&list=PLRLB5WCqU54W6Gt6NczCeizFGRwLVibFX">
                  View Content
             </a>
@@ -94,7 +95,7 @@ function sndlecture() {
          <div className="upper">
                 <img src={Imgtc} alt="img" />
                 </div>
-              <span>Technical Communication</span>
+              <span className='lec-desc'>Technical Communication</span>
              <a href="https://www.youtube.com/watch?v=ZXqi3KqjyMA&list=PLaGBxvvw_eMUhn3H7mlBnqCUcd2Vqgq2s">
                  View Content
             </a>
@@ -105,7 +106,7 @@ function sndlecture() {
          <div className="upper">
                 <img src={Imgpy} alt="img" />
                 </div>
-              <span> Python Programming</span>
+              <span className='lec-desc'> Python Programming</span>
              <a href="https://www.youtube.com/watch?v=Wh3zMk4yAc4&list=PLHEcKKWWhXy_QBXhpQpuqMbtjGVJm_fkt">
                  View Content
             </a>
@@ -116,7 +117,7 @@ function sndlecture() {
          <div className="upper">
                 <img src={Imgcss} alt="img" />
                 </div>
-              <span>Cyber Security</span>
+              <span className='lec-desc'>Cyber Security</span>
              <a href="https://www.youtube.com/watch?v=BS5v5Rr-oVo&list=PL-JvKqQx2AteIbm-z4X709scVr9OaHpIY">
                  View Content
             </a>
@@ -127,7 +128,7 @@ function sndlecture() {
          <div className="upper">
                 <img src={Imguhv} alt="img" />
                 </div>
-              <span>Universal Human Values</span>
+              <span className='lec-desc'>Universal Human Values</span>
              <a href="https://www.youtube.com/watch?v=J1gSYelcM40&list=PLHkk39NrOxRm5ByJViESOeTKWitZS1Hyg">
                  View Content
             </a>
@@ -139,7 +140,7 @@ function sndlecture() {
          <div className="upper">
                 <img src={Imgos} alt="img" />
                 </div>
-              <span>Operating System</span>
+              <span className='lec-desc'>Operating System</span>
              <a href="https://www.youtube.com/watch?v=i4WyGv5Mbak&list=PL_obO5Qb5QTE9s7QCNjqk97Q4UUgOseWP">
                  View Content
             </a>
@@ -151,7 +152,7 @@ function sndlecture() {
          <div className="upper">
                 <img src={Imgtafl} alt="img" />
                 </div>
-              <span> Theory of Automata & formal Language</span>
+              <span className='lec-desc'> Theory of Automata & formal Language</span>
              <a href="https://www.youtube.com/watch?v=oSCfvEKGUPQ&list=PL_obO5Qb5QTEihQ35PgzjZSh7PveVt-iF">
                  View Content
             </a>
@@ -162,7 +163,7 @@ function sndlecture() {
          <div className="upper">
                 <img src={ssii} alt="img" />
                 </div>
-              <span> soft skill-2</span>
+              <span className='lec-desc'> soft skill-2</span>
              <a href="https://www.youtube.com/watch?v=TQWspT4kTPc&list=PL8nHpqzOrbFAvPeGY7_PJyoO4xFMs7a8ahttps://www.youtube.com/watch?v=TQWspT4kTPc&list=PL8nHpqzOrbFAvPeGY7_PJyoO4xFMs7a8ahttps://www.youtube.com/watch?v=TQWspT4kTPc&list=PL8nHpqzOrbFAvPeGY7_PJyoO4xFMs7a8a">
                  View Content
             </a>
@@ -170,6 +171,7 @@ function sndlecture() {
 
 
        </div>
+     </div>
      </div>
     // </div>
   )

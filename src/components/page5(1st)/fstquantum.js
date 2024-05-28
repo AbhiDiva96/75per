@@ -30,7 +30,7 @@ function quantum() {
     <div >
       <Header />
 <div >
-  <h2 class="quantum-head">1st year quantum book</h2>
+  <h2 class="quantum-head">1st Year Quantum Book</h2>
       <div className="content" style={{  
     height: "auto"}}>
 

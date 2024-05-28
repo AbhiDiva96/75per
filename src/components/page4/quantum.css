@@ -4,6 +4,10 @@
     align-items: center;
     
 }
+.book p{
+  color: #3d3003;
+  font-size: 22px;
+}
 .link1{
   
     text-decoration: none;
@@ -11,7 +15,7 @@
 
 }
 .quantum-head{
- 
+ font-size: 36px;
   border-bottom: 2px solid #9a5959;
   justify-content: center;
   text-align: center;
