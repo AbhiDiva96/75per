@@ -29,9 +29,9 @@ function quantum() {
 
     <div >
       <Header />
-<div style={{  background: "#c6a677",overflow:"auto"}}>
+<div >
   <h2 class="quantum-head">1st year quantum book</h2>
-      <div className="content" style={{  background: "#c6a677",
+      <div className="content" style={{  
     height: "auto"}}>
 
 

@@ -36,9 +36,9 @@ function sndquantum() {
   return (
     <div>
     <Header />
-<div style={{  background: "#c6a677",overflow:"auto"}}>
+<div style={{overflow:"auto"}}>
 <h2 class="quantum-head">2nd year quantum book</h2>
-    <div className="content" style={{  background: "#c6a677",
+    <div className="content" style={{
     height: "auto"}}>
 
 <div className="book">
