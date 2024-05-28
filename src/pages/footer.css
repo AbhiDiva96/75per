@@ -5,4 +5,5 @@
   background-color: white;
   transition: bottom 0.3s ease, height 0.3s ease;
   z-index: 1000; 
+  box-shadow: -7px -7px 20px 0 #fff9, -4px -4px 5px 0 #fff9, 7px 7px 20px 0 #0002, 4px 4px 5px 0 #0001, inset 0 0 0 0 #fff9, inset 0 0 0 0 #0001, inset 0 0 0 0 #fff9, inset 0 0 0 0 #0001;
 }

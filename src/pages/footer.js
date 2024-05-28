@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import './footer.css';
@@ -6,7 +5,7 @@ import './footer.css';
 const Footer = () => {
 
   return (
-    <div className="footer bottom-0 bg-white">
+    <div className="footer bottom-0 bg-customGrey">
       <div className='footer-content'>
         <div className='sm:flex sm:flex-row justify-evenly flex-col gap-5 sm:gap-0 p-2'>
           <div className='sm:w-1/3 sm:items-center sm:justify-center sm:flex'>
