@@ -4,55 +4,21 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import './footer.css';
 
 const Footer = () => {
-  const [showCompanyList, setShowCompanyList] = useState(false);
-  const [showLegalList, setShowLegalList] = useState(false);
-
-  const toggleCompanyList = () => setShowCompanyList(!showCompanyList);
-  const toggleLegalList = () => setShowLegalList(!showLegalList);
-
-  const isExpanded = showCompanyList || showLegalList;
 
   return (
-    <div className={`footer ${isExpanded ? 'expanded' : ''}`}>
+    <div className="footer bottom-0 bg-white">
       <div className='footer-content'>
-        <div className='md:flex'>
-          <div className='md:w-1/6 md:items-center md:flex'>
-            <span className="text-2xl font-semibold text-black">
+        <div className='sm:flex sm:flex-row justify-evenly flex-col gap-5 sm:gap-0 p-2'>
+          <div className='sm:w-1/3 sm:items-center sm:justify-center sm:flex'>
+            <span className="text-2xl font-semibold text-black my-4 sm:my-0">
               75%
             </span>
           </div>
-          <div className='md:w-5/6 justify-evenly gap-8 md:gap-0 md:flex'>
-            <div className='md:w-1/6 my-2'>
-              <p 
-                className='text-black font-semibold text-md mt-8 block w-auto md:mt-0 cursor-pointer'
-                onClick={toggleCompanyList}
-              >
-                Company
-              </p>
-              <ul className={`text-gray-700 py-4 toggle-list ${showCompanyList ? 'show' : ''}`}>
-                <li className='py-1 cursor-pointer'>About Us</li>
-                <li className='py-1 cursor-pointer'>Contact Us</li>
-                <li className='py-1 cursor-pointer'>FAQ</li>
-              </ul>
-            </div>
-            <div className='md:w-2/6 my-2 w-full text-black xl:flex justify-center font-semibold text-md lg:text-lg xl:text-md'>
+            <div className='sm:w-1/3 w-full text-black flex sm:justify-center text-left font-semibold text-md my-4 sm:my-0 lg:text-xl'>
               Copyright @ 75%
             </div>
-            <div className='md:w-1/6 my-2'>
-              <p 
-                className='text-black font-semibold w-auto block cursor-pointer'
-                onClick={toggleLegalList}
-              >
-                Legal Pages
-              </p>
-              <ul className={`text-gray-700 py-4 toggle-list ${showLegalList ? 'show' : ''}`}>
-                <li className='py-1 cursor-pointer'>Privacy Policy</li>
-                <li className='py-1 cursor-pointer'>Terms and Conditions</li>
-                <li className='py-1 cursor-pointer'>Cookie Policy</li>
-              </ul>
-            </div>
-            <div className='w-1/6 my-2'>
-              <div className='md:justify-end'>
+            <div className='w-1/3 flex text-left sm:justify-center my-4 sm:my-0 items-center'>
+              <div className='sm:justify-center'>
                 <a href="https://github.com/AbhiDiva96/75per">
                   <GitHubIcon className='cursor-pointer mr-4'/>
                 </a>
@@ -64,7 +30,6 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </div>
   )
 }
 
