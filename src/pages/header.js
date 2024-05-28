@@ -17,7 +17,7 @@ function Header() {
         {/* logo */}
            <div className="header">
                <div className="logo">
-                <b><Link to ="/" className='link'> 75%.com</Link></b>
+                <b><Link to ="/" className='link1'> 75%.com</Link></b>
                </div>
         {/* notes */}
            {/* <div className="notes">
