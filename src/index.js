@@ -27,6 +27,7 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import "./index.css";
+import LoginSignup from './components/login/LoginSignup.jsx';
 
 
 // const ThemeContext = createContext();
@@ -119,7 +120,11 @@ const router = createBrowserRouter([
    {
     path: "fothyear",
     element: <Fothyear/>
-   }
+   },
+   {
+    path: "/login",
+    element: <LoginSignup/>
+   },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
