@@ -7,6 +7,7 @@ const cors = require("cors");
 const passport = require("passport");
 const GoogleStrategy = require("passport-google-oauth20").Strategy;
 const session = require("express-session");
+const bcrypt = require("bcrypt");
 
 app.use(express.json());
 app.use(cors());
@@ -16,7 +17,7 @@ app.use(passport.session());
 
 // Database connection with MongoDB
 mongoose.connect(
-    "ADD_MONGO_URL"
+  "Mongodb Uri"
 ).then(() => console.log("DATABASE CONNECTED"));
 
 // User Schema
@@ -36,8 +37,8 @@ const Users = mongoose.model("Users", {
 
 // Passport configuration
 passport.use(new GoogleStrategy({
-    clientID: "ADD_YOUR_CLIENT_ID",
-    clientSecret: "ADD_CLIENT_SECRET_CODE",
+    clientID: "CLIENT_ID",
+    clientSecret: "CLIENT_SECRET_ID",
     callbackURL: "http://localhost:4000/auth/google/callback"
   },
   async (accessToken, refreshToken, profile, done) => {
@@ -82,18 +83,20 @@ app.post("/signup", async (req, res) => {
   if (check) {
     return res.status(400).json({
       success: false,
-      errors: "User already exist with this email id",
+      errors: "User already exists with this email id",
     });
   }
+
+  const hashedPassword = await bcrypt.hash(req.body.password, 10);
 
   const user = new Users({
     name: req.body.name,
     email: req.body.email,
-    password: req.body.password,
+    password: hashedPassword,
   });
   await user.save();
   const data = { user: { id: user.id } };
-  const token = jwt.sign(data, "secret_ecom");
+  const token = jwt.sign(data, "secret_ecom", { expiresIn: '1h' });
   res.json({ success: true, token });
 });
 
@@ -101,16 +104,16 @@ app.post("/signup", async (req, res) => {
 app.post("/login", async (req, res) => {
   let user = await Users.findOne({ email: req.body.email });
   if (user) {
-    const passCompare = req.body.password === user.password;
+    const passCompare = await bcrypt.compare(req.body.password, user.password);
     if (passCompare) {
       const data = { user: { id: user.id } };
-      const token = jwt.sign(data, "secret_ecom");
+      const token = jwt.sign(data, "secret_ecom", { expiresIn: '1h' });
       res.json({ success: true, token });
     } else {
-      res.json({ success: false, error: "Wrong Password" });
+      res.status(401).json({ success: false, error: "Wrong Password" });
     }
   } else {
-    res.json({ success: false, error: "Wrong Email Id" });
+    res.status(401).json({ success: false, error: "Wrong Email Id" });
   }
 });
 
