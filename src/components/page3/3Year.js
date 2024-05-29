@@ -2,13 +2,12 @@ import React from 'react'
 import {Link} from 'react-router-dom';
 import '../page3/3Year.css'
 import Header from '../../pages/header';
-
-
-import quantumImage from '../../assets/5th.png';
-import youtube from '../../assets/ytt.png'
-import timetable from '../../assets/sec-3A.jpg';
-import syllabus from '../../assets/syllabuswt.jpg';
-
+import quantumImage from '../../assets/icons8-book-64.png';
+import timetable from '../../assets/icons8-timetable-64.png';
+import syllabus from '../../assets/icons8-syllabus-80 (1).png';
+import pyq from "../../assets/icons8-minus-1-year-80.png"
+import Notes from "../../assets/icons8-notes-80.png"
+import youtube from "../../assets/icons8-youtube-64.png";
 
 
 function TrdYear() {
@@ -16,14 +15,14 @@ function TrdYear() {
   return (
     <div>
       <Header/>
-  
+  <div class="background">
       <div className="yr">
-       <h2>3rd year</h2>
+       <h1>3rd Year</h1>
       </div>
 
-      <div className="content">
+      <div className="content" style={{height:"auto"}}>
         <div class="cards">
-<Link to="/quantum">
+<Link class="link" to="/quantum">
     <div class="card red">
     <img src={quantumImage} alt="Quantum" />
         {/* <p class="tip"></p> */}
@@ -32,44 +31,44 @@ function TrdYear() {
     </div>
     </Link>
 
-    <Link to='/trdlecture'>
+    <Link class="link" to='/trdlecture'>
     <div class="card blue">
-    <img src={youtube} alt="" /> 
+    <img src={youtube} alt="" />
     <p class="second-text">Lecture</p>
     </div>
     </Link>
 
-   <Link to='/syllabus'>
+   <Link class="link" to='/syllabus'>
     <div class="card pink">
     <img src={syllabus} alt="" />
       <p class="second-text">Syllabus</p>
     </div> 
     </Link>
 
-   <Link to="/timetable">
+   <Link class="link" to="/timetable">
     <div class="card syan">
      <img src={timetable} alt="" />
       <p class="second-text">Timetable</p>
     </div>
     </Link>
 
-   <Link to='/pyq'>
+   <Link class="link" to='/pyq'>
     <div class="card green">
-        {/* <p class="tip">Hover Me</p> */}
+    <img src={pyq} alt=''/>
      <p class="second-text">PYQ</p>
     </div>
     </Link>
 
-  <Link to='/notes'>
+  <Link class="link" to='/notes'>
     <div class="card yellow">
-        <p class="tip"></p>
+    <img src={Notes} alt=''/>
         <p class="second-text">Notes</p>
     </div>
     </Link>
 
 </div>
 </div>
-
+</div>
 {/* <Footer /> */}
     </div>
   )
