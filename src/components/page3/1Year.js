@@ -36,7 +36,7 @@ function fstYear() {
 </div>
 </Link>
 
-<Link class="link" to='/syllabus'>
+<Link class="link" to='/fstsyllabus'>
 <div class="card pink">
 <img src={syllabus} alt="" />
   <p class="second-text">Syllabus</p>

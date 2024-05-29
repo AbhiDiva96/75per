@@ -4,7 +4,7 @@ import Footer from "../../pages/footer";
 import '../page4/syllabus.css';
 
 
-const fstsyllabus =() => {
+const Syllabus =() => {
 
     // const[selectSem, setSelectSem] = useState(null);
 
@@ -21,22 +21,27 @@ const fstsyllabus =() => {
   return (
     <div>
         <Header/>
+
+
          <h2 className='head'> Download Syllabus</h2>
          
          <div class="ag-format-container">
   <div class="ag-courses_box">
+    
+
+    
+
     <div class="ag-courses_item">
       <a href="#" class="ag-courses-item_link">
         <div class="ag-courses-item_bg"></div>
 
         <div class="ag-courses-item_title">
-         Semester 1st
+       Semester 3rd
         </div>
 
         <div class="ag-courses-item_date-box">
-         
           <span class="ag-courses-item_date">
-          <button onClick={() => handleDownload("1stsem")} >Download</button>
+          <button onClick={() => handleDownload("3rdsem")} >Download</button>
 
           </span>
         </div>
@@ -48,17 +53,21 @@ const fstsyllabus =() => {
         <div class="ag-courses-item_bg"></div>
 
         <div class="ag-courses-item_title">
-            Semester 2nd
-         </div>
+          Semester 4th
+        </div>
 
         <div class="ag-courses-item_date-box">
-        
+          
           <span class="ag-courses-item_date">
-          <button onClick={() => handleDownload("2ndsem")} >Download</button>
+          <button onClick={() => handleDownload("4thsem")} >Download</button>
           </span>
         </div>
       </a>
     </div>
+
+
+    
+
   </div>
 </div>
       <Footer/>
@@ -66,8 +75,6 @@ const fstsyllabus =() => {
   )
 }
 
-export default fstsyllabus
-
-
+export default Syllabus
 
 
