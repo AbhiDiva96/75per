@@ -1,0 +1,151 @@
+.container-pyq {
+    text-align: center;
+    margin: 20px;
+}
+
+.year-heading {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.semester-selection {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.semester-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.semester-button:hover {
+    background-color: #45a049;
+}
+
+.ag-courses-item_link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.ag-courses-item_title {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.ag-courses-item_date-box ul {
+    list-style: none;
+    padding: 0;
+}
+
+.file-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.download-button {
+    padding: 5px 10px;
+    font-size: 14px;
+    cursor: pointer;
+    background-color: #008CBA;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    transition: background-color 0.3s ease;
+}
+
+.download-button:hover {
+    background-color: #007bb5;
+}
+
+.back-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+.back-button:hover {
+    background-color: #e53935;
+}
+
+.pyq-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+.subjects-container {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .subject-box {
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .subject-title {
+    margin-bottom: 10px;
+  }
+
+
+@media (max-width: 600px) {
+    .semester-selection {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .semester-button {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  
+    .subjects-container {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .subject-box {
+      min-width: 100%;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .subjects-container {
+      flex-direction: column;
+      gap: 15px;
+    }
+  
+    .subject-box {
+      min-width: 100%;
+    }
+  }
+  
+  @media (max-width: 1200px) {
+    .subjects-container {
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+  
+    .subject-box {
+      flex: 1;
+      min-width: 45%;
+    }
+  }

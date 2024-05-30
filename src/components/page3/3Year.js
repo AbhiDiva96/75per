@@ -53,7 +53,7 @@ function TrdYear() {
     </div>
     </Link>
 
-   <Link to='/pyq'>
+   <Link to='/pyq/3rd'>
     <div class="card green">
         {/* <p class="tip">Hover Me</p> */}
      <p class="second-text">PYQ</p>

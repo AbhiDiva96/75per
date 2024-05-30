@@ -58,7 +58,7 @@ const router = createBrowserRouter([
     element: <Notes/>
    },
    {
-    path: "pyq",
+    path: "pyq/:id",
     element: <Pyq />
    },
    {

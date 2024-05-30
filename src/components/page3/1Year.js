@@ -51,7 +51,7 @@ function fstYear() {
 </div>
 </Link>
 
-<Link to='/pyq'>
+<Link to='/pyq/1st'>
 <div class="card green">
     {/* <p class="tip">Hover Me</p> */}
  <p class="second-text">PYQ</p>
