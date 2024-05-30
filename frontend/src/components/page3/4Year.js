@@ -1,20 +1,7 @@
-// import React from 'react'
-
-// function fothYear() {
-//   return (
-//     <div>
-//       <h1>Fourth Year</h1>
-//     </div>
-//   )
-// }
-
-// export default fothYear
-
-
 import React from 'react'
 import {Link} from 'react-router-dom';
-// import '../page3/3Year.css'
 import Header from '../../pages/header';
+import '../page3/1Year.css';
 
 
 import quantumImage from '../../assets/5th.png';
@@ -27,13 +14,44 @@ import ComingSoon from '../../pages/cs.js'
 
 function fothYear() {
 
-  return (
-    <div>
-    <ComingSoon />
+ 
+    return (
+  <div>
 
-{/* <Footer /> */}
+  <Header/>
+    
+    <div className="yr">
+    <h2>4th year</h2>
     </div>
-  )
-}
+
+    <div className="content">
+      <div className="cards">
+  
+
+
+  <Link to='/frthsyllabus'>
+  <div className="card pink">
+  <img src={syllabus} alt="" />
+    <p className="second-text">Syllabus</p>
+  </div> 
+  </Link>
+
+  
+
+  
+
+  
+
+  </div>
+  </div>
+
+  </div>
+
+    )
+  }
+
+
+
+
 
 export default fothYear;
