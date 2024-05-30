@@ -1,12 +1,17 @@
 import React from 'react'
 import '../page1/Home.css';
 import {Link} from 'react-router-dom';
+import { ThemeContext } from './ThemeContext';
+
 function Home() {
   return (
     <div>
         <div className="title">
-         <h2>Visite your year</h2>
+         <h2>Visit your year</h2>
+         <button onClick={toggleTheme}>Toggle Dark Mode</button>
+
         </div>
+        
 
       <div class="container">
 
