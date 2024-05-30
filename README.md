@@ -1,9 +1,9 @@
-# Centralized platform for all the college to acess their study material
+# Centralized platform for all the colleges to access their study material
 
 
 ![alt text](home.png)
 
-This repository contains the source code for a website designed to help college students access their study matierials like quantum books , lecture, notes, past year questions (PYQ), and many more
+This repository contains the source code for a website designed to help college students access their study materials like quantum books, lectures, notes, past year questions (PYQ), and many more
 
 ## Getting Started
 
@@ -42,7 +42,7 @@ This website is designed to help college students manage their notes, past-year 
 
 - access quantum books
 - lecture for the year-wise student
-- all year can access the timetable their class at one place
+- all year can access the timetable of their class in one place
 - accessing the syllabus for all subject
 - Access a question set of past year questions (PYQ)
 - Manage and keep track of upcoming lectures
