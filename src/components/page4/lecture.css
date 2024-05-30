@@ -32,7 +32,11 @@
     top: 30%;
     right: 7%;
   }
-  
+  .text-box-in{
+    color: black;
+    font-size: 20px;
+    text-align: center;
+  }
   .container::after {
     content: "";
     position: absolute;
@@ -45,13 +49,15 @@
   .container .box {
     width: 17.875em;
     height: 17.875em;
-    padding: 0rem;
+    align-items: center;
+   
     background-color: rgba(41, 2, 73, 0.074);
     border: 1px solid rgba(244, 252, 34, 0.222);
     -webkit-backdrop-filter: blur(20px);
     backdrop-filter: blur(20px);
     border-radius: 0.7rem;
     transition: all ease 0.3s;
+    padding: 10px;
   }
   
   .container .box {
