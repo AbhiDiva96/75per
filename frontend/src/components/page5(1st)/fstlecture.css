@@ -18,7 +18,7 @@
     margin-bottom: 0px;
   }
   
-  .container::before,
+  /* .container::before,
   .container::after {
     content: "";
     background-color: #fab5704c;
@@ -40,7 +40,7 @@
     top: 8%;
     right: 5%;
     border: 1px solid;
-  }
+  } */
   
   .container .box {
     width: 17.875em;
