@@ -1,25 +1,9 @@
-/* body {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-  } */
-
-.footer{
-    position: fixed;
-   bottom:0;
-   width: 100%;
-    
-}
-
-.fram{
-     display: flex;
-    justify-content: space-around;
-    background-color: #f8f8f8;
-    bottom: 0;
-    position: relative;
-     box-shadow:
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: lavender;
+  box-shadow:
      -7px -7px 20px 0px #fff9,
      -4px -4px 5px 0px #fff9,
      7px 7px 20px 0px #0002,
@@ -28,82 +12,101 @@
      inset 0px 0px 0px 0px #0001,
      inset 0px 0px 0px 0px #fff9,        inset 0px 0px 0px 0px #0001;
    transition:box-shadow 0.6s cubic-bezier(.79,.21,.06,.81);
-     border-radius: 10px;
 }
 
-
-.github{
-    display: flex;
-    flex-direction: row;
-    /* justify-content: space-between; */
-    align-items: center;
-     padding: 10px;
-    margin: 5px;
-
-    position: relative;
-     box-shadow:
-     -7px -7px 20px 0px #fff9,
-     -4px -4px 5px 0px #fff9,
-     7px 7px 20px 0px #0002,
-     4px 4px 5px 0px #0001,
-     inset 0px 0px 0px 0px #fff9,
-     inset 0px 0px 0px 0px #0001,
-     inset 0px 0px 0px 0px #fff9,        inset 0px 0px 0px 0px #0001;
-   transition:box-shadow 0.6s cubic-bezier(.79,.21,.06,.81);
-     border-radius: 10px;
-  }
-
-  .github:hover{
-    background: radial-gradient(circle,  #0ff 0%, #e0e5ec 60%);
-      color: rgba(65, 78, 143, 0.5); 
-      animation: colorchange 3s linear infinite;
-    }
-    .github:active{
-      box-shadow:  4px 4px 6px 0 rgba(98, 90, 155, 0.5),
-                  -4px -4px 6px 0 rgba(10, 75, 154, 0.2), 
-        inset -4px -4px 6px 0 rgba(4, 124, 145, 0.842),
-        inset 4px 4px 6px 0 rgba(35, 102, 185, 0.3);
-    }
-    
-    @keyframes colorchange {
-      to {filter: hue-rotate(360deg);}
-    }
-
-.founder{
-     justify-content: center;
+.footer-content {
+  padding: 1rem;
 }
-.linkedin{
+
+.footer-text {
+  font-size: 10px;
+}
+
+.footer-flex-container {
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  cursor: pointer;
-  padding: 10px;
-  margin: 5px;
-  position: relative;
-   box-shadow:
-   -7px -7px 20px 0px rgba(255, 255, 255, 0.6),
-   -4px -4px 5px 0px rgba(255, 255, 255, 0.6),
-   7px 7px 20px 0px rgba(18, 158, 233, 0.133),
-   4px 4px 5px 0px rgba(0, 162, 255, 0.067),
-   inset 0px 0px 0px 0px #fff9,
-   inset 0px 0px 0px 0px rgba(7, 164, 255, 0.067),
-   inset 0px 0px 0px 0px rgba(255, 255, 255, 0.6),        inset 0px 0px 0px 0px rgba(0, 0, 0, 0.067);
- transition:box-shadow 0.6s cubic-bezier(.79,.21,.06,.81);
-   border-radius: 10px;
+  justify-content: space-evenly;
 }
 
-.linkedin:hover{
-  background: radial-gradient(circle,  #0ff 0%, #e0e5ec 60%);
-    color: rgba(65, 78, 143, 0.5); 
-    animation: colorchange 3s linear infinite;
+@media (min-width: 560px) {
+  .footer-flex-container {
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 0;
   }
-  .linkedin:active{
-    box-shadow:  4px 4px 6px 0 rgba(98, 90, 155, 0.5),
-                -4px -4px 6px 0 rgba(10, 75, 154, 0.2), 
-      inset -4px -4px 6px 0 rgba(4, 124, 145, 0.842),
-      inset 4px 4px 6px 0 rgba(35, 102, 185, 0.3);
+
+  .footer-icons .icon {
+    cursor: pointer;
+    margin-right: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2rem !important;
+    height: 2rem !important;
   }
-  
-  @keyframes colorchange {
-    to {filter: hue-rotate(360deg);}
+
+  .footer-text {
+    font-size: 2rem !important;
   }
+
+  .footer-item.footer-copyright {
+    font-size: 2rem !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .footer-icons {
+    gap: 1rem !important;
+  }
+}
+
+.footer-item {
+  text-align: left;
+}
+
+.footer-item.footer-copyright {
+  text-align: left;
+  font-weight: 600;
+  color: black;
+  font-size: 1rem;
+}
+
+.footer-item .footer-text {
+  font-size: 1rem; 
+  font-weight: 600;
+  color: black;
+  margin: 1rem 0;
+}
+
+@media (min-width: 1024px) {
+  .footer-item.footer-copyright {
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .footer-icons {
+    gap: 1rem !important;
+  }
+}
+
+.footer-icons {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.footer-icons .icon {
+  cursor: pointer;
+  margin-right: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.footer-icons .icon:last-child {
+  margin-right: 0;
+}
