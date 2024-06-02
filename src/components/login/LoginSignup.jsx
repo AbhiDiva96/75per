@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import "./LoginSignup.css";
-
+import {FaEye,FaEyeSlash} from 'react-icons/fa6'
 const LoginSignup = () => {
 
 
   const [state, setState] = useState("Sign Up");
+  const [isVisible,setIsVisible]=useState(false)
+
   const [formData, setFormData] = useState({
     username: "",
     password: "",
@@ -67,7 +69,12 @@ const LoginSignup = () => {
             <></>
           )}
           <input type="email" name="email" value={formData.email} onChange={ChangeHandler} placeholder="Email Address" />
-          <input type="password" name="password" value={formData.password} onChange={ChangeHandler} placeholder="Password" />
+          <div style={{position:"relative"}}>
+
+          <input type={`${isVisible?"text":"password"}`} name="password" value={formData.password} onChange={ChangeHandler} placeholder="Password" />
+          {isVisible?<FaEye className="eye" onClick={()=>setIsVisible(false)} />:<FaEyeSlash className="eye" onClick={()=>setIsVisible(true)}/>}
+          </div>
+        
         </div>
         <button
           onClick={() => {
