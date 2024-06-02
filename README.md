@@ -27,6 +27,25 @@
 
 This repository contains the source code for a website designed to help college students access their study materials like quantum books, lectures, notes, past year questions (PYQ), and many more
 
+## Featured In
+
+<table>
+
+   <tr>
+      <th>Event Logo</th>
+      <th>Event Name</th>
+      <th>Event Description</th>
+   </tr>
+   <tr>
+      <td><img src=".github/assets/gssoc24.png" width="200" height="auto" loading="lazy" alt="GSSoC 24"/></td>
+      <td>GirlScript Summer of Code 2024</td>
+      <td>GirlScript Summer of Code is a three-month-long Open Source Program conducted every summer by GirlScript Foundation. It is an initiative to bring more beginners to Open-Source Software Development.</td>
+   </tr>
+
+</table>
+
+<hr>
+
 ## Overview of project
 <a n="overview-of-project"></a>
 
@@ -110,7 +129,7 @@ You can refer to the following articles on the basics of Git and Github.
 ### How to Contribute?
 <a k="how-to-contribute"></a>
 
-- Take a look at the existing [Issues](https://github.com/akshitagupta15june/PetMe/issues) or [create a new issue](https://github.com/AbhiDiva96/75per/issues/new)!
+- Take a look at the existing [Issues](https://github.com/AbhiDiva96/75per/issues) or [create a new issue](https://github.com/AbhiDiva96/75per/issues/new)!
 - [Fork the Repo](https://github.com/AbhiDiva96/75per/fork). Then, create a branch for any issue that you are working on. Finally, commit your work.
 - Create a **[Pull Request](https://github.com/AbhiDiva96/75per/compare)** (_PR_), which will be promptly reviewed and given suggestions for improvements by the community.
 - Add screenshots or screen captures to your Pull Request to help us understand the effects of the changes proposed in your PR.
