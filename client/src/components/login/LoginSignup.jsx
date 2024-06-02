@@ -11,7 +11,7 @@ const LoginSignup = () => {
   const [error, setError] = useState("");
 
   const handleSignInWithGoogle = () => {
-    window.location.href = 'http://localhost:4000/auth/google'; // Redirect to the server route for Google OAuth login
+    window.location.href = 'http://localhost:8000/auth/google'; // Redirect to the server route for Google OAuth login
   };
 
   const ChangeHandler = (e) => {
@@ -25,67 +25,73 @@ const LoginSignup = () => {
 
   const login = async () => {
     console.log("login");
-    let responseData;
-    await fetch("http://localhost:4000/login", {
-      method: "POST",
-      headers: {
-        Accept: 'application/json',
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(formData)
-    }).then((response) => response.json())
-      .then((data) => responseData = data)
-      .catch((error) => {
-        setError("An error occurred. Please try again.");
+    setError(""); // Reset error message before new request
+    try {
+      const response = await fetch("http://localhost:8000/login", {
+        method: "POST",
+        headers: {
+          Accept: 'application/json',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
       });
-  
-    if (responseData && responseData.success) {
-      localStorage.setItem('auth-token', responseData.token);
-      localStorage.setItem('username', responseData.username); // Store username
-      window.location.replace("/");
-    } else if (responseData) {
-      setError(responseData.errors);
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
+      const data = await response.json();
+      console.log(data.success)
+      if (data.success) {
+        localStorage.setItem('auth-token', data.token);
+        localStorage.setItem('username', data.username); // Store username
+        window.location.replace("/");
+      } else {
+        setError(data.errors || "Invalid credentials");
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      setError("Invalid credentials!.");
     }
   };
   
   const signup = async () => {
     console.log("Sign up");
     setError("");
-  
+
     if (!isValidUsername(formData.username)) {
       setError("Invalid username. It must be 3-15 characters long and can contain only letters, numbers, and underscores.");
       return;
     }
-  
-    let responseData;
-    await fetch("http://localhost:4000/signup", {
-      method: "POST",
-      headers: {
-        Accept: 'application/json',
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(formData)
-    }).then((response) => response.json())
-      .then((data) => responseData = data)
-      .catch((error) => {
-        setError("An error occurred. Please try again.");
+
+    try {
+      const response = await fetch("http://localhost:8000/signup", {
+        method: "POST",
+        headers: {
+          Accept: 'application/json',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
       });
-  
-    if (responseData && responseData.success) {
-      localStorage.setItem('auth-token', responseData.token);
-      localStorage.setItem('username', formData.username); // Store username
-      window.location.replace("/");
-    } else if (responseData) {
-      setError(responseData.errors);
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
+      const data = await response.json();
+      if (data.success) {
+        localStorage.setItem('auth-token', data.token);
+        localStorage.setItem('username', formData.username); // Store username
+        window.location.replace("/");
+      } else {
+        setError(data.errors || "Email already exists");
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      setError("Email already exists");
     }
   };
   
-  
-
   return (
     <div className={styles.loginsignup}>
       <div className={styles["loginsignup-container"]}>
-        <h1>{state}</h1>
+        <h1 className={styles["headings"]}>{state}</h1>
         <div className={styles["loginsignup-fields"]}>
           {state === "Sign Up" ? (
             <input
@@ -135,7 +141,7 @@ const LoginSignup = () => {
           </p>
         ) : (
           <p className={styles["loginsignup-login"]}>
-            Create an account?{" "}
+            Create an account? {""}
             <span
               onClick={() => {
                 setState("Sign Up");

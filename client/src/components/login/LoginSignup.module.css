@@ -62,6 +62,7 @@ button:hover {
 .loginsignup-login {
   margin-top: 20px;
   font-size: 14px;
+  width: fit-content;
   color: #555;
 }
 
@@ -77,6 +78,7 @@ button:hover {
 }
 
 .loginsignup-error {
+  width: fit-content;
   color: red;
   margin-top: 10px;
   font-size: 14px;
@@ -91,4 +93,9 @@ button:hover {
 
 .google-signin:hover {
   background-color: #c23321;
+}
+
+.headings{
+  font-size: 38px;
+  margin:8px
 }

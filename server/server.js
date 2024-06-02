@@ -3,11 +3,12 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const jwt = require('jsonwebtoken');
 const mongoose = require('mongoose');
-const dotenv=require("dotenv");
-dotenv.config()
+const bcrypt = require('bcrypt');
+const dotenv = require("dotenv");
+dotenv.config();
 
 const app = express();
-const PORT = process.env.PORT || 4000;
+const PORT = process.env.PORT || 8000;
 
 // Middleware
 app.use(bodyParser.json());
@@ -35,32 +36,46 @@ const User = mongoose.model('User', userSchema);
 
 // Routes
 app.post('/login', async (req, res) => {
-    const { email, password } = req.body;
-    const user = await User.findOne({email:email,password:password});
+  const { email, password } = req.body;
+  try {
+    const user = await User.findOne({ email });
     if (!user) {
-      return res.status(401).json({ errors: 'Invalid credentials' });
+      console.log("here")
+      return res.status(401).json({ errors: 'Invalid email or password' });
     }
-  
-    // Assuming your user object contains a username field
+    
+    const isMatch = await bcrypt.compare(password, user.password);
+    if (!isMatch) {
+      return res.status(401).json({ errors: 'Invalid email or password' });
+    }
+
     const { username } = user;
-    console.log(username)
     const token = jwt.sign({ email: user.email, username: user.username }, 'secret', { expiresIn: '1h' });
-    res.json({ success: true, token, username }); // Return username along with other data
-  });
-  
+    res.json({ success: true, token, username });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ errors: 'Internal server error' });
+  }
+});
+
 app.post('/signup', async (req, res) => {
   const { username, email, password } = req.body;
   try {
     if (await User.findOne({ email })) {
       return res.status(400).json({ errors: 'Email already exists' });
     }
-    const newUser = new User({ username, email, password });
+
+    const hashedPassword = await bcrypt.hash(password, 10);
+    const newUser = new User({ username, email, password: hashedPassword });
     await newUser.save();
-    const token = jwt.sign({ email: newUser.email }, 'secret', { expiresIn: '1h' });
+    const token = jwt.sign({ email: newUser.email, username: newUser.username }, 'secret', { expiresIn: '1h' });
     res.json({ success: true, token });
   } catch (err) {
+    console.error(err);
     res.status(500).json({ errors: 'Internal server error' });
   }
 });
+
+
 
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
