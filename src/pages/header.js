@@ -17,7 +17,7 @@ function Header() {
         {/* logo */}
            <div className="header">
                <div className="logo">
-                <b><Link to ="/" className='link1'> 75%.com</Link></b>
+                <b><Link to ="/" className='link1'><img src="/logo.png" alt="logo" /></Link></b>
                 
                </div>
                <a href="/Login" className='logo link1' style={{marginTop:"5px"}}><b>login</b></a>
