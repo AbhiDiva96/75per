@@ -4,6 +4,13 @@
     background: #fce3fe;
     padding-top: 100px;
 }
+.eye{
+    position: absolute;
+    right: 10px;
+    top: 30%;
+    cursor: pointer;
+    font-size: 2rem;
+}
 .loginsignup-cointainer{
     width: 580px;
     height: 700px;
