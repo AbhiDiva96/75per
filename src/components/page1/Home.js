@@ -5,7 +5,7 @@ function Home() {
   return (
     <div>
         <div className="title">
-         <h2>Visite your year</h2>
+         <h2>Visit your year</h2>
         </div>
 
       <div class="container">
