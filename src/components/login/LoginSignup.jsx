@@ -62,11 +62,15 @@ const LoginSignup = () => {
         <h1>{state}</h1>
         <div className="loginsignup-fields">
           {state === "Sign Up" ? (
-            <input type="text" name="username" value={formData.username} onChange={ChangeHandler} placeholder="Your Name" />
+            <>
+           <p className="label-login">Name</p>
+            <input type="text" name="username" value={formData.username} onChange={ChangeHandler} placeholder="Your Name" /></>
           ) : (
             <></>
           )}
+          <p className="label-login">Email</p>
           <input type="email" name="email" value={formData.email} onChange={ChangeHandler} placeholder="Email Address" />
+          <p className="label-login">Password</p>
           <input type="password" name="password" value={formData.password} onChange={ChangeHandler} placeholder="Password" />
         </div>
         <button
@@ -74,7 +78,7 @@ const LoginSignup = () => {
             state === "Login" ? login() : signup();
           }}
         >
-          Continue
+         Sign Up
         </button>
         {state === "Sign Up" ? (
           <p className="loginsignup-login">
@@ -84,7 +88,7 @@ const LoginSignup = () => {
                 setState("Login");
               }}
             >
-              Login Here
+              SignIn
             </span>
           </p>
         ) : (
@@ -95,7 +99,7 @@ const LoginSignup = () => {
                 setState("Sign Up");
               }}
             >
-              Click Here
+             Sign Up
             </span>
           </p>
         )}
