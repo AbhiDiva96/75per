@@ -3,6 +3,29 @@
 <div align="center">
   <h1>75percent</h1></div>
 
+<table align="center">
+    <thead align="center">
+        <tr border: 1px;>
+            <td><b>🌟 Stars</b></td>
+            <td><b>🍴 Forks</b></td>
+            <td><b>🐛 Issues</b></td>
+            <td><b>🔔 Open PRs</b></td>
+            <td><b>🔕 Close PRs</b></td>
+            <td><b> last commit</b></td>
+        </tr>
+     </thead>
+    <tbody>
+         <tr>
+            <td><img alt="Stars" src="https://img.shields.io/github/stars/AbhiDiva96/75per?style=flat&logo=github"/></td>
+             <td><img alt="Forks" src="https://img.shields.io/github/forks/AbhiDiva96/75per?style=flat&logo=github"/></td>
+            <td><img alt="Issues" src="https://img.shields.io/github/issues/AbhiDiva96/75per?style=flat&logo=github"/></td>
+            <td><img alt="Open Pull Requests" src="https://img.shields.io/github/issues-pr/AbhiDiva96/75per?style=flat&logo=github"/></td>
+            <td><img alt="Close Pull Requests" src="https://img.shields.io/github/issues-pr-closed/AbhiDiva96/75per?style=flat&color=critical&logo=github"/></td>
+           <td><img alt="last commit" src="https://img.shields.io/github/last-commit/AbhiDiva96/75per?style=flat&color=critical&logo=github"/></td>
+        </tr>
+    </tbody>
+</table>
+</div>
   
 <h2>Table of Contents</h2>
 
@@ -45,6 +68,10 @@ This repository contains the source code for a website designed to help college 
 </table>
 
 <hr>
+
+
+
+
 
 ## Overview of project
 <a n="overview-of-project"></a>
@@ -226,7 +253,15 @@ Navigate to `http://localhost:3000` in your web browser to view the application.
 
 
 Feel free to contribute to this project by opening issues or submitting pull requests!<br>
+<h2 align = "center">Our Contributors ❤️</h2>
+<div align = "center">
+ <h3>Thank you for your invaluable contributions to our project!</h3>
+  
+  ![Contributors](https://contrib.rocks/image?repo=AbhiDiva96/75per)
+</div>
 
-Thank you for your invaluable contributions to our project!
+
+
+
 
 <p align="right">(<a href="#top">back to top</a>)</p>
