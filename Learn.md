@@ -18,8 +18,7 @@ At 75% .com, our mission is to make quality education accessible to everyone. We
 9. [Spreading the Word](#spreading-the-word-)
 
 ## Introduction 🖥️
-75per allows users to calculate their carbon footprint based on various parameters. It provides detailed insights and suggestions on how to reduce their carbon emissions. The name "75per" is derived from "Prithvi" (Earth) and "We," emphasizing collective action and collaboration. 
-Visit the live application [here](https://75per.onrender.com).
+This repository contains the source code for a website designed to help college students access their study materials like quantum books, lectures, notes, past year questions (PYQ), and many more
 
 ## Tech Stack 🗃️
 
