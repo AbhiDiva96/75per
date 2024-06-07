@@ -5,6 +5,8 @@ import Timetable from './components/page4/timetable';
 import Footer from "./pages/footer";
 import Home from "./components/page1/Home";
 import Notice from "./components/page2/notice";
+import LoginSignup from './components/login/LoginSignup';
+
 // import { ThemeProvider } from './components/ThemeContext';
 // const ThemeContext = createContext();
 
@@ -24,9 +26,11 @@ function App() {
     {/* <div className='app' id={theme}> */}
        <Header/>
        <Notice/>
+      
          {/* <Timetable /> */}
          <Home />
         <Footer/>
+        
     {/* </div> */}
     {/* </ThemeContext.Provider> */}
 

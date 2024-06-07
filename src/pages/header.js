@@ -17,36 +17,11 @@ function Header() {
         {/* logo */}
            <div className="header">
                <div className="logo">
-                <b><Link to ="/" className='link'> 75%.com</Link></b>
+                <b><Link to ="/" className='link1'> 75%.com</Link></b>
+                
                </div>
-        {/* notes */}
-           {/* <div className="notes">
-               <h6>Get your timeTable/Syllabus/Quantum/Note</h6>
-            </div> */}
-          {/* button */}
-   {/* <div className="btn">
+               <a href="/Login" className='logo link1' style={{marginTop:"5px"}}><b>login</b></a>
 
-  <Link to="/syllabus" className='link' >  
-      <button className='button-85'> Syllabus </button> </Link>
-                <Link to="/quantum" className='link' >  <button className='button-85'> Quantum </button> </Link>
-           </div> */}
-
-           {/* Dark mode */}
-            
-{/*        
-     <div className="swi">
-        <label class="ui-switch">
-             <input type="checkbox" 
-               id = "themeToggle"
-            //  checked = {isDarkMode}
-            //  onChange={togglerDarkMode}
-              />
-               <div class="slider">
-           <div class="circle"></div>
-          </div>
-       </label>
-       </div> */}
-       
       
   
              </div>

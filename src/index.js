@@ -21,12 +21,16 @@ import SndQuantum from './components/page6(2nd)/sndquantum.js'
 import SndLecture from './components/page6(2nd)/sndlecture.js'
 import Fsttimetable from './components/page5(1st)/fsttimetable.js'
 import Sndtimetable from './components/page6(2nd)/sndtimetable.js';
-
+import Fstsyllabus from './components/page5(1st)/fstsyllabus.js';
+import Sndsyllabus from './components/page6(2nd)/sndsyllabus.js'
+import Frthsyllabus from './components/page7(4yr)/frthsyllabus.js'
+import TrdSyllabus from './components/page8(3yr)/trdsyllabus.js';
 import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
 import "./index.css";
+import LoginSignup from './components/login/LoginSignup.jsx';
 
 
 // const ThemeContext = createContext();
@@ -45,9 +49,25 @@ const router = createBrowserRouter([
     path: "/",
     element: <App />,
   },
+  //  {
+  //   path: "syllabus",
+  //   element: <Syllabus/>
+  //  },
    {
-    path: "syllabus",
-    element: <Syllabus/>
+    path:"fstsyllabus",
+    element:<Fstsyllabus/>
+   },
+   {
+    path:"sndsyllabus",
+    element:<Sndsyllabus/>
+   },
+   {
+    path:"trdsyllabus",
+    element:<TrdSyllabus/>
+   },
+   {
+    path:"frthsyllabus",
+    element:<Frthsyllabus/>
    },
    {
     path: "timetable",
@@ -119,7 +139,11 @@ const router = createBrowserRouter([
    {
     path: "fothyear",
     element: <Fothyear/>
-   }
+   },
+   {
+    path: "/login",
+    element: <LoginSignup/>
+   },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
