@@ -18,7 +18,7 @@ const LoginSignup = () => {
     setFormData({...formData,[e.target.name]:e.target.value})
   }
   const login = async () => {
-    console.log("logim");
+    console.log("login");
     let responseData;
     await fetch("http://localhost:4000/login",{
       method: "POST",
@@ -78,7 +78,7 @@ const LoginSignup = () => {
             state === "Login" ? login() : signup();
           }}
         >
-         Sign Up
+         {state === "Login" ? "Login" : "Sign Up"}
         </button>
         {state === "Sign Up" ? (
           <p className="loginsignup-login">
