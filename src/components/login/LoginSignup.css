@@ -13,6 +13,20 @@
     margin: auto;
     padding: 40px 60px;
 }
+.eye{
+    position: absolute;
+    right: 28px;
+    top: 80%;
+    cursor: pointer;
+    font-size: 2rem;
+}
+.eye1{
+    position: absolute;
+    right: 28px;
+    top: 86%;
+    cursor: pointer;
+    font-size: 2rem;
+}
 .loginsignup-cointainer h1{
     margin: 20px 0px;
     text-align: center;
@@ -21,6 +35,7 @@
 .loginsignup-fields{
     display: flex;
     flex-direction: column;
+    position: relative;
     gap: 5px;
     margin-top: 30px;
 
@@ -143,3 +158,5 @@
     margin-top: 5px;
   }
   
+
+}
