@@ -7,8 +7,6 @@ const LoginSignup = () => {
 
   const [state, setState] = useState("Sign Up");
 
-
-  const [state, setState] = useState("Login");
   const [formData, setFormData] = useState({
     username: "",
     password: "",
@@ -107,7 +105,7 @@ const LoginSignup = () => {
             state === "Login" ? login() : signup();
           }}
         >
-          Sign Up
+        
           
          {state === "Login" ? "Login" : "Sign Up"}
         </button>
