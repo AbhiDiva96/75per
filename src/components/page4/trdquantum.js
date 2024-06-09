@@ -9,6 +9,7 @@ import Imgdaa from '../../assets/daa1.jpg';
 // import Imgmlt from '../../assets/mlt.jpg'
 import Imgcn from '../../assets/cn.webp';
 import Imgwt from '../../assets/wt.png';
+import Imgitcs from '../../assets/itcsimg.jpg'
 
 function quantum() {
         
@@ -101,7 +102,7 @@ function quantum() {
 
   <div className="book">
        <img src={Imgwt} alt="" />  
-        <button  onClick={() => handleDownload()}>Download</button>
+        <button  onClick={() => handleDownload("WEB TECH QUANTUM")}>Download</button>
        <div className="cover">
         <p>Web Technology</p>
      </div>
@@ -109,7 +110,7 @@ function quantum() {
 
   <div className="book">
        <img src={Aquantum} alt="" />  
-        <button  onClick={() => handleDownload()}>Download</button>
+        <button  onClick={() => handleDownload("BigData")}>Download</button>
        <div className="cover">
         <p>Big Data</p>
      </div>
@@ -120,6 +121,15 @@ function quantum() {
         <button onClick={() => handleDownload("sequantum")}>Download</button>
        <div className="cover">
         <p>Software Engineering</p>
+     </div>
+  </div>
+
+  
+  <div className="book">
+       <img src={Imgitcs} alt="" />  
+        <button onClick={() => handleDownload("itcs")}>Download</button>
+       <div className="cover">
+        <p>ITCS</p>
      </div>
   </div>
 
