@@ -3,6 +3,49 @@
 <div align="center">
   <h1>75percent</h1></div>
 
+<table align="center">
+    <thead align="center">
+        <tr border: 1px;>
+            <td><b>🌟 Stars</b></td>
+            <td><b>🍴 Forks</b></td>
+            <td><b>🐛 Issues</b></td>
+            <td><b>🔔 Open PRs</b></td>
+            <td><b>🔕 Close PRs</b></td>
+            <td><b> last commit</b></td>
+        </tr>
+     </thead>
+    <tbody>
+         <tr>
+            <td><img alt="Stars" src="https://img.shields.io/github/stars/AbhiDiva96/75per?style=flat&logo=github"/></td>
+             <td><img alt="Forks" src="https://img.shields.io/github/forks/AbhiDiva96/75per?style=flat&logo=github"/></td>
+            <td><img alt="Issues" src="https://img.shields.io/github/issues/AbhiDiva96/75per?style=flat&logo=github"/></td>
+            <td><img alt="Open Pull Requests" src="https://img.shields.io/github/issues-pr/AbhiDiva96/75per?style=flat&logo=github"/></td>
+            <td><img alt="Close Pull Requests" src="https://img.shields.io/github/issues-pr-closed/AbhiDiva96/75per?style=flat&color=critical&logo=github"/></td>
+           <td><img alt="last commit" src="https://img.shields.io/github/last-commit/AbhiDiva96/75per?style=flat&color=critical&logo=github"/></td>
+        </tr>
+    </tbody>
+</table>
+</div>
+
+
+## Featured In
+
+<table>
+
+   <tr>
+      <th>Event Logo</th>
+      <th>Event Name</th>
+      <th>Event Description</th>
+   </tr>
+   <tr>
+      <td><img src="https://user-images.githubusercontent.com/63473496/153487849-4f094c16-d21c-463e-9971-98a8af7ba372.png" width="200" height="auto" loading="lazy" alt="GSSoC 24"/></td>
+      <td>GirlScript Summer of Code 2024</td>
+      <td>GirlScript Summer of Code is a three-month-long Open Source Program conducted every summer by GirlScript Foundation. It is an initiative to bring more beginners to Open-Source Software Development.</td>
+   </tr>
+
+</table>
+
+<hr>
   
 <h2>Table of Contents</h2>
 
@@ -26,6 +69,9 @@
 ![alt text](home.png)
 
 This repository contains the source code for a website designed to help college students access their study materials like quantum books, lectures, notes, past year questions (PYQ), and many more
+
+
+
 
 ## Overview of project
 <a n="overview-of-project"></a>
@@ -110,7 +156,7 @@ You can refer to the following articles on the basics of Git and Github.
 ### How to Contribute?
 <a k="how-to-contribute"></a>
 
-- Take a look at the existing [Issues](https://github.com/akshitagupta15june/PetMe/issues) or [create a new issue](https://github.com/AbhiDiva96/75per/issues/new)!
+- Take a look at the existing [Issues](https://github.com/AbhiDiva96/75per/issues) or [create a new issue](https://github.com/AbhiDiva96/75per/issues/new)!
 - [Fork the Repo](https://github.com/AbhiDiva96/75per/fork). Then, create a branch for any issue that you are working on. Finally, commit your work.
 - Create a **[Pull Request](https://github.com/AbhiDiva96/75per/compare)** (_PR_), which will be promptly reviewed and given suggestions for improvements by the community.
 - Add screenshots or screen captures to your Pull Request to help us understand the effects of the changes proposed in your PR.
@@ -207,7 +253,15 @@ Navigate to `http://localhost:3000` in your web browser to view the application.
 
 
 Feel free to contribute to this project by opening issues or submitting pull requests!<br>
+<h2 align = "center">Our Contributors ❤️</h2>
+<div align = "center">
+ <h3>Thank you for your invaluable contributions to our project!</h3>
+  
+  ![Contributors](https://contrib.rocks/image?repo=AbhiDiva96/75per)
+</div>
 
-Thank you for your invaluable contributions to our project!
+
+
+
 
 <p align="right">(<a href="#top">back to top</a>)</p>
