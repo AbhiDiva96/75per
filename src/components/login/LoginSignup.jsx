@@ -4,7 +4,11 @@ import { FaArrowLeft } from "react-icons/fa"; // Import Font Awesome arrow left 
 import "./LoginSignup.css";
 
 const LoginSignup = () => {
+
   const [state, setState] = useState("Sign Up");
+
+
+  const [state, setState] = useState("Login");
   const [formData, setFormData] = useState({
     username: "",
     password: "",
@@ -18,7 +22,7 @@ const LoginSignup = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
   const login = async () => {
-    console.log("logim");
+    console.log("login");
     let responseData;
     await fetch("http://localhost:4000/login", {
       method: "POST",
@@ -104,6 +108,8 @@ const LoginSignup = () => {
           }}
         >
           Sign Up
+          
+         {state === "Login" ? "Login" : "Sign Up"}
         </button>
         {state === "Sign Up" ? (
           <p className="loginsignup-login">
