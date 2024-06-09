@@ -50,6 +50,8 @@ function fstYear() {
 </div>
 </Link>
 
+
+<Link to='/pyq/1st'>
 <Link class="link" to=''>
 <div class="card green">
 <img src={pyq} alt=''/>

@@ -52,7 +52,11 @@ function TrdYear() {
     </div>
     </Link>
 
+
+   <Link to='/pyq/3rd'>
+
    <Link class="link" to='/pyq'>
+
     <div class="card green">
     <img src={pyq} alt=''/>
      <p class="second-text">PYQ</p>
