@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import Header from "../../pages/header";
 import Footer from "../../pages/footer";
-import './Pyq.css'; // Import the CSS file
+import './Pyq.css'; 
 
 function Pyq() {
   const yearFiles = [
@@ -43,7 +43,7 @@ function Pyq() {
       },
       evenSemesters: {
         subjects: [
-          { name: 'Operating Systems', files: ['6thsem_operating_systems.pdf' ,'os 23-24.pdf'] },
+          { name: 'Operating Systems', files: ['6thsem_operating_systems.pdf', 'os 23-24.pdf'] },
           { name: 'Networks', files: ['6thsem_networks.pdf'] }
         ]
       }
@@ -63,6 +63,7 @@ function Pyq() {
     }
   ];
 
+  // Function to handle file download
   const downloadFile = (filePath) => {
     const link = document.createElement('a');
     link.href = `${process.env.PUBLIC_URL}/${filePath}`;
@@ -77,17 +78,17 @@ function Pyq() {
     downloadFile(filePath);
   };
 
-  const { id } = useParams();
+  const { id } = useParams(); 
   const yearItem = yearFiles.find((item) => item.year === id);
   const [selectedSemester, setSelectedSemester] = useState(null);
 
   return (
-    <>
+    <div className="page-container">
       <Header />
       <div className="container-pyq">
         <h2 className='head'>Download Previous Year Questions</h2>
         {yearItem && <h3 className='year-heading'>{yearItem.year} Year</h3>}
-        <div className="ag-format-container">
+        <div className="content-container">
           <div className="pyq-box">
             {!selectedSemester ? (
               <div className="semester-selection">
@@ -124,17 +125,18 @@ function Pyq() {
                       </div>
                     ))}
                   </div>
+                 
                   <button className="back-button" onClick={() => setSelectedSemester(null)}>Back to Semester Selection</button>
                 </div>
               ) : (
-                <p>No files available for this year or semester.</p>
+                <p>Year data not found.</p>
               )
             )}
           </div>
         </div>
       </div>
       <Footer />
-    </>
+    </div>
   );
 }
 

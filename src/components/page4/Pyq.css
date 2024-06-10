@@ -1,6 +1,20 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.page-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
 .container-pyq {
     text-align: center;
     margin: 20px;
+    flex: 1;
 }
 
 .year-heading {
@@ -15,7 +29,7 @@
     margin-bottom: 20px;
 }
 
-.semester-button {
+.semester-btn {
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
@@ -26,23 +40,8 @@
     transition: background-color 0.3s ease;
 }
 
-.semester-button:hover {
+.semester-btn:hover {
     background-color: #45a049;
-}
-
-.ag-courses-item_link {
-    text-decoration: none;
-    color: inherit;
-}
-
-.ag-courses-item_title {
-    font-size: 18px;
-    margin-bottom: 10px;
-}
-
-.ag-courses-item_date-box ul {
-    list-style: none;
-    padding: 0;
 }
 
 .file-item {
@@ -52,7 +51,7 @@
     margin-bottom: 10px;
 }
 
-.download-button {
+.download-btn {
     padding: 5px 10px;
     font-size: 14px;
     cursor: pointer;
@@ -63,11 +62,11 @@
     transition: background-color 0.3s ease;
 }
 
-.download-button:hover {
+.download-btn:hover {
     background-color: #007bb5;
 }
 
-.back-button {
+.back-btn {
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
@@ -79,73 +78,74 @@
     margin-top: 20px;
 }
 
-.back-button:hover {
+.back-btn:hover {
     background-color: #e53935;
 }
 
-.pyq-box{
+.pyq-box {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin: 20px;
 }
+
 .subjects-container {
     display: flex;
     gap: 20px;
-  }
-  
-  .subject-box {
+    flex-wrap: wrap;
+}
+
+.subject-box {
     border: 1px solid #ccc;
     padding: 10px;
     border-radius: 5px;
-  }
-  
-  .subject-title {
-    margin-bottom: 10px;
-  }
+    flex: 1;
+    min-width: 45%;
+}
 
+.subject-title {
+    margin-bottom: 10px;
+}
+
+@media (max-width: 1200px) {
+    .subject-box {
+        min-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .semester-selection {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .semester-btn {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .subjects-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .subject-box {
+        min-width: 100%;
+    }
+}
 
 @media (max-width: 600px) {
-    .semester-selection {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .semester-button {
-      width: 100%;
-      margin-bottom: 10px;
-    }
-  
     .subjects-container {
-      flex-direction: column;
-      gap: 10px;
+        flex-direction: column;
+        gap: 10px;
     }
-  
+
     .subject-box {
-      min-width: 100%;
+        min-width: 100%;
     }
-  }
-  
-  @media (max-width: 768px) {
-    .subjects-container {
-      flex-direction: column;
-      gap: 15px;
-    }
-  
-    .subject-box {
-      min-width: 100%;
-    }
-  }
-  
-  @media (max-width: 1200px) {
-    .subjects-container {
-      flex-wrap: wrap;
-      gap: 20px;
-    }
-  
-    .subject-box {
-      flex: 1;
-      min-width: 45%;
-    }
-  }
+}
+
+.footer {
+    margin-top: auto; 
+}
