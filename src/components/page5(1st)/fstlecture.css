@@ -2,6 +2,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 10px 0px;
+    margin-bottom: 28px;
 }
 
 .container {
@@ -45,7 +47,7 @@
   .container .box {
     width: 17.875em;
     height: 17.875em;
-    padding: 0rem;
+    padding: 1rem;
     background-color: rgba(41, 2, 73, 0.074);
     border: 1px solid rgba(244, 252, 34, 0.222);
     -webkit-backdrop-filter: blur(20px);
@@ -68,6 +70,7 @@
  .container .box .upper img{
     width: 285px;
     height: 150px;
+    border-radius: 5px;
   }
 
  /* .container .box button{

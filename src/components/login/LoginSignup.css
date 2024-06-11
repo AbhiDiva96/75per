@@ -149,3 +149,15 @@
 }
 
 }
+
+/* LoginSignup.css */
+
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+    text-align: start;
+  }
+  
+
+

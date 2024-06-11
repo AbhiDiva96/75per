@@ -42,14 +42,14 @@ function sndYear() {
   </div> 
   </Link>
 
- <Link class="link"  to="/pyq">
+ <Link class="link"  to="/">
   <div class="card syan">
    <img src={timetable} alt="" />
     <p class="second-text">Timetable</p>
   </div>
   </Link>
 
- <Link class="link" to='/notes'>
+ <Link class="link" to='/pyq/2nd'>
   <div class="card green">
     <img src={pyq} alt=''/>
    <p   class="second-text">PYQ</p>
