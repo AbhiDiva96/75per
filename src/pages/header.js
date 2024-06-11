@@ -10,25 +10,25 @@ function Header() {
 
     //  const {isDarkMode, togglerDarkMode} =useTheme();
 
-  return (
+  return (      
+    <div className="frame">
+    <div className="header">
+        <div className="logo">
+            <Link to="/" className="link1">
+                <img src="/logo.png" alt="logo" />
+            </Link>
+        </div>
+        <div style={{ display: 'flex', gap: '20px' }}>
+            <a href="/Review" className="logo link1" style={{ padding: 10, margin: 5, height: 30, width: 80 }}>
+                <b>Review Us</b>
+            </a>
+            <a href="/Login" className="logo link1" style={{ padding: 10, margin: 5, height: 30, width: 40 }}>
+                <b>Login</b>
+            </a>
+        </div>
+    </div>
+</div>
 
-      
-      <div className="frame">
-        {/* logo */}
-           <div className="header">
-               <div className="logo">
-                <b><Link to ="/" className='link1'><img src="/logo.png" alt="logo" /></Link></b>
-                
-               </div>
-               <a href="/Login" className='logo link1' style={{padding: 10, margin: 5,height: 30, width: 40,positionTop: 15}}><b>login</b></a>
-
-      
-  
-             </div>
-            </div>
-            
-   
-    
   )
 }
 

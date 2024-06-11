@@ -31,6 +31,7 @@ import {
 } from "react-router-dom";
 import "./index.css";
 import LoginSignup from './components/login/LoginSignup.jsx';
+import ReviewPage from './components/review/review.jsx';
 
 
 // const ThemeContext = createContext();
@@ -143,6 +144,10 @@ const router = createBrowserRouter([
    {
     path: "/login",
     element: <LoginSignup/>
+   },
+   {
+    path: "/Review",
+    element: <ReviewPage/>
    },
 ]);
 
