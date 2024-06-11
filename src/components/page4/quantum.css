@@ -4,6 +4,24 @@
     align-items: center;
     
 }
+.inputField{
+  outline: none;
+  border-radius: 15px;
+  height: 31px;
+  width: 350px;
+
+}
+input::placeholder{
+  font-size: medium;
+}
+.inputDiv{
+  width: 100%;
+  gap: 50px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .link1{
   
     text-decoration: none;
