@@ -9,7 +9,7 @@ import Imgdaa from '../../assets/daa1.jpg';
 import Imgcn from '../../assets/cn.webp';
 import Imgwt from '../../assets/wt.png';
 import Imgitcs from '../../assets/itcsimg.jpg';
-
+import {FaMagnifyingGlass } from 'react-icons/fa6'
 const quantumBooks = [
   { img: Imgcd, title: "Compiler Design", file: "cd" },
   { img: Imgda, title: "Data Analytics", file: "DataAnalytics" },
@@ -54,16 +54,18 @@ function Quantum() {
         <div className="quantum-head">
           <h2>Download Quantum</h2>
         </div>
-        <div className='inputDiv'>
+        <div class='inputDiv1'>
+          <FaMagnifyingGlass className='left'/>
+    <input
+      type='text'
+      class='inputField'
+      placeholder='Search For Quantum...'
+      value={searchQuery}
+      onChange={(e) => setSearchQuery(e.target.value)}
+    />
+   
+</div>
 
-          <input
-            type='text'
-            className='inputField'
-            placeholder='Search For Quantum ...'
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-          />
-        </div>
         <div className="content" style={{ height: "auto", overflow: "auto" }}>
           {filteredBooks.map(book => (
             <div className="book" key={book.title}>

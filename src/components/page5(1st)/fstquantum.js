@@ -10,6 +10,7 @@ import Imgchem from '../../assets/chemistry.webp';
 import Imgmath2 from '../../assets/math2.jpg';
 import Imgelectronics from '../../assets/electronics.png';
 import Imgmech from '../../assets/mechanical.jpg';
+import {FaMagnifyingGlass } from 'react-icons/fa6'
 
 const books = [
   { img: Imgphy, title: "Engineering Physics", file: "physics" },
@@ -54,7 +55,8 @@ function Quantum() {
       <Header />
       <div>
         <h2 className="quantum-head">1st year quantum book</h2>
-        <div className='inputDiv'>
+        <div class='inputDiv1'>
+        <FaMagnifyingGlass className='left'/>
 
 <input
   type='text'

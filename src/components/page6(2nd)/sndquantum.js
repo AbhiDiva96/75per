@@ -13,6 +13,7 @@ import Imgcs from '../../assets/css.jpeg';
 import Imguhv from '../../assets/uhv.jpg';
 import Imgos from '../../assets/os.jpg';
 import Imgtafl from '../../assets/autometa.png';
+import {FaMagnifyingGlass } from 'react-icons/fa6'
 
 const books = [
   { img: Imgmath4, title: "Engineering Math4", file: "Mathematics4" },
@@ -57,7 +58,8 @@ function SndQuantum() {
       <Header />
       <div style={{ overflow: "auto" }}>
         <h2 className="quantum-head">2nd year quantum book</h2>
-        <div className='inputDiv'>
+        <div class='inputDiv1'>
+        <FaMagnifyingGlass className='left'/>
 
 <input
   type='text'

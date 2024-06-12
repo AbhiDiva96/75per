@@ -11,6 +11,7 @@ import oops from '../../assets/oops.jpg';
 import wt from '../../assets/wt.jpg';
 import se from '../../assets/se.jpg';
 import bd from '../../assets/bd.jpg';
+import {FaMagnifyingGlass } from 'react-icons/fa6'
 
 function Lecture() {
   // State for search query
@@ -43,7 +44,9 @@ function Lecture() {
         <h1>Lecture</h1>
       </div>
       {/* Input field for search */}
-      <div className='inputDiv' style={{marginBottom:"20px"}}>
+      <div class='inputDiv'>
+      <FaMagnifyingGlass className='left'/>
+
         <input
           type='text'
           className='inputField'

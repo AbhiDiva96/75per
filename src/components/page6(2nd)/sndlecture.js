@@ -13,6 +13,7 @@ import Imguhv from '../../assets/luhv.jpg';
 import Imgos from '../../assets/los.jpg';
 import Imgtafl from '../../assets/ltafl.jpg';
 import ssii from '../../assets/ssii.jpg';
+import {FaMagnifyingGlass } from 'react-icons/fa6'
 
 const lectures = [
   { img: Imgmath4, title: "Engineering Mathematics-4", link: "https://www.youtube.com/watch?v=14bNduEh9ag&list=PL5Dqs90qDljXYjZ8kDHtpMqPGKNGb2dxu" },
@@ -47,7 +48,8 @@ function SndLecture() {
       <div className="lecturetrd">
         <h1>2nd year lecture</h1>
       </div>
-      <div className='inputDiv'>
+      <div class='inputDiv'>
+      <FaMagnifyingGlass className='left'/>
 
 <input
   type='text'

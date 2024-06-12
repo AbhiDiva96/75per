@@ -8,20 +8,57 @@
   outline: none;
   border-radius: 15px;
   height: 31px;
-  width: 350px;
+  width: 70%;
+  max-width: 400px;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-left: 10px;
-  margin-bottom: 20px;
-
+  padding-left: 40px;
+position: relative;
+right: 25px;
 }
+.left{
+  position: relative ;
+  z-index: 99;
+  color: gray;
+}
+.inputDiv {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+.inputDiv1 {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5px;
+  margin-top: 40px;
+}
+.inputField {
+  padding-right: 20px; /* Adjust as needed */
+}
+
+.searchIcon {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  color: #555; /* Adjust the color as needed */
+  pointer-events: none; /* So it doesn't interfere with input */
+}
+
+/* Responsive Styles */
+
 input::placeholder{
   font-size: medium;
 }
 .inputDiv{
   width: 100%;
-  gap: 50px;
   margin-top: 20px;
   display: flex;
   justify-content: center;
@@ -32,6 +69,11 @@ input::placeholder{
     text-decoration: none;
     color: black;
 
+}
+@media only screen and (max-width:400px){
+  .inputDiv{
+    padding-left: 15px;
+  }
 }
 .quantum-head{
  

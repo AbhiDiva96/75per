@@ -15,6 +15,7 @@ import pps from '../../assets/pps.jpg';
 import ai from '../../assets/ai.jpg';
 import ssi from '../../assets/ssi.jpg';
 import ssii from '../../assets/ssii.jpg';
+import {FaMagnifyingGlass } from 'react-icons/fa6'
 
 function Lecture() {
   // State for search query
@@ -49,7 +50,9 @@ function Lecture() {
         <h1>1st year lecture</h1>
       </div>
       {/* Input field for search */}
-      <div className='inputDiv' style={{marginBottom:"20px"}}>
+      <div class='inputDiv'>
+      <FaMagnifyingGlass className='left'/>
+
         <input
           type='text'
           className='inputField'
