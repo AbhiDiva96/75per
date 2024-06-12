@@ -17,7 +17,7 @@ class MyChatbot extends Component {
       },
       {
         id: 'sayHello',
-        message: 'Hii {previousValue}! Nice to meet you! Which year are you in?',
+        message: 'Hi {previousValue}! Nice to meet you! Which year are you in?',
         trigger: 'yearOptions',
       },
       {
@@ -38,56 +38,71 @@ class MyChatbot extends Component {
       {
         id: 'options',
         options: [
-          { value: 1, label: 'Quantum', trigger: 'Quantum' },
-          { value: 2, label: 'Lecture', trigger: 'Lecture' },
-          { value: 3, label: 'Syllabus', trigger: 'Syllabus' },
-          { value: 4, label: 'Timetable', trigger: 'Timetable' },
-          { value: 5, label: 'PYQ', trigger: 'PYQ' },
-          { value: 6, label: 'Notes', trigger: 'Notes' },
+          { value: 'Quantum', label: 'Quantum', trigger: 'quantumSection' },
+          { value: 'Lecture', label: 'Lecture', trigger: 'lectureSection' },
+          { value: 'Syllabus', label: 'Syllabus', trigger: 'syllabusSection' },
+          { value: 'Timetable', label: 'Timetable', trigger: 'timetableSection' },
+          { value: 'PYQ', label: 'PYQ', trigger: 'pyqSection' },
+          { value: 'Notes', label: 'Notes', trigger: 'notesSection' },
         ],
       },
       {
-        id: 'Quantum',
-        message: 'You are in the Quantum section.',
-        trigger: 'end',
+        id: 'quantumSection',
+        message: 'You are in the Quantum section. How can I help you here?',
+        trigger: 'endOptions',
       },
       {
-        id: 'Lecture',
-        message: 'You are in the Lecture Syllabus section.',
-        trigger: 'end',
+        id: 'lectureSection',
+        message: 'You are in the Lecture section. How can I help you here?',
+        trigger: 'endOptions',
       },
       {
-        id: 'Syllabus',
-        message: 'You are in the Syllabus section.',
-        trigger: 'end',
+        id: 'syllabusSection',
+        message: 'You are in the Syllabus section. How can I help you here?',
+        trigger: 'endOptions',
       },
       {
-        id: 'Timetable',
-        message: 'You are in the Timetable section.',
-        trigger: 'end',
+        id: 'timetableSection',
+        message: 'You are in the Timetable section. How can I help you here?',
+        trigger: 'endOptions',
       },
       {
-        id: 'PYQ',
-        message: 'You are in the PYQ section.',
-        trigger: 'end',
+        id: 'pyqSection',
+        message: 'You are in the PYQ section. How can I help you here?',
+        trigger: 'endOptions',
       },
       {
-        id: 'Notes',
-        message: 'You are in the Notes section.',
-        trigger: 'end',
+        id: 'notesSection',
+        message: 'You are in the Notes section. How can I help you here?',
+        trigger: 'endOptions',
+      },
+      {
+        id: 'endOptions',
+        options: [
+          { value: 'restart', label: 'Restart Chat', trigger: 'restart' },
+          { value: 'end', label: 'End Chat', trigger: 'end' },
+        ],
+        hideInput: true,
+      },
+      {
+        id: 'restart',
+        message: 'Let’s start over!',
+        trigger: '1',
       },
       {
         id: 'end',
         component: (
-            <div>
-                Perfect! All the Best with your Exam Preparation!<br />
-                <button onClick={() => window.location.reload()} className="text-blue-500">End Chat</button>
-            </div>
+          <div>
+            Perfect! All the Best with your Exam Preparation!<br />
+            <button onClick={() => window.location.reload()} className="text-blue-500">
+              End Chat
+            </button>
+          </div>
         ),
         asMessage: true,
         end: true,
-    },
-];
+      },
+    ];
 
     const theme = {
       background: 'white',
@@ -121,6 +136,16 @@ class MyChatbot extends Component {
             .rsc-os-option-element {
               display: inline-block;
               margin-right: 10px;
+            }
+            .rsc-os-option-element button {
+              background-color: #000000;
+              color: #FFFFFF;
+              border-radius: 5px;
+              padding: 10px;
+              margin: 5px;
+            }
+            .rsc-os-option-element button:hover {
+              background-color: #555555;
             }
           `}
         </style>
