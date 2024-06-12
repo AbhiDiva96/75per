@@ -53,7 +53,7 @@ function Lecture() {
         <input
           type='text'
           className='inputField'
-          placeholder='Search ...'
+          placeholder='Search For Lecture ...'
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
         />

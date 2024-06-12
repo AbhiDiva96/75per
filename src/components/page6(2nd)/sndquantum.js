@@ -62,7 +62,7 @@ function SndQuantum() {
 <input
   type='text'
   className='inputField'
-  placeholder='Search ...'
+  placeholder='Search For Quantum  ...'
   value={searchQuery}
   onChange={(e) => setSearchQuery(e.target.value)}
 />

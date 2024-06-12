@@ -9,6 +9,10 @@
   border-radius: 15px;
   height: 31px;
   width: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 10px;
 
 }
 input::placeholder{
