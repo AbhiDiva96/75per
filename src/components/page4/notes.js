@@ -4,6 +4,7 @@ import Header from '../../pages/header';
 import ComingSoon from '../../pages/cs.js';
 
 import '../page4/notes.css';
+import ScrollToTopButton from '../ScrollToTopButton.js';
 function notes() {
   return (
     <div >
@@ -16,6 +17,7 @@ function notes() {
  </div> */}
 
   <ComingSoon/>
+  <ScrollToTopButton />
     </div>
   )
 }

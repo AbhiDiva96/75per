@@ -10,6 +10,14 @@ body {
   
 }
 
+/* Dark theme styles */
+body.dark-theme {
+  background-color: darkblue;
+  /* Dark theme background color */
+  color: white;
+  /* Dark theme text color */
+}
+
 #light{
   background-color: #fff;
 }

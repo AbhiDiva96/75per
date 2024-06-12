@@ -16,6 +16,7 @@ import pps from '../../assets/pps.jpg';
 import ai from '../../assets/ai.jpg';
 import ssi from '../../assets/ssi.jpg';
 import ssii from '../../assets/ssii.jpg';
+import ScrollToTopButton from '../ScrollToTopButton';
 
 function lecture() {
   return (
@@ -169,6 +170,7 @@ function lecture() {
 
 
        </div>
+       <ScrollToTopButton />
      </div>
     // </div>
   )

@@ -1,6 +1,8 @@
 import React from 'react'
 import '../page1/Home.css';
 import {Link} from 'react-router-dom';
+import ScrollToTopButton from '../ScrollToTopButton';
+
 function Home() {
   return (
     <div>
@@ -46,6 +48,7 @@ function Home() {
 
 
      </div>
+     <ScrollToTopButton />
     </div>
   )
 }

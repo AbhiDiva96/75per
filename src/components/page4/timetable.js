@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import Imgdata from '../imgdata';
 import '../page4/timetable.css';
 import Header from "../../pages/header.js"
+import ScrollToTopButton from '../ScrollToTopButton.js';
 function Timetable() {
 
     const [selectedSection, setSelectedSection] = useState(null);
@@ -29,6 +30,8 @@ function Timetable() {
     
       {/* apering section of timetable */}
       {selectedSection && <Imgdata section={selectedSection}/>}
+
+      <ScrollToTopButton />
 
     </div>
   )

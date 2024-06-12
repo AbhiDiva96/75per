@@ -11,6 +11,7 @@ import oops from '../../assets/oops.jpg';
 import wt from '../../assets/wt.jpg';
 import se from '../../assets/se.jpg';
 import bd from '../../assets/bd.jpg';
+import ScrollToTopButton from '../ScrollToTopButton';
                                                                                                                       
 function lecture() {
   return (
@@ -140,6 +141,7 @@ function lecture() {
 
 
        </div>
+       <ScrollToTopButton/>
      </div>
     // </div>
   )

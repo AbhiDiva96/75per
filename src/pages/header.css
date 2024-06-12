@@ -233,3 +233,34 @@
     align-items: center;
   }
 
+
+/* Css for Dark / Deafult Toggler */
+
+.theme-toggler {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 16px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: inherit;
+  font-size: 16px;
+  font-weight: bold;
+  transition: color 0.3s ease, transform 0.3s ease;
+  svg{
+    font-size: 1.8rem;
+  }
+}
+
+.theme-toggler:hover {
+  color: #007bff;
+  /* Change color on hover */
+  transform: scale(1.1);
+  /* Add scale animation on hover */
+}
+
+.toggle-text {
+  margin-left: 8px;
+}
+

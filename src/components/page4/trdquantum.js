@@ -9,6 +9,7 @@ import Imgdaa from '../../assets/daa1.jpg';
 // import Imgmlt from '../../assets/mlt.jpg'
 import Imgcn from '../../assets/cn.webp';
 import Imgwt from '../../assets/wt.png';
+import ScrollToTopButton from '../ScrollToTopButton.js';
 
 function quantum() {
         
@@ -125,6 +126,7 @@ function quantum() {
 
 </div>
     </div>
+    <ScrollToTopButton />
     </div>
   )
 }

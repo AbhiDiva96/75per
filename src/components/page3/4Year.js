@@ -10,6 +10,7 @@ import timetable from '../../assets/sec-3A.jpg';
 import syllabus from '../../assets/syllabuswt.jpg';
 
 import ComingSoon from '../../pages/cs.js'
+import ScrollToTopButton from '../ScrollToTopButton.js';
 
 
 function fothYear() {
@@ -44,7 +45,7 @@ function fothYear() {
 
   </div>
   </div>
-
+<ScrollToTopButton />
   </div>
 
     )

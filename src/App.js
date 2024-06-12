@@ -6,6 +6,8 @@ import Footer from "./pages/footer";
 import Home from "./components/page1/Home";
 import Notice from "./components/page2/notice";
 import LoginSignup from './components/login/LoginSignup';
+import ScrollToTopButton from './components/ScrollToTopButton';
+
 
 // import { ThemeProvider } from './components/ThemeContext';
 // const ThemeContext = createContext();
@@ -30,7 +32,7 @@ function App() {
          {/* <Timetable /> */}
          <Home />
         <Footer/>
-        
+        <ScrollToTopButton />
     {/* </div> */}
     {/* </ThemeContext.Provider> */}
 

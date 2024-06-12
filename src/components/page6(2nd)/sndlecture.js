@@ -17,6 +17,7 @@ import Imgos from '../../assets/los.jpg';
 import Imgtafl from '../../assets/ltafl.jpg';
 
 import ssii from '../../assets/ssii.jpg';
+import ScrollToTopButton from '../ScrollToTopButton';
 
 function sndlecture() {
   return (
@@ -170,6 +171,7 @@ function sndlecture() {
 
 
        </div>
+       <ScrollToTopButton />
      </div>
     // </div>
   )
