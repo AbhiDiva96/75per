@@ -17,9 +17,16 @@ function App() {
   // const toggleTheme = () => {
   //   setTheme((curr) => (curr === "light" ? "light ": "dark"));
   // }
- 
-
-  return (
+  const [loading, setLoading] = useState(true);
+  const spinner = document.getElementById("spinner");
+  if (spinner) {
+    setTimeout(() => {
+      spinner.style.display = "none";
+      setLoading(false);
+    }, 2000);
+  }
+  return(
+    !loading &&(
 <div className="maintain">
 
     {/* <ThemeContext.Provider value={{theme, toggleTheme}}> */}
@@ -36,6 +43,7 @@ function App() {
 
     </div>
   )
+)
 }
 
 export default App
