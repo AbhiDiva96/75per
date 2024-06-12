@@ -32,28 +32,29 @@ function Header() {
 
   //  const {isDarkMode, togglerDarkMode} =useTheme();
 
-  return (
-
-
+  return (      
     <div className="frame">
-      {/* logo */}
-      <div className="header">
+    <div className="header">
         <div className="logo">
-          <b><Link to="/" className='link1'><img src="/logo.png" alt="logo" /></Link></b>
-
+            <Link to="/" className="link1">
+                <img src="/logo.png" alt="logo" />
+            </Link>
         </div>
-        <a href="/Login" className='logo link1' style={{ padding: 10, margin: 5, height: 30, width: 40, positionTop: 15 }}><b>login</b></a>
-
-
+        <div style={{ display: 'flex', gap: '20px' }}>
+            <a href="/Review" className="logo link1" style={{ padding: 10, margin: 5, height: 30, width: 80 }}>
+                <b>Review Us</b>
+            </a>
+            <a href="/Login" className="logo link1" style={{ padding: 10, margin: 5, height: 30, width: 40 }}>
+                <b>Login</b>
+            </a>
+        </div>
         {/* Theme Toggler Button */}
         <button className="theme-toggler" onClick={toggleTheme}>
           {isDarkMode ? <FiSun /> : <FiMoon />} {/* Use icons based on theme */}
           <span className="toggle-text">{isDarkMode ? '' : ''}</span> {/* Text based on theme */}
         </button>
-      </div>
     </div>
-
-
+</div>
 
   )
 }
