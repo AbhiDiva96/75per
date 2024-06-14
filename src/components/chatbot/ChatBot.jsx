@@ -150,7 +150,7 @@ class MyChatbot extends Component {
           `}
         </style>
       </div>
-    );
+    );  
   }
 }
 
