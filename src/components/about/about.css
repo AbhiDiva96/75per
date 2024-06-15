@@ -1,0 +1,134 @@
+
+.font{
+  font-size: 0.8rem;
+  font-family: sans-serif;
+  color: black;
+  font-weight:550;
+}
+
+
+@keyframes animate {
+  from {
+    height: 0px;
+  }
+  to {
+    height: 270px;
+  }
+}
+
+
+
+
+.head-container{
+  text-align: center;
+}
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+
+.start {
+  width: 80%;
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+  height: auto;
+  overflow-x: hidden;
+}
+.end {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  height: auto;
+  overflow-x: hidden;
+}
+.start .img-container {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.end .img-container {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.text-container {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.text-title {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+}
+.text-desc {
+  font-size: larger;
+  text-align: justify;
+}
+
+.about_logo{
+  width: 180px;
+  transition: transform 0.5s ease;
+  margin-right: 15px;
+}
+.mission {
+  width: 300px;
+  transition: transform 0.5s ease;
+}
+.benefit{
+  width: 400px;
+  transition: transform 0.5s ease;
+}
+.img-container img:hover {
+  transform: scale(0.9);
+}
+
+@media only screen and (max-width: 769px) {
+  .end {
+    flex-direction: column;
+  }
+  .start {
+    flex-direction: column;
+  }
+  .img-container {
+    width: 100% !important;
+  }
+  .start .img-container {
+    justify-content: center;
+  }
+  .end .img-container {
+    justify-content: center;
+  }
+  .text-container {
+    width: 100% !important;
+  }
+}
+.text-container h1{
+  font-size: 40px !important;
+  text-align: left;
+}
+
+  p{
+    font-weight: bold !important;
+  align-items: left !important;
+  display: block !important;
+  width: auto !important;
+}
+
+.about_logo{
+  width: auto !important;
+}
+.img{
+  width: 90% !important;
+  height: auto !important;
+}
+  .main{
+    margin-top: 100px !important;
+}

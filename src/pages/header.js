@@ -25,6 +25,9 @@ function Header() {
             <a href="/Login" className="logo link1" style={{ padding: 10, margin: 5, height: 30, width: 40 }}>
                 <b>Login</b>
             </a>
+            <a href="/about" className="logo link1" style={{ padding: 10, margin: 5, height: 30, width: 80 }}>
+                <b>About Us</b>
+            </a>
         </div>
     </div>
 </div>
