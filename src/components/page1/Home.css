@@ -1,7 +1,7 @@
 .title{
     display: flex;
     justify-content: center;
-   
+    font-size: 25px;
 }
 
 .container{
@@ -104,8 +104,8 @@
   }
   
   .card1 {
-    width: 90px;
-    height: 90px;
+    width: 100px;
+    height: 100px;
     outline: none;
     border: none;
     background: white;
@@ -122,8 +122,8 @@
   }
   
   .card2 {
-    width: 90px;
-    height: 90px;
+    width: 100px;
+    height: 100px;
     outline: none;
     border: none;
     background: white;
@@ -140,8 +140,8 @@
   }
   
   .card3 {
-    width: 90px;
-    height: 90px;
+    width: 100px;
+    height: 100px;
     outline: none;
     border: none;
     background: white;
@@ -157,8 +157,8 @@
   }
   
   .card4 {
-    width: 90px;
-    height: 90px;
+    width: 100px;
+    height: 100px;
     outline: none;
     border: none;
     background: white;

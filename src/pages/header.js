@@ -14,16 +14,16 @@ function Header() {
     <div className="frame">
     <div className="header">
         <div className="logo">
-            <Link to="/" className="link1">
+            <Link to="/">
                 <img src="/logo.png" alt="logo" />
             </Link>
         </div>
-        <div style={{ display: 'flex', gap: '20px' }}>
-            <a href="/Review" className="logo link1" style={{ padding: 10, margin: 5, height: 30, width: 80 }}>
-                <b>Review Us</b>
+        <div style={{ display: 'flex', gap: '20px', marginRight: '30px' }}>
+            <a href="/Review" className="link2">
+                Review Us
             </a>
-            <a href="/Login" className="logo link1" style={{ padding: 10, margin: 5, height: 30, width: 40 }}>
-                <b>Login</b>
+            <a href="/Login" className="link2">
+                Login
             </a>
         </div>
     </div>
