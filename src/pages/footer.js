@@ -20,6 +20,10 @@ const Footer = () => {
                 </div>
             </div>
         </div>
+        <div class="copyright">
+            <h5>Copyright © 2022. All rights reserved.</h5>
+            <h5>Made with ❤️ by Abhishek and open source contributors</h5>
+        </div>
     </footer>
   );
 }

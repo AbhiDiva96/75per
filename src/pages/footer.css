@@ -1,7 +1,8 @@
 footer {
   background-color: #ffffff;
   color: #1c1c1c;
-  padding: 40px 0;
+  padding-top: 40px;
+  padding-bottom: 10px;
 }
 
 .footer-container {
@@ -52,4 +53,8 @@ footer {
   transform: scale(1.1, 1.1);
   transition: 0.3s;
   color: #007ACC;
+}
+.copyright {
+  text-align: center;
+  margin-top: 10px;
 }
