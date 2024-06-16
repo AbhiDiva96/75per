@@ -7,6 +7,10 @@ import Timetable from './components/page4/timetable';
 import LoginSignup from './components/login/LoginSignup';
 import CustomChatBot from './components/chatbot/ChatBot';
 
+
+// import { ThemeProvider } from './components/ThemeContext';
+// const ThemeContext = createContext();
+
 function App() {
   return (
     <div className="maintain">
