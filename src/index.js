@@ -25,6 +25,7 @@ import Fstsyllabus from './components/page5(1st)/fstsyllabus.js';
 import Sndsyllabus from './components/page6(2nd)/sndsyllabus.js'
 import Frthsyllabus from './components/page7(4yr)/frthsyllabus.js'
 import TrdSyllabus from './components/page8(3yr)/trdsyllabus.js';
+import About from './components/about/About.jsx';
 import {
   createBrowserRouter,
   RouterProvider,
@@ -148,6 +149,10 @@ const router = createBrowserRouter([
    {
     path: "/Review",
     element: <ReviewPage/>
+   },
+   {
+    path: "/about",
+    element: <About />
    },
 ]);
 
