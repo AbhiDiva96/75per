@@ -27,10 +27,12 @@ function Header() {
                     <Link to="/Login" className="link2">
                         Login
                     </Link>
+                    <Link to="/about" className="link2">
+                        About us
+                    </Link>
                 </div>
             </div>
         </div>
-    );
 }
 
 export default Header;
