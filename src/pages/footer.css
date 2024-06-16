@@ -58,3 +58,13 @@ footer {
   text-align: center;
   margin-top: 10px;
 }
+@media screen and (max-width: 767px) {
+  .footer-container {
+    justify-content: center;
+  }
+
+  .footer-section {
+    flex-direction: column;
+    align-items: center;
+  }
+}

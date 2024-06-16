@@ -1,35 +1,36 @@
-import React from 'react'
+import React, { useState } from 'react';
 import './header.css';
-import {Link} from "react-router-dom";
-import { colors } from '@mui/material';
-// import { useTheme } from '../index';
-
-
+import { Link } from "react-router-dom";
 
 function Header() {
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-    //  const {isDarkMode, togglerDarkMode} =useTheme();
+    const toggleMenu = () => {
+        setIsMenuOpen(!isMenuOpen);
+    };
 
-  return (      
-    <div className="frame">
-    <div className="header">
-        <div className="logo">
-            <Link to="/">
-                <img src="/logo.png" alt="logo" />
-            </Link>
+    return (
+        <div className="frame">
+            <div className="header">
+                <div className="logo">
+                    <Link to="/">
+                        <img src="/logo.png" alt="logo" />
+                    </Link>
+                </div>
+                <div className="hamburger" onClick={toggleMenu}>
+                    &#9776;
+                </div>
+                <div className={`nav-links ${isMenuOpen ? 'open' : ''}`}>
+                    <Link to="/Review" className="link2">
+                        Review Us
+                    </Link>
+                    <Link to="/Login" className="link2">
+                        Login
+                    </Link>
+                </div>
+            </div>
         </div>
-        <div style={{ display: 'flex', gap: '20px', marginRight: '30px' }}>
-            <a href="/Review" className="link2">
-                Review Us
-            </a>
-            <a href="/Login" className="link2">
-                Login
-            </a>
-        </div>
-    </div>
-</div>
-
-  )
+    );
 }
 
-export default Header
+export default Header;
