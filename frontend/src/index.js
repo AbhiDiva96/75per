@@ -25,12 +25,14 @@ import Fstsyllabus from './components/page5(1st)/fstsyllabus.js';
 import Sndsyllabus from './components/page6(2nd)/sndsyllabus.js'
 import Frthsyllabus from './components/page7(4yr)/frthsyllabus.js'
 import TrdSyllabus from './components/page8(3yr)/trdsyllabus.js';
+import About from './components/about/About.jsx';
 import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
 import "./index.css";
 import LoginSignup from './components/login/LoginSignup.jsx';
+import ReviewPage from './components/review/review.jsx';
 
 
 // const ThemeContext = createContext();
@@ -78,7 +80,7 @@ const router = createBrowserRouter([
     element: <Notes/>
    },
    {
-    path: "pyq",
+    path: "pyq/:id",
     element: <Pyq />
    },
    {
@@ -143,6 +145,14 @@ const router = createBrowserRouter([
    {
     path: "/login",
     element: <LoginSignup/>
+   },
+   {
+    path: "/Review",
+    element: <ReviewPage/>
+   },
+   {
+    path: "/about",
+    element: <About />
    },
 ]);
 

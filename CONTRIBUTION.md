@@ -31,8 +31,8 @@ To acheive this task we need to follow these steps.
    Launch GitHub Desktop and log in to your GitHub account if you haven't already.
 
 2. **Clone the Repository:**
-   - If you haven't cloned the SuperpeechSaga repository yet, you can do so by clicking on the "File" menu and selecting "Clone Repository."
-   - Choose the SuperpeechSaga repository from the list of repositories on GitHub and clone it to your local machine.
+   - If you haven't cloned the 75per repository yet, you can do so by clicking on the "File" menu and selecting "Clone Repository."
+   - Choose the 75per repository from the list of repositories on GitHub and clone it to your local machine.
 
 3. **Switch to the Correct Branch:**
    - Ensure you are on the branch that you want to submit a pull request for.
@@ -49,7 +49,7 @@ To acheive this task we need to follow these steps.
    After committing your changes, click the "Push origin" button in the top right corner of GitHub Desktop to push your changes to your forked repository on GitHub.
 
 7. **Create a Pull Request:**
-  - Go to the GitHub website and navigate to your fork of the SuperpeechSaga repository.
+  - Go to the GitHub website and navigate to your fork of the 75per repository.
   - You should see a button to "Compare & pull request" between your fork and the original repository. Click on it.
 
 8. **Review and Submit:**
@@ -57,7 +57,7 @@ To acheive this task we need to follow these steps.
    - Once you're satisfied, click the "Create pull request" button to submit your pull request.
 
 9. **Wait for Review:**
-    Your pull request will now be available for review by the project maintainers. They may provide feedback or ask for changes before merging your pull request into the main branch of the SuperpeechSaga repository.
+    Your pull request will now be available for review by the project maintainers. They may provide feedback or ask for changes before merging your pull request into the main branch of the 75per repository.
 
 ## 📈 Development Workflow
 
