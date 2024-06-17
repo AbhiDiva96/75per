@@ -6,34 +6,7 @@ section
     background-size: cover;
     height:auto;
 }
-.active{
-    background-color: #000016 !important;
-    color: white !important;
-  }
-  .active div , .active button{
-    background-color: #000016 !important;
-    color: white !important;
-  
-  }
-  .active .card , .active .book ,.active .box , .active .ag-courses-item_title, .active .ag-courses_item {
-    background-color: #000000 !important;
-    color: white !important;
-    box-shadow: 0px 0px 15px lightblue;
-  
-  }
-  .active .text-box-in , .active div{
-    color: white !important;
-  }
-  .active .ag-courses-item_bg{
-    background-color: #f9b234 !important;
-  }
-  .active button{
-  border: solid 1px white;
-  box-shadow: 0px 0px 15px lightblue;
-  }
-  .active h1, .active h2 , .active p,.active b{
-    color: white !important;
-  }
+
 
 .review-container
 {
@@ -355,4 +328,16 @@ section
     {
         width: 100%;
     }
+}
+
+input[type=radio]{
+    display: none;
+}
+
+.star{
+    cursor: pointer;
+}
+
+label{
+    margin-bottom: 0.4rem;
 }
