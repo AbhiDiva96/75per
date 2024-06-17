@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import Header from "../../pages/header";
 import Footer from "../../pages/footer";
-import './Pyq.css'; 
+import './Pyq.css';
 import ScrollToTopButton from '../ScrollToTopButton.js';
 
 function Pyq() {
@@ -79,67 +79,68 @@ function Pyq() {
     downloadFile(filePath);
   };
 
-  const { id } = useParams(); 
+  const { id } = useParams();
   const yearItem = yearFiles.find((item) => item.year === id);
   const [selectedSemester, setSelectedSemester] = useState(null);
 
   return (
     <div>
-    <div className="page-container">
-      <Header />
-      <div className="container-pyq">
-        <h2 className='head'>Download Previous Year Questions</h2>
-        {yearItem && <h3 className='year-heading'>{yearItem.year} Year</h3>}
-        <div className="content-container">
-          <div className="pyq-box">
-            {!selectedSemester ? (
-              <div className="semester-selection">
-                <button className="semester-button" onClick={() => setSelectedSemester('odd')}>Odd Semester</button>
-                <button className="semester-button" onClick={() => setSelectedSemester('even')}>Even Semester</button>
-              </div>
-            ) : (
-              yearItem ? (
-                <div className="semester-container">
-                  <div className="subjects-container">
-                    {selectedSemester === 'odd' ? yearItem.oddSemesters.subjects.map((subject, subjIndex) => (
-                      <div key={subjIndex} className="subject-box">
-                        <h4 className="subject-title">{subject.name}</h4>
-                        <ul>
-                          {subject.files.map((file, fileIndex) => (
-                            <li key={fileIndex} className="file-item">
-                              <span>{file}</span>
-                              <button className="download-button" onClick={() => handleDownload(`pyqs/${yearItem.year}Year/${file}`)}>Download</button>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    )) : yearItem.evenSemesters.subjects.map((subject, subjIndex) => (
-                      <div key={subjIndex} className="subject-box">
-                        <h4 className="subject-title">{subject.name}</h4>
-                        <ul>
-                          {subject.files.map((file, fileIndex) => (
-                            <li key={fileIndex} className="file-item">
-                              <span>{file}</span>
-                              <button className="download-button" onClick={() => handleDownload(`pyqs/${yearItem.year}Year/${file}`)}>Download</button>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    ))}
-                  </div>
-                 
-                  <button className="back-button" onClick={() => setSelectedSemester(null)}>Back to Semester Selection</button>
+      <div className="page-container">
+        <Header />
+        <div className="container-pyq">
+          <h2 className='head'>Download Previous Year Questions</h2>
+          {yearItem && <h3 className='year-heading'>{yearItem.year} Year</h3>}
+          <div className="content-container">
+            <div className="pyq-box">
+              {!selectedSemester ? (
+                <div className="semester-selection">
+                  <button className="semester-button" onClick={() => setSelectedSemester('odd')}>Odd Semester</button>
+                  <button className="semester-button" onClick={() => setSelectedSemester('even')}>Even Semester</button>
                 </div>
               ) : (
-                <p>Year data not found.</p>
-              )
-            )}
+                yearItem ? (
+                  <div className="semester-container">
+                    <div className="subjects-container">
+                      {selectedSemester === 'odd' ? yearItem.oddSemesters.subjects.map((subject, subjIndex) => (
+                        <div key={subjIndex} className="subject-box">
+                          <h4 className="subject-title">{subject.name}</h4>
+                          <ul>
+                            {subject.files.map((file, fileIndex) => (
+                              <li key={fileIndex} className="file-item">
+                                <span>{file}</span>
+                                <button className="download-button" onClick={() => handleDownload(`pyqs/${yearItem.year}Year/${file}`)}>Download</button>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      )) : yearItem.evenSemesters.subjects.map((subject, subjIndex) => (
+                        <div key={subjIndex} className="subject-box">
+                          <h4 className="subject-title">{subject.name}</h4>
+                          <ul>
+                            {subject.files.map((file, fileIndex) => (
+                              <li key={fileIndex} className="file-item">
+                                <span>{file}</span>
+                                <button className="download-button" onClick={() => handleDownload(`pyqs/${yearItem.year}Year/${file}`)}>Download</button>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      ))}
+                    </div>
+
+                    <button className="back-button" onClick={() => setSelectedSemester(null)}>Back to Semester Selection</button>
+                  </div>
+                ) : (
+                  <p>Year data not found.</p>
+                )
+              )}
+            </div>
           </div>
         </div>
-      </div>
-  <ScrollToTopButton />
-      <Footer />
+        <ScrollToTopButton />
+        <Footer />
 
+      </div>
     </div>
   );
 }

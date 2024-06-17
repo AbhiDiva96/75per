@@ -3,6 +3,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import { Link } from "react-router-dom"; // Import Link
 import 'react-toastify/dist/ReactToastify.css';
 import './review.css';
+import ScrollToTopButton from "../ScrollToTopButton";
 
 const ReviewPage = () => {
   const [formData, setFormData] = useState({
@@ -111,6 +112,7 @@ const ReviewPage = () => {
           </form>
         </div>
       </div>
+      <ScrollToTopButton />
       <ToastContainer />
     </section>
   );
