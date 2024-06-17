@@ -1,21 +1,22 @@
-import React, { useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { ToastContainer, toast } from 'react-toastify';
 import { Link } from "react-router-dom"; // Import Link
 import 'react-toastify/dist/ReactToastify.css';
 import './review.css';
+import { ThemeContext } from "../../Content/context";
 
 const ReviewPage = () => {
+  const {theme}=useContext(ThemeContext)
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     rating: '',
     review: ''
   });
-
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
-
+console.log(theme)
   const handleSubmit = (e) => {
     e.preventDefault();
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -51,7 +52,7 @@ const ReviewPage = () => {
   };
 
   return (
-    <section>
+    <section className={`${theme=='dark'?"active":""} `}>
 
 <Link to="/" className="back-icon" style={{ position: 'absolute', top: '15px', left: '35px', fontSize: '42px' }}>
         <svg 
@@ -74,7 +75,7 @@ const ReviewPage = () => {
         </svg>
       </Link>
 
-      <div className="review-container">
+      <div className={`${theme=='dark'?"active":""} review-container`}>
         <div className="reviewInfo">
           <div>
             {/* Review info section */}
