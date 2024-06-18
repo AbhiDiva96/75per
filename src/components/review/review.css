@@ -16,6 +16,9 @@ section
     display: flex;
     margin-top: 4rem ;
 }
+.active .review-container .reviewForm{
+    background-color: #000016 !important;
+}
 
 .review-container .reviewInfo
 {
@@ -150,7 +153,14 @@ section
     position: relative;
     margin-bottom: 35px;
 }
-
+.active .review-container .reviewForm .formBox .inputBox input {
+    background-color: #000016 !important;
+    color: white;
+}
+.active .review-container .reviewForm .formBox .inputBox textarea{
+    background-color: #000016 !important;
+    color: white;
+}
 .review-container .reviewForm .formBox .inputBox.w50
 {
     width: 47%;

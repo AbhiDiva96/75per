@@ -17,6 +17,9 @@
 .footer-content {
   padding: 1rem;
 }
+.active .footer-content{
+  background-color:#000016 !important ;
+}
 
 .footer-text {
   font-size: 10px;
