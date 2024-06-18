@@ -3,6 +3,7 @@ import Header from '../../pages/header';
 import './fstlecture.css';
 import ScrollToTopButton from '../ScrollToTopButton';
 import { FaMagnifyingGlass } from 'react-icons/fa6';
+import NoResultsFound from '../noResultsFound/index.js'
 
 // Import images
 import ec from '../../assets/ec.jpg';
@@ -62,7 +63,7 @@ function Lecture() {
         />
       </div>
       {/* Display filtered lecture items */}
-      <div className="container">
+      {  filteredItems.length !== 0 ? <div className="container">
         {filteredItems.map((item, index) => (
           <div className="box" key={index}>
             <div className="upper">
@@ -72,8 +73,11 @@ function Lecture() {
             <a href={item.link}>View Content</a>
           </div>
         ))}
+
       </div>
-      <ScrollToTopButton />
+      
+      </div> : <NoResultsFound /> }
+<ScrollToTopButton />
     </div>
   );
 }

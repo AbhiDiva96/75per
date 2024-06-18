@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import NoResultsFound from '../noResultsFound/index.js'
 import Header from '../../pages/header.js';
 import Aquantum from '../../assets/5th.png';
 import Imgphy from '../../assets/physics.webp';
@@ -51,36 +52,37 @@ function Quantum() {
               document.body.removeChild(link);
        };
 
-       return (
-              <div>
-                     <Header />
-                     <div>
-                            <h2 className="quantum-head">1st year quantum book</h2>
-                            <div className='inputDiv1'>
-                                   <FaMagnifyingGlass className='left' />
-                                   <input
-                                          type='text'
-                                          className='inputField'
-                                          placeholder='Search For Quantum ...'
-                                          value={searchQuery}
-                                          onChange={(e) => setSearchQuery(e.target.value)}
-                                   />
-                            </div>
-                            <div className="content" style={{ height: "auto" }}>
-                                   {filteredBooks.map(book => (
-                                          <div className="book" key={book.title}>
-                                                 <img src={book.img} alt={book.title} />
-                                                 <button onClick={() => handleDownload(book.file)}>Download</button>
-                                                 <div className="cover">
-                                                        <p>{book.title}</p>
-                                                 </div>
-                                          </div>
-                                   ))}
-                            </div>
-                     </div>
-                     <ScrollToTopButton />
+  return (
+    <div>
+      <Header />
+      <div>
+        <h2 className="quantum-head">1st year quantum book</h2>
+        <div class='inputDiv1'>
+        <FaMagnifyingGlass className='left'/>
+
+<input
+  type='text'
+  className='inputField'
+  placeholder='Search For Quantum ...'
+  value={searchQuery}
+  onChange={(e) => setSearchQuery(e.target.value)}
+/>
+</div>
+        { filteredBooks.length !== 0 ? <div className="content" style={{ height: "auto" }}>
+          {filteredBooks.map(book => (
+            <div className="book" key={book.title}>
+              <img src={book.img} alt={book.title} />
+              <button onClick={() => handleDownload(book.file)}>Download</button>
+              <div className="cover">
+                <p>{book.title}</p>
               </div>
-       );
+            </div>
+          ))}
+        </div> : <NoResultsFound />}
+      </div>
+ <ScrollToTopButton />
+    </div>
+  );
 }
 
 export default Quantum;

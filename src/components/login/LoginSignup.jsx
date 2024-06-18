@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom"; // Import Link
 import { FaArrowLeft } from "react-icons/fa"; // Import Font Awesome arrow left icon
 import "./LoginSignup.css";
 import { FaEye, FaEyeSlash } from 'react-icons/fa6'
+import { ThemeContext } from "../../Content/context";
 const LoginSignup = () => {
-
+  let {theme}=useContext(ThemeContext)
   const [state, setState] = useState("Sign Up");
   const [isVisible, setIsVisible] = useState(false);
 
@@ -94,7 +95,7 @@ const LoginSignup = () => {
     }
   };
   return (
-    <div className="loginsignup">
+    <div className={`${theme=='dark'?"active":""} loginsignup`}>
 
       <Link to="/" className="back-icon" style={{ position: 'absolute', top: '15px', left: '35px', fontSize: '42px' }}>
         <svg

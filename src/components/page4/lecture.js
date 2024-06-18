@@ -12,7 +12,8 @@ import wt from '../../assets/wt.jpg';
 import se from '../../assets/se.jpg';
 import bd from '../../assets/bd.jpg';
 import ScrollToTopButton from '../ScrollToTopButton';
-import { FaMagnifyingGlass } from 'react-icons/fa6';
+import {FaMagnifyingGlass } from 'react-icons/fa6'
+import NoResultsFound from '../noResultsFound/index.js'
 
 function Lecture() {
   // State for search query
@@ -56,6 +57,7 @@ function Lecture() {
         />
       </div>
       {/* Display filtered lecture items */}
+      { filteredItems.length !== 0 ?
       <div className="container">
         {filteredItems.map((item, index) => (
           <div className="box" key={index}>
@@ -67,7 +69,8 @@ function Lecture() {
           </div>
         ))}
       </div>
-      <ScrollToTopButton />
+      : <NoResultsFound />}
+       <ScrollToTopButton />
     </div>
   );
 }
