@@ -42,7 +42,7 @@ function sndYear() {
   </div> 
   </Link>
 
- <Link class="link"  to="/">
+ <Link class="link"  to="/notes">
   <div class="card syan">
    <img src={timetable} alt="" />
     <p class="second-text">Timetable</p>
