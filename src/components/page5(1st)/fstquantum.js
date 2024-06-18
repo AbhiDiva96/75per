@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import NoResultsFound from '../noResultsFound/index.js'
 import Header from '../../pages/header.js';
 import Aquantum from '../../assets/5th.png';
 import Imgphy from '../../assets/physics.webp';
@@ -66,7 +67,7 @@ function Quantum() {
   onChange={(e) => setSearchQuery(e.target.value)}
 />
 </div>
-        <div className="content" style={{ height: "auto" }}>
+        { filteredBooks.length !== 0 ? <div className="content" style={{ height: "auto" }}>
           {filteredBooks.map(book => (
             <div className="book" key={book.title}>
               <img src={book.img} alt={book.title} />
@@ -76,7 +77,7 @@ function Quantum() {
               </div>
             </div>
           ))}
-        </div>
+        </div> : <NoResultsFound />}
       </div>
     </div>
   );
