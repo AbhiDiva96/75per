@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Header from '../../pages/header';
-
+import NoResultsFound from '../noResultsFound/index.js'
 import Imgmath4 from '../../assets/lmath4.jpg';
 import Imgdsa from '../../assets/ldsa.jpg';
 import Imgcoa from '../../assets/lcoa.jpg';
@@ -61,7 +61,7 @@ function SndLecture() {
 </div>
       <div style={{ margin: '20px' }}>
       </div>
-      <div className="container">
+      { filteredLectures.length !== 0 ? <div className="container">
         {filteredLectures.map((lecture) => (
           <div className="box" key={lecture.title}>
             <div className="upper">
@@ -73,7 +73,7 @@ function SndLecture() {
             </a>
           </div>
         ))}
-      </div>
+      </div> : <NoResultsFound />}
     </div>
   );
 }
