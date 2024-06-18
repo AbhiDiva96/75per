@@ -16,7 +16,7 @@ function App() {
   // };
 
   return (
-    <div className="maintrain">
+    <div className="maintain">
       {/* <ThemeContext.Provider value={{theme, toggleTheme}}> */}
       <header />
       <Notice />
