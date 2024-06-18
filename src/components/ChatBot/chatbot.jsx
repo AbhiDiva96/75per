@@ -3,11 +3,24 @@ import ChatBot from 'react-simple-chatbot';
 import { ThemeProvider } from 'styled-components';
 
 class MyChatbot extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      opened: false, // State to manage chatbot visibility
+    };
+  }
+
+  toggleChatbot = () => {
+    this.setState((prevState) => ({
+      opened: !prevState.opened,
+    }));
+  };
+
   render() {
     const steps = [
       {
         id: '1',
-        message: 'Welcome to 75% .com! What is your name?',
+        message: 'Welcome to 75%.com! What is your name?',
         trigger: 'name',
       },
       {
@@ -23,10 +36,10 @@ class MyChatbot extends Component {
       {
         id: 'yearOptions',
         options: [
-          { value: 'Year 1', label: 'Year 1', trigger: 'yearSelected' },
-          { value: 'Year 2', label: 'Year 2', trigger: 'yearSelected' },
-          { value: 'Year 3', label: 'Year 3', trigger: 'yearSelected' },
-          { value: 'Year 4', label: 'Year 4', trigger: 'yearSelected' },
+          { value: 'Year1', label: 'Year 1', trigger: 'yearSelected' },
+          { value: 'Year2', label: 'Year 2', trigger: 'yearSelected' },
+          { value: 'Year3', label: 'Year 3', trigger: 'yearSelected' },
+          { value: 'Year4', label: 'Year 4', trigger: 'yearSelected' },
         ],
         hideInput: true,
       },
