@@ -8,7 +8,7 @@ import { ThemeContext } from '../Content/context';
 import {HiSun,HiMoon} from 'react-icons/hi2'
 
 function Header() {
-    let {theme,toggleTheme} =useContext(ThemeContext)
+    let {theme,toggleTheme} =useContext(ThemeContext);
     function handleClick(e){
             if(theme=="dark"){
                 toggleTheme('light')
