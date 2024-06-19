@@ -21,7 +21,7 @@ const LoginSignup = () => {
   });
 
   const handleSignInWithGoogle = () => {
-    window.location.href = 'http://localhost:4000/auth/google'; // Redirect to the server route for Google OAuth login
+    window.location.href = 'https://seven5per-backend-1.onrender.com/auth/google'; // Redirect to the server route for Google OAuth login
   };
 
   const ChangeHandler = (e) => {
@@ -58,7 +58,7 @@ const LoginSignup = () => {
     if (!validate()) return;
     console.log("login");
     let responseData;
-    await fetch("http://localhost:4000/login", {
+    await fetch("https://seven5per-backend-1.onrender.com/login", {
       method: "POST",
       headers: {
         Accept: 'application/form-data',
@@ -78,7 +78,7 @@ const LoginSignup = () => {
     if (!validate()) return;
     console.log("Sign up");
     let responseData;
-    await fetch("http://localhost:4000/signup", {
+    await fetch("https://seven5per-backend-1.onrender.com/signup", {
       method: "POST",
       headers: {
         Accept: 'application/form-data',
