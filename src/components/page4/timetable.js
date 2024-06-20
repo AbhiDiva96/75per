@@ -33,7 +33,7 @@ function Timetable() {
         </svg>
       </Link>
        <Header/>
-
+    
        <div className="trdyr">
       <center>
         <h3> 3rd year time table</h3>
@@ -41,15 +41,15 @@ function Timetable() {
      </div>
 
        <div className='secbtn'>
-        <button onClick={() => handleSectionClick('sec-3A')} className ="button-86" > Sec-3A</button>
-        <button onClick={() => handleSectionClick('sec-3B')}  className ="button-86"> Sec-3B</button>
+        <button onClick={() => handleSectionClick('sec-3A')} className ="button-86 red" > Sec-3A</button>
+        <button onClick={() => handleSectionClick('sec-3B')}  className ="button-86 blue"> Sec-3B</button>
         <button onClick={() => handleSectionClick('sec-3C')} className ="button-86" > Sec-3C</button>
-        <button onClick={() => handleSectionClick('sec-3D(IT)') } className ="button-86"> Sec-3D(IT)</button>
+        <button onClick={() => handleSectionClick('sec-3D(IT)') } className ="button-86 pink"> Sec-3D(IT)</button>
        </div>
-    
+   
       {/* apering section of timetable */}
       {selectedSection && <Imgdata section={selectedSection}/>}
-
+  
     </div>
   )
 
