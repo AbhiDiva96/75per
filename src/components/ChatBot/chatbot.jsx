@@ -6,7 +6,7 @@ class MyChatbot extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      opened: false, //state to manage visibilty
+      opened: false, //State to manage chatbot visibilty
     };
   }
 
@@ -136,6 +136,7 @@ class MyChatbot extends Component {
             headerTitle="75Bot"
             steps={steps}
             floating={true}
+            
             opened={this.state.opened}
             toggleFloating={() => this.toggleChatbot()} //hook method to close tab 
             openedByDefault={true}
