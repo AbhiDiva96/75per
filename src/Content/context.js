@@ -1,4 +1,3 @@
-// ThemeContext.js
 import React, { createContext, useState, useEffect } from 'react';
 
 export const ThemeContext = createContext();
@@ -9,13 +8,8 @@ export const ThemeProvider = ({ children }) => {
   });
 
   useEffect(() => {
-    localStorage.setItem('theme',theme)
-    if(theme=='light'){
-      document.getElementsByTagName('body')[0].className='';
-    }  else{
-
-      document.getElementsByTagName('body')[0].className='active';
-    }
+    localStorage.setItem('theme', theme);
+    document.body.className = theme === 'light' ? '' : 'active';
   }, [theme]);
 
   const toggleTheme = () => {

@@ -1,5 +1,6 @@
 import React from 'react'
 import '../page2/notice.css';
+
 function notice() {
   return (
     <div className='notices'>
