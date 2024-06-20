@@ -136,6 +136,7 @@ class MyChatbot extends Component {
             headerTitle="75Bot"
             steps={steps}
             floating={true}
+            opened={false}
             opened={this.state.opened}
             toggleFloating={() => this.toggleChatbot()} // Hook up toggle method
             openedByDefault={true}
