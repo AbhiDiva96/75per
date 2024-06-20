@@ -14,7 +14,7 @@ function Home() {
       if (event.key === 'mode') {
         setValue(event.newValue);
       }
-      console.log('mode')
+      console.log('mpde')
     };
 
     window.addEventListener('storage', ()=>console.log('dfdfdf'));
