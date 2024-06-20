@@ -6,8 +6,23 @@ class MyChatbot extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      opened: false, // State to manage chatbot visibility
+      opened: true, // State to manage chatbot visibility
     };
+    this.chatBotRef = React.createRef();
+  }
+
+  componentDidMount() {
+    const closeIcon = document.querySelector('.kMqZix');
+    if (closeIcon) {
+      closeIcon.addEventListener('click', this.toggleChatbot);
+    }
+  }
+
+  componentWillUnmount() {
+    const closeIcon = document.querySelector('.kMqZix');
+    if (closeIcon) {
+      closeIcon.removeEventListener('click', this.toggleChatbot);
+    }
   }
 
   toggleChatbot = () => {
@@ -132,17 +147,20 @@ class MyChatbot extends Component {
     return (
       <div className="App">
         <ThemeProvider theme={theme}>
-          <ChatBot
-            headerTitle="75Bot"
-            steps={steps}
-            floating={true}
-            opened={true}
-            openedByDefault={true}
-            botDelay={0}
-            botAvatarStyle={{ left: '10px' }}
-            userDelay={0}
-            userAvatarStyle={{ left: '10px' }}
-          />
+          {this.state.opened && (
+            <div ref={this.chatBotRef}>
+              <ChatBot
+                headerTitle="75Bot"
+                steps={steps}
+                floating={true}
+                opened={true}
+                botDelay={0}
+                botAvatarStyle={{ left: '10px' }}
+                userDelay={0}
+                userAvatarStyle={{ left: '10px' }}
+              />
+            </div>
+          )}
         </ThemeProvider>
         <style>
           {`
@@ -163,13 +181,8 @@ class MyChatbot extends Component {
           `}
         </style>
       </div>
-    );  
+    );
   }
 }
 
 export default MyChatbot;
-
-
-
-
-
