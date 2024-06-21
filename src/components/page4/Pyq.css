@@ -15,10 +15,13 @@ html, body {
     text-align: center;
     margin: 20px;
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .year-heading {
-    font-size: 20px;
+    font-size: 24px;
     margin-bottom: 20px;
 }
 
@@ -27,59 +30,103 @@ html, body {
     justify-content: center;
     gap: 20px;
     margin-bottom: 20px;
+    flex-wrap: wrap;
 }
 
-.semester-btn {
-    padding: 10px 20px;
-    font-size: 16px;
+.semester-card {
+    padding: 20px;
+    font-size: 26px;
     cursor: pointer;
-    background-color: #4CAF50;
+    background-color: #4c59af;
     color: white;
     border: none;
     border-radius: 5px;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 200px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.semester-btn:hover {
+.semester-card:hover {
     background-color: #45a049;
+    transform: translateY(-5px);
 }
 
 .file-item {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    flex-direction: column;
     margin-bottom: 10px;
 }
 
-.download-btn {
-    padding: 5px 10px;
-    font-size: 14px;
-    cursor: pointer;
-    background-color: #008CBA;
-    color: white;
-    border: none;
-    border-radius: 3px;
-    transition: background-color 0.3s ease;
+.file-divider {
+    width: 80%;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 10px 0;
 }
 
-.download-btn:hover {
-    background-color: #007bb5;
+.file-actions {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.icon-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.icon {
+    font-size: 18px;
+    color: #008CBA;
+}
+
+.icon-container:hover .icon {
+    color: #007bb5;
+}
+
+.icon-container:hover .icon-label {
+    color: #007bb5;
+}
+
+.icon-label {
+    font-size: 12px;
+    color: #008CBA;
 }
 
 .back-btn {
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
-    background-color: #f44336;
+    background-color: rgb(65, 62, 62);
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 30px;
     transition: background-color 0.3s ease;
-    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    position: absolute; /* Fixed positioning within container */
+    top: 120px; /* Adjust this value to place the button correctly */
+    left: 20px; /* Adjust this value to align with your header logo */
 }
 
 .back-btn:hover {
     background-color: #e53935;
+}
+
+.back-icon {
+    margin-right: 5px;
 }
 
 .pyq-box {
@@ -87,30 +134,46 @@ html, body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 20px;
+    width: 100%;
 }
 
 .subjects-container {
     display: flex;
-    gap: 20px;
     flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    width: 100%;
 }
 
 .subject-box {
     border: 1px solid #ccc;
-    padding: 10px;
-    border-radius: 5px;
-    flex: 1;
-    min-width: 45%;
+    padding: 20px;
+    border-radius: 30px;
+    flex: 0 0 23%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 200px;
+    max-height: 300px;
+    text-align: center;
+}
+
+.subject-box:hover {
+    transform: translateY(-5px);
 }
 
 .subject-title {
     margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: bold;
 }
 
 @media (max-width: 1200px) {
     .subject-box {
-        min-width: 100%;
+        flex: 0 0 45%;
     }
 }
 
@@ -120,7 +183,7 @@ html, body {
         align-items: center;
     }
 
-    .semester-btn {
+    .semester-card {
         width: 100%;
         margin-bottom: 10px;
     }
@@ -132,6 +195,7 @@ html, body {
 
     .subject-box {
         min-width: 100%;
+        max-width: 100%;
     }
 }
 
@@ -143,9 +207,33 @@ html, body {
 
     .subject-box {
         min-width: 100%;
+        max-width: 100%;
+    }
+
+    .year-heading {
+        font-size: 20px;
+    }
+
+    .back-btn {
+        top: 100px;
+        left: 10px;
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    .semester-card {
+        font-size: 22px;
+        height: 80px;
     }
 }
 
 .footer {
-    margin-top: auto; 
+    margin-top: fixed;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f1f1f1;
+    text-align: center;
+    padding: 10px 0;
 }
