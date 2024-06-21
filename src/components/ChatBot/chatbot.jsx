@@ -137,7 +137,7 @@ class MyChatbot extends Component {
             steps={steps}
             floating={true}
             opened={this.state.opened}
-            toggleFloating={() => this.toggleChatbot()} //hook method to close tab 
+            toggleFloating={() => this.toggleChatbot()} 
             openedByDefault={true}
             botDelay={0}
             botAvatarStyle={{ left: '10px' }}
@@ -169,8 +169,3 @@ class MyChatbot extends Component {
 }
 
 export default MyChatbot;
-
-
-
-
-
