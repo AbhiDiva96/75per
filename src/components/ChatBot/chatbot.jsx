@@ -6,7 +6,7 @@ class MyChatbot extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      opened: false, // State to manage chatbot visibility added 
+      opened: false, // State to manage chatbot visibility 
     };
   }
 
