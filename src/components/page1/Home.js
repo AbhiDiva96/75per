@@ -3,7 +3,7 @@ import '../page1/Home.css';
 import {Link} from 'react-router-dom';
 function Home() {
   return (
-    <div>
+    <div class="container-size">
         <div className="title">
          <h2>Visit your year</h2>
         </div>

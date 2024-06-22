@@ -1,6 +1,7 @@
 import React from 'react'
 import {Link} from 'react-router-dom';
 import Header from '../../pages/header';
+import Footer from '../../pages/footer';
 import '../page3/1Year.css';
 import quantumImage from '../../assets/icons8-book-64.png';
 import timetable from '../../assets/icons8-timetable-64.png';
@@ -68,6 +69,7 @@ function fstYear() {
 </div>
 
 </div>
+<Footer/>
 </div>
   )
 }

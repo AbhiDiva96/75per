@@ -2,6 +2,7 @@ import React from 'react'
 import {Link} from 'react-router-dom';
 import '../page3/3Year.css'
 import Header from '../../pages/header';
+import Footer from '../../pages/footer';
 import quantumImage from '../../assets/icons8-book-64.png';
 import timetable from '../../assets/icons8-timetable-64.png';
 import syllabus from '../../assets/icons8-syllabus-80 (1).png';
@@ -69,7 +70,7 @@ function TrdYear() {
 </div>
 </div>
 </div>
-{/* <Footer /> */}
+<Footer />
     </div>
   )
 }

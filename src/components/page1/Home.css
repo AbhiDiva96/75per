@@ -1,3 +1,6 @@
+.container-size{
+  height: 70vh;
+}
 .title{
     display: flex;
     justify-content: center;
