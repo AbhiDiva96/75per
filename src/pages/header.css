@@ -173,3 +173,70 @@
   --background-color-light: #000000;
   --text-color-light: #fff;
 }
+.hamburger{
+  display: none !important;
+}
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  transition: 0.4s;
+}
+.mode{
+  display: none;
+}
+@media only screen and (max-width:510px){
+.hamburger {
+  align-items: center;
+display: flex !important;
+flex-direction: column;
+justify-content: center;
+gap: 5px;
+cursor: pointer;
+position: relative;
+right: 20px !important;
+}
+.active .hamburger div{
+  background-color: white !important;
+}
+.container{
+  z-index: 1;
+}
+
+.elements{
+  width: 50vw !important;
+  display: flex;
+  flex-direction: column;
+  padding-top: 10px !important;
+  align-items: center !important;
+  position: fixed;
+  gap: 20px !important;
+  top: 105px !important;
+  background-color: #e6e6fa;
+  overflow: hidden;
+  animation: animate 0.3s ease-in;
+  right: 0px !important;
+  border-radius: 15px !important;
+}
+.active .elements{
+  background-color: #000016;
+  color: white;
+}
+.container2{
+  display: none !important;
+}
+.mode{
+  position: absolute;
+  right: 20px !important;
+}.mode{
+  right: 70px !important;
+  display: block !important;
+}
+}@keyframes animate {
+  from{
+    height: 0px ;
+  }to{
+    height: 200px !important;
+
+  }
+}
