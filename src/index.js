@@ -5,7 +5,6 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import Syllabus from "./components/page4/Syllabus";
 import Quantum from "./components/page4/trdquantum";
 import Timetable from './components/page4/timetable'
 import Frtyear from "./components/page3/1Year";
@@ -34,6 +33,7 @@ import "./index.css";
 import LoginSignup from './components/login/LoginSignup.jsx';
 import ReviewPage from './components/review/review.jsx';
 import { ThemeContext, ThemeProvider } from './Content/context.js';
+import Syllabus from './components/page4/Syllabus.js';
 
 
 // const ThemeContext = createContext();
