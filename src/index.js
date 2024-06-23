@@ -33,7 +33,7 @@ import "./index.css";
 import LoginSignup from './components/login/LoginSignup.jsx';
 import ReviewPage from './components/review/review.jsx';
 import { ThemeContext, ThemeProvider } from './Content/context.js';
-import Syllabus from './components/page4/Syllabus.js';
+import Syllabus from './components/page4/syllabus.js';
 
 
 // const ThemeContext = createContext();
