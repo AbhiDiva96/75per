@@ -102,11 +102,11 @@ const ReviewPage = () => {
             <div className="formBox">
               <div className="inputBox w100">
               <label>Name</label>
-                <input className="input-review" placeholder="Manav Malhotra" type="text" name="name" value={formData.name} onChange={handleChange} required />
+                <input placeholder="Manav Malhotra" type="text" name="name" value={formData.name} onChange={handleChange} required />
               </div>
               <div className="inputBox w100">
               <label>Email Address</label>
-                <input className="input-review" placeholder="manav@example.com" type="email" name="email" value={formData.email} onChange={handleChange} required />
+                <input placeholder="manav@example.com" type="email" name="email" value={formData.email} onChange={handleChange} required />
               </div>
               <label>Rate Us</label>
               <div className="inputBox w100">
@@ -134,8 +134,8 @@ const ReviewPage = () => {
                 <label>Your Feedback</label>
                 <textarea placeholder="Tell us what you loved about our site" name="review" value={formData.review} onChange={handleChange} required />
               </div>
-              <div className="inputBox w100 ">
-                <input className="review-but" type="submit" value="Submit Review" />
+              <div className="inputBox w100">
+                <input type="submit" value="Submit Review" />
               </div>
             </div>
           </form>

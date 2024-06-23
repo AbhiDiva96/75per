@@ -153,16 +153,13 @@ section
     position: relative;
     margin-bottom: 35px;
 }
-.active .review-container .reviewForm .formBox .inputBox .input-review {
+.active .review-container .reviewForm .formBox .inputBox input {
     background-color: #000016 !important;
     color: white;
 }
 .active .review-container .reviewForm .formBox .inputBox textarea{
     background-color: #000016 !important;
     color: white;
-}
-.active .review-but{
-    background-color: #095a55 !important;
 }
 .review-container .reviewForm .formBox .inputBox.w50
 {
