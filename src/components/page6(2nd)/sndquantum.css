@@ -6,7 +6,7 @@
     flex-wrap: wrap;
     gap: 15px;
     height: 50vh;
-    margin-bottom: 100px;
+    margin-bottom: 0px;
   }
   .book {
      flex: nowrap;

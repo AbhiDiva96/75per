@@ -1,6 +1,7 @@
 import React from 'react'
 import {Link} from 'react-router-dom';
 import Header from '../../pages/header';
+import Footer from '../../pages/footer.js';
 import '../page3/1Year.css';
 import syllabus from '../../assets/icons8-syllabus-80 (1).png';
 
@@ -44,7 +45,7 @@ function fothYear() {
 
   </div>
   </div>
-
+  <Footer/>
   </div>
 
     )
