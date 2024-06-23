@@ -173,3 +173,64 @@
   --background-color-light: #000000;
   --text-color-light: #fff;
 }
+.hamburger{
+  display: none !important;
+}
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  transition: 0.4s;
+}
+.mode{
+  display: none;
+}
+@media only screen and (max-width:510px){
+.hamburger {
+  align-items: center;
+display: flex !important;
+flex-direction: column;
+justify-content: center;
+gap: 5px;
+cursor: pointer;
+position: relative;
+right: 20px !important;
+}
+.active .hamburger div{
+  background-color: white !important;
+}
+.container{
+  z-index: 1;
+}
+
+.elements {
+  width: 100vw !important;
+  display: flex;
+  flex-direction: column;
+  padding-top: 10px !important;
+  align-items: center !important;
+  position: fixed;
+  gap: 20px !important;
+  top: 105px !important;
+  background-color: rgba(230, 230, 250, 0.6); /* Light purple with some transparency */
+  backdrop-filter: blur(7px); /* Adjust the blur radius as needed */
+  overflow: hidden;
+  right: 0px !important;
+  border-radius: 15px !important;
+}
+
+.active .elements{
+  background-color: rgba(0, 0, 0, 0.6); 
+  color: white;
+}
+.container2{
+  display: none !important;
+}
+.mode{
+  position: absolute;
+  right: 20px !important;
+}.mode{
+  right: 70px !important;
+  display: block !important;
+}
+}
