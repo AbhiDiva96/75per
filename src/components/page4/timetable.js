@@ -1,7 +1,9 @@
 import React, {useState} from 'react'
 import Imgdata from '../imgdata';
 import '../page4/timetable.css';
-import Header from "../../pages/header.js"
+import Header from "../../pages/header.js";
+import BackButton from  "../BackButton/backbutton";
+
 function Timetable() {
 
     const [selectedSection, setSelectedSection] = useState(null);
@@ -13,7 +15,7 @@ function Timetable() {
     <div>
        
        <Header/>
-    
+      <BackButton/>
        <div className="trdyr">
       <center>
         <h3> 3rd year time table</h3>

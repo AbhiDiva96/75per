@@ -16,6 +16,7 @@ import Imgos from '../../assets/os.jpg';
 import Imgtafl from '../../assets/autometa.png';
 import {FaMagnifyingGlass } from 'react-icons/fa6'
 import { FilterBAndW } from '@mui/icons-material';
+import BackButton from  "../BackButton/backbutton";
 
 const books = [
   { img: Imgmath4, title: "Engineering Math4", file: "Mathematics4" },
@@ -58,6 +59,7 @@ function SndQuantum() {
   return (
     <div>
       <Header />
+      <BackButton/>
       <div style={{ overflow: "auto" }}>
         <h2 className="quantum-head">2nd year quantum book</h2>
         <div class='inputDiv1'>

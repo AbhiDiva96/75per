@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Header from '../../pages/header';
 import './fstlecture.css';
 import NoResultsFound from '../noResultsFound/index.js'
+import BackButton from  "../BackButton/backbutton";
 
 // Import images
 import ec from '../../assets/ec.jpg';
@@ -47,6 +48,7 @@ function Lecture() {
   return (
     <div>
       <Header />
+      <BackButton/>
       <div className="lecturetrd">
         <h1>1st year lecture</h1>
       </div>
