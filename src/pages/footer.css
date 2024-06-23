@@ -1,5 +1,5 @@
 .footer {
-  position: absolute;
+
   bottom: 0;
   width: 100%;
   background-color: lavender;
@@ -16,6 +16,9 @@
 
 .footer-content {
   padding: 1rem;
+}
+.active .footer-content{
+  background-color:#000016 !important ;
 }
 
 .footer-text {
