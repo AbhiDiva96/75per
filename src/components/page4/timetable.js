@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import Imgdata from '../imgdata';
 import '../page4/timetable.css';
 import Header from "../../pages/header.js"
+import Footer from './../../pages/footer.js';
 function Timetable() {
 
     const [selectedSection, setSelectedSection] = useState(null);
@@ -11,8 +12,10 @@ function Timetable() {
 
   return (
     <div>
+    <Header/>
+    <div style={{height:"69vh"}} >
        
-       <Header/>
+       
     
        <div className="trdyr">
       <center>
@@ -29,8 +32,10 @@ function Timetable() {
    
       {/* apering section of timetable */}
       {selectedSection && <Imgdata section={selectedSection}/>}
-  
+ 
     </div>
+     <Footer/>
+     </div>
   )
 
 
