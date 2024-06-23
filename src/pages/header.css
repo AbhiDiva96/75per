@@ -213,7 +213,7 @@ right: 20px !important;
   gap: 20px !important;
   top: 105px !important;
   background-color: rgba(230, 230, 250, 0.6); /* Light purple with some transparency */
-  backdrop-filter: blur(10px); /* Adjust the blur radius as needed */
+  backdrop-filter: blur(7px); /* Adjust the blur radius as needed */
   overflow: hidden;
   right: 0px !important;
   border-radius: 15px !important;
