@@ -203,7 +203,7 @@ right: 20px !important;
   z-index: 1;
 }
 
-.elements{
+.elements {
   width: 100vw !important;
   display: flex;
   flex-direction: column;
@@ -212,13 +212,15 @@ right: 20px !important;
   position: fixed;
   gap: 20px !important;
   top: 105px !important;
-  background-color: #e6e6fa;
+  background-color: rgba(230, 230, 250, 0.6); /* Light purple with some transparency */
+  backdrop-filter: blur(10px); /* Adjust the blur radius as needed */
   overflow: hidden;
   right: 0px !important;
   border-radius: 15px !important;
 }
+
 .active .elements{
-  background-color: #000016;
+  background-color: rgba(0, 0, 0, 0.6); 
   color: white;
 }
 .container2{
