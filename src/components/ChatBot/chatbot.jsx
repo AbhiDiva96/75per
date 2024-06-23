@@ -6,7 +6,7 @@ class MyChatbot extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      opened: true, // State to manage chatbot visibility
+      opened: false, // State to manage chatbot visibility
     };
     this.chatBotRef = React.createRef();
   }
@@ -150,10 +150,11 @@ class MyChatbot extends Component {
       <div className="App">
       <ThemeProvider theme={theme}>
         <div ref={this.chatBotRef}>
+          {/* Chatbot component */}
           <ChatBot
             headerTitle="75Bot"
             steps={steps}
-            floating={true}
+            floating
             opened={this.state.opened}
             botDelay={0}
             botAvatarStyle={{ left: '10px' }}
@@ -162,6 +163,7 @@ class MyChatbot extends Component {
           />
         </div>
 
+        {/* Button to toggle chatbot visibility */}
         <div
           className="chatbot-icon"
           style={{
@@ -173,14 +175,11 @@ class MyChatbot extends Component {
           }}
           onClick={this.toggleChatbot}
         >
-          {/* <img
-            src="path_to_your_icon_image"
-            alt="Chatbot Icon"
-            style={{ width: '50px', height: '50px' }}
-          /> */}
+       
         </div>
       </ThemeProvider>
 
+      {/* Custom styles */}
       <style>
         {`
           .rsc-os-option-element {
