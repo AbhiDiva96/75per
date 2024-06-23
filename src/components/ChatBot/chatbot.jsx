@@ -6,15 +6,13 @@ class MyChatbot extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      opened: false, // State to manage chatbot visibility 
+      opened: false, // State to manage chatbot visibility
     };
   }
 
-  toggleChatbot = () => {
-    this.setState((prevState) => ({
-      opened: !prevState.opened,
-    }));
-  };
+  toggleChatbot() {
+    this.setState({ opened: !this.state.opened });
+  }
 
   render() {
     const steps = [
@@ -137,7 +135,7 @@ class MyChatbot extends Component {
             steps={steps}
             floating={true}
             opened={this.state.opened}
-            toggleFloating={() => this.toggleChatbot()} 
+            toggleFloating={() => this.toggleChatbot()}
             openedByDefault={true}
             botDelay={0}
             botAvatarStyle={{ left: '10px' }}
@@ -164,13 +162,8 @@ class MyChatbot extends Component {
           `}
         </style>
       </div>
-    );  
+    );
   }
 }
 
 export default MyChatbot;
-
-
-
-
-
