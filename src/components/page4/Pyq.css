@@ -116,9 +116,9 @@ html, body {
     margin-bottom: 20px;
     display: flex;
     align-items: center;
-    position: absolute; /* Fixed positioning within container */
-    top: 120px; /* Adjust this value to place the button correctly */
-    left: 20px; /* Adjust this value to align with your header logo */
+    position: absolute; 
+    top: 120px; 
+    left: 20px; 
 }
 
 .back-btn:hover {
