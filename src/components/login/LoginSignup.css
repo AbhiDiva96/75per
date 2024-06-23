@@ -9,17 +9,17 @@
     color: white !important;
   }
   .active div , .active button{
-    background-color: #000016 !important;
+    /* background-color: #000016 !important; */
     color: white !important;
   
   }
-  .active .card , .active .book ,.active .box , .active .ag-courses-item_title, .active .ag-courses_item {
+  .active .card , .active .book ,.active .box , .active .ag-courses_item {
     background-color: #000000 !important;
     color: white !important;
     box-shadow: 0px 0px 15px lightblue;
   
   }
-  .active .text-box-in , .active div{
+  .active .text-box-in {
     color: white !important;
   }
   .active .ag-courses-item_bg{

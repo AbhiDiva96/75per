@@ -1,5 +1,6 @@
 .ag-format-container {
     width: 1142px;
+    height: 60vh;
     margin: 0 auto;
   }
   
@@ -29,6 +30,7 @@
   
     border-radius: 28px;
   }
+  
   .ag-courses-item_link {
     display: block;
     padding: 30px 20px;
@@ -48,10 +50,13 @@
     -ms-transform: scale(10);
     transform: scale(10);
   }
+  .active .ag-courses-item_link{
+    background-color: black;
+  }
   .ag-courses-item_title {
     min-height: 87px;
     margin: 0 0 25px;
-  
+    background-color: transparent !important;
     overflow: hidden;
   
     font-weight: bold;
