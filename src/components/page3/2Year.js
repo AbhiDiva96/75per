@@ -9,11 +9,14 @@ import syllabus from '../../assets/icons8-syllabus-80 (1).png';
 import pyq from "../../assets/icons8-minus-1-year-80.png"
 import Notes from "../../assets/icons8-notes-80.png"
 import youtube from "../../assets/icons8-youtube-64.png";
+import BackButton from  "../BackButton/backbutton";
+
 function sndYear() {
   return (
     <div>
       <Header />
       <div className='background'>
+        <BackButton/>
         <div className="yr">
           <h1>2nd Year</h1>
         </div>

@@ -13,6 +13,7 @@ import se from '../../assets/se.jpg';
 import bd from '../../assets/bd.jpg';
 import {FaMagnifyingGlass } from 'react-icons/fa6'
 import NoResultsFound from '../noResultsFound/index.js'
+import BackButton from  "../BackButton/backbutton";
 
 function Lecture() {
   // State for search query
@@ -41,6 +42,7 @@ function Lecture() {
   return (
     <div>
       <Header />
+      <BackButton/>
       <div className="lecturetrd">
         <h1>Lecture</h1>
       </div>

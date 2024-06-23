@@ -3,6 +3,7 @@ import Imgdata from '../imgdata';
 import '../page4/timetable.css';
 import Header from "../../pages/header.js"
 import ComingSoon from '../../pages/cs.js';
+import BackButton from  "../BackButton/backbutton";
 
 function  Fsttimetable() {
 
@@ -16,7 +17,7 @@ function  Fsttimetable() {
        
        <Header/>
 
-
+      <BackButton/>
         <ComingSoon />
        {/* <div className="trdyr"> */}
 

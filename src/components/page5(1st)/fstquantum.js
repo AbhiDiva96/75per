@@ -12,6 +12,7 @@ import Imgmath2 from '../../assets/math2.jpg';
 import Imgelectronics from '../../assets/electronics.png';
 import Imgmech from '../../assets/mechanical.jpg';
 import {FaMagnifyingGlass } from 'react-icons/fa6'
+import BackButton from  "../BackButton/backbutton";
 
 const books = [
   { img: Imgphy, title: "Engineering Physics", file: "physics" },
@@ -54,6 +55,7 @@ function Quantum() {
   return (
     <div>
       <Header />
+      <BackButton/>
       <div>
         <h2 className="quantum-head">1st year quantum book</h2>
         <div class='inputDiv1'>

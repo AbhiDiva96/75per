@@ -5,6 +5,7 @@ import Footer from "../../pages/footer";
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import DownloadIcon from '@mui/icons-material/Download';
 import './Pyq.css'; 
+import BackButton from  "../BackButton/backbutton";
 
 function Pyq() {
   const yearFiles = [
@@ -156,6 +157,7 @@ function Pyq() {
   return (
     <div className="page-container">
       <Header />
+      <BackButton/>
       <div className="container-pyq">
         <h2 className="year-heading">Download Previous Year Questions - {id} Year</h2>
         <div className="content-container">

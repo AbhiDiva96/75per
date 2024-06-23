@@ -2,6 +2,7 @@ import React  from 'react'
 import Header from "../../pages/header";
 import Footer from "../../pages/footer";
 import '../page4/syllabus.css';
+import BackButton from  "../BackButton/backbutton";
 
 
 const frthsyllabus =() => {
@@ -22,7 +23,7 @@ const frthsyllabus =() => {
     <div>
         <Header/>
 
-
+        <BackButton/>
          <h2 className='head'> Download Syllabus</h2>
          
          <div class="ag-format-container">

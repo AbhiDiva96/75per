@@ -10,7 +10,9 @@ import Imgcn from '../../assets/cn.webp';
 import Imgwt from '../../assets/wt.png';
 import Imgitcs from '../../assets/itcsimg.jpg';
 import {FaMagnifyingGlass } from 'react-icons/fa6'
-import NoResultsFound from '../noResultsFound/index.js'
+import NoResultsFound from '../noResultsFound/index.js';
+import BackButton from  "../BackButton/backbutton";
+
 const quantumBooks = [
   { img: Imgcd, title: "Compiler Design", file: "cd" },
   { img: Imgda, title: "Data Analytics", file: "DataAnalytics" },
@@ -51,6 +53,7 @@ function Quantum() {
   return (
     <div>
       <Header />
+      <BackButton/>
       <div style={{ overflow: "auto" }}>
         <div className="quantum-head">
           <h2>Download Quantum</h2>
