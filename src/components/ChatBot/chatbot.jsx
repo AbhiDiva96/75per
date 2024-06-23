@@ -6,30 +6,13 @@ class MyChatbot extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      opened: true, // State to manage chatbot visibility
+      opened: false, // State to manage chatbot visibility 
     };
-    this.chatBotRef = React.createRef();
-  }
-
-  componentDidMount() {
-    const closeIcon = document.querySelector('.kMqZix');
-    if (closeIcon) {
-      closeIcon.addEventListener('click', this.toggleChatbot);
-    }
-  }
-
-  componentWillUnmount() {
-    const closeIcon = document.querySelector('.kMqZix');
-    if (closeIcon) {
-      closeIcon.removeEventListener('click', this.toggleChatbot);
-    }
   }
 
   toggleChatbot() {
     this.setState({ opened: !this.state.opened });
   }
-
-
 
   render() {
     const steps = [
@@ -146,14 +129,13 @@ class MyChatbot extends Component {
 
     return (
       <div className="App">
-      <ThemeProvider theme={theme}>
-        <div ref={this.chatBotRef}>
+        <ThemeProvider theme={theme}>
           <ChatBot
             headerTitle="75Bot"
             steps={steps}
             floating={true}
             opened={this.state.opened}
-            toggleFloating={() => this.toggleChatbot()}
+            toggleFloating={() => this.toggleChatbot()} 
             openedByDefault={true}
             botDelay={0}
             botAvatarStyle={{ left: '10px' }}
@@ -180,48 +162,13 @@ class MyChatbot extends Component {
           `}
         </style>
       </div>
-        </div>
-
-        <div
-          className="chatbot-icon"
-          style={{
-            position: 'fixed',
-            bottom: '20px',
-            right: '20px',
-            zIndex: '1000',
-            cursor: 'pointer',
-          }}
-          onClick={this.toggleChatbot}
-        >
-          {/* <img
-            src="path_to_your_icon_image"
-            alt="Chatbot Icon"
-            style={{ width: '50px', height: '50px' }}
-          /> */}
-        </div>
-      </ThemeProvider>
-
-      <style>
-        {`
-          .rsc-os-option-element {
-            display: inline-block;
-            margin-right: 10px;
-          }
-          .rsc-os-option-element button {
-            background-color: #000000;
-            color: #FFFFFF;
-            border-radius: 5px;
-            padding: 10px;
-            margin: 5px;
-          }
-          .rsc-os-option-element button:hover {
-            background-color: #555555;
-          }
-        `}
-      </style>
-    </div>
-    );
+    );  
   }
 }
 
 export default MyChatbot;
+
+
+
+
+
