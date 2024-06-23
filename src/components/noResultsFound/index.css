@@ -1,0 +1,16 @@
+.bg-container{
+    display: flex;
+    flex-direction: column;
+    height: 50vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.bg-container h1{
+    font-size: 30px;
+    color: rgb(36, 36, 36);
+}
+
+.bg-container p{
+    color: #757575;
+}
