@@ -2,17 +2,12 @@ import React from 'react'
 import {Link} from 'react-router-dom';
 import '../page3/2Year.css'
 import Header from '../../pages/header';
-<<<<<<< HEAD
-import Footer from '../../pages/footer';
-import quantumImage from  '../../assets/icons8-book-64.png';
-import timetable from '../../assets/icons8-timetable-64.png';
-=======
->>>>>>> 388a4acb824da1e582b4dc95bf7542769fea3736
 import syllabus from '../../assets/icons8-syllabus-80 (1).png';
 import pyq from "../../assets/icons8-minus-1-year-80.png"
 import Notes from "../../assets/icons8-notes-80.png"
 import youtube from "../../assets/icons8-youtube-64.png";
-function FouthYear() {
+
+function fothYear() {
   return (
     <div>
     <Header/>
@@ -76,8 +71,6 @@ function FouthYear() {
   )
 }
 
-<<<<<<< HEAD
-export default FouthYear;
-=======
+
+
 export default fothYear;
->>>>>>> 388a4acb824da1e582b4dc95bf7542769fea3736
