@@ -31,6 +31,8 @@ class MyChatbot extends Component {
     }));
   };
 
+
+
   render() {
     const steps = [
       {
@@ -146,41 +148,59 @@ class MyChatbot extends Component {
 
     return (
       <div className="App">
-        <ThemeProvider theme={theme}>
-          {this.state.opened && (
-            <div ref={this.chatBotRef}>
-              <ChatBot
-                headerTitle="75Bot"
-                steps={steps}
-                floating={true}
-                opened={true}
-                botDelay={0}
-                botAvatarStyle={{ left: '10px' }}
-                userDelay={0}
-                userAvatarStyle={{ left: '10px' }}
-              />
-            </div>
-          )}
-        </ThemeProvider>
-        <style>
-          {`
-            .rsc-os-option-element {
-              display: inline-block;
-              margin-right: 10px;
-            }
-            .rsc-os-option-element button {
-              background-color: #000000;
-              color: #FFFFFF;
-              border-radius: 5px;
-              padding: 10px;
-              margin: 5px;
-            }
-            .rsc-os-option-element button:hover {
-              background-color: #555555;
-            }
-          `}
-        </style>
-      </div>
+      <ThemeProvider theme={theme}>
+        <div ref={this.chatBotRef}>
+          <ChatBot
+            headerTitle="75Bot"
+            steps={steps}
+            floating={true}
+            opened={this.state.opened}
+            botDelay={0}
+            botAvatarStyle={{ left: '10px' }}
+            userDelay={0}
+            userAvatarStyle={{ left: '10px' }}
+          />
+        </div>
+
+        <div
+          className="chatbot-icon"
+          style={{
+            position: 'fixed',
+            bottom: '20px',
+            right: '20px',
+            zIndex: '1000',
+            cursor: 'pointer',
+          }}
+          onClick={this.toggleChatbot}
+        >
+          {/* <img
+            src="path_to_your_icon_image"
+            alt="Chatbot Icon"
+            style={{ width: '50px', height: '50px' }}
+          /> */}
+        </div>
+      </ThemeProvider>
+
+      <style>
+        {`
+          .rsc-os-option-element {
+            display: inline-block;
+            margin-right: 10px;
+          }
+          .rsc-os-option-element button {
+            background-color: #000000;
+            color: #FFFFFF;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 5px;
+          }
+          .rsc-os-option-element button:hover {
+            background-color: #555555;
+          }
+        `}
+      </style>
+    </div>
+      
     );
   }
 }

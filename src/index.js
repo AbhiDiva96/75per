@@ -5,7 +5,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import Syllabus from "./components/page4/syllabus";
+import Syllabus from "./components/page4/Syllabus";
 import Quantum from "./components/page4/trdquantum";
 import Timetable from './components/page4/timetable'
 import Frtyear from "./components/page3/1Year";
