@@ -6,8 +6,9 @@ class MyChatbot extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      opened: false, // State to manage chatbot visibility 
+      opened: false, // State to manage chatbot visibility
     };
+    this.toggleChatbot = this.toggleChatbot.bind(this); // Binding the method
   }
 
   toggleChatbot() {
@@ -128,12 +129,13 @@ class MyChatbot extends Component {
     };
 
     return (
-      <div className="App">
-        <ThemeProvider theme={theme}>
+      <ThemeProvider theme={theme}>
+        <div>
+          {/* Chatbot component */}
           <ChatBot
             headerTitle="75Bot"
             steps={steps}
-            floating={true}
+            floating
             opened={this.state.opened}
             toggleFloating={() => this.toggleChatbot()} 
             openedByDefault={true}
@@ -142,33 +144,43 @@ class MyChatbot extends Component {
             userDelay={0}
             userAvatarStyle={{ left: '10px' }}
           />
-        </ThemeProvider>
-        <style>
-          {`
-            .rsc-os-option-element {
-              display: inline-block;
-              margin-right: 10px;
-            }
-            .rsc-os-option-element button {
-              background-color: #000000;
-              color: #FFFFFF;
-              border-radius: 5px;
-              padding: 10px;
-              margin: 5px;
-            }
-            .rsc-os-option-element button:hover {
-              background-color: #555555;
-            }
-          `}
-        </style>
-      </div>
-    );  
+          <style>
+            {`
+              .rsc-os-option-element {
+                display: inline-block;
+                margin-right: 10px;
+              }
+              .rsc-os-option-element button {
+                background-color: #000000;
+                color: #FFFFFF;
+                border-radius: 5px;
+                padding: 10px;
+                margin: 5px;
+              }
+              .rsc-os-option-element button:hover {
+                background-color: #555555;
+              }
+            `}
+          </style>
+          {/* Button to toggle chatbot visibility */}
+          <div
+            className="chatbot-icon"
+            style={{
+              position: 'fixed',
+              bottom: '20px',
+              right: '20px',
+              zIndex: '1000',
+              cursor: 'pointer',
+            }}
+            onClick={this.toggleChatbot}
+          >
+            {/* Placeholder for chatbot toggle button */}
+            <img src="chatbot-icon.png" alt="Chatbot Icon" />
+          </div>
+        </div>
+      </ThemeProvider>
+    );
   }
 }
 
 export default MyChatbot;
-
-
-
-
-
