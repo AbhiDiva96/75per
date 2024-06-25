@@ -61,7 +61,7 @@ function Pyq() {
           { name: 'Operating Systems Lab', files: ['4thsem_os_lab.pdf'] },
           { name: 'Microprocessor Lab', files: ['4thsem_microprocessor_lab.pdf'] },
           { name: 'Python Language Programming Lab', files: ['4thsem_python_lab.pdf'] },
-          { name: 'Python Programming/Computer System Security', files: ['4thsem_python_security.pdf'] }
+          { name: 'Computer System Security/Python Programming', files: ['4thsem_python_security.pdf'] }
         ]
       }
     },
@@ -171,50 +171,51 @@ function Pyq() {
                   <button className="back-btn" onClick={() => setSelectedSemester(null)}>
                     <i className="back-icon">&larr;</i> Back 
                   </button>
+                  
                   <div className="subjects-container">
                     {selectedSemester === 'odd' ? yearItem.oddSemesters.subjects.map((subject, subjIndex) => (
                       <div key={subjIndex} className="subject-box">
-                        <h4 className="subject-title">{subject.name}</h4>
-                        <ul>
+                       <div className='subject-title-container'> <h4 className="subject-title">{subject.name}</h4> </div>
+                        
                           {subject.files.map((file, fileIndex) => (
                             <div key={fileIndex} className="file-item">
-                              <span>{file}</span>
+                              {/* <span>{file}</span> */}
                               <div className="file-actions">
                                 <div className="icon-container" onClick={() => handleView(`pyqs/${yearItem.year}Year/${file}`)}>
                                   <VisibilityIcon className="icon" />
-                                  <span className="icon-label">View</span>
+                                  {/* <span className="icon-label">View</span> */}
                                 </div>
                                 <div className="icon-container" onClick={() => handleDownload(`pyqs/${yearItem.year}Year/${file}`)}>
                                   <DownloadIcon className="icon" />
-                                  <span className="icon-label">Download</span>
+                                  {/* <span className="icon-label">Download</span> */}
                                 </div>
                               </div>
                               {subject.files.length > 1 && fileIndex < subject.files.length - 1 && <hr className="file-divider" />}
                             </div>
                           ))}
-                        </ul>
+                     
                       </div>
                     )) : yearItem.evenSemesters.subjects.map((subject, subjIndex) => (
                       <div key={subjIndex} className="subject-box">
-                        <h4 className="subject-title">{subject.name}</h4>
-                        <ul>
+                       <div className='subject-title-container'> <h4 className="subject-title">{subject.name}</h4> </div>
+                  
                           {subject.files.map((file, fileIndex) => (
                             <div key={fileIndex} className="file-item">
-                              <span>{file}</span>
-                              <div className="file-actions">
-                                <div className="icon-container" onClick={() => handleView(`pyqs/${yearItem.year}Year/${file}`)}>
-                                  <VisibilityIcon className="icon" />
-                                  <span className="icon-label">View</span>
-                                </div>
-                                <div className="icon-container" onClick={() => handleDownload(`pyqs/${yearItem.year}Year/${file}`)}>
-                                  <DownloadIcon className="icon" />
-                                  <span className="icon-label">Download</span>
-                                </div>
+                            {/* <span>{file}</span> */}
+                            <div className="file-actions">
+                              <div className="icon-container" onClick={() => handleView(`pyqs/${yearItem.year}Year/${file}`)}>
+                                <VisibilityIcon className="icon" />
+                                {/* <span className="icon-label">View</span> */}
                               </div>
-                              {subject.files.length > 1 && fileIndex < subject.files.length - 1 && <hr className="file-divider" />}
+                              <div className="icon-container" onClick={() => handleDownload(`pyqs/${yearItem.year}Year/${file}`)}>
+                                <DownloadIcon className="icon" />
+                                {/* <span className="icon-label">Download</span> */}
+                              </div>
                             </div>
+                            {subject.files.length > 1 && fileIndex < subject.files.length - 1 && <hr className="file-divider" />}
+                          </div>
                           ))}
-                        </ul>
+                       
                       </div>
                     ))}
                   </div>
