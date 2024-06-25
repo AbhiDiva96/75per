@@ -32,7 +32,7 @@ import {
 import "./index.css";
 import LoginSignup from './components/login/LoginSignup.jsx';
 import ReviewPage from './components/review/review.jsx';
-import { ThemeContext, ThemeProvider } from './Content/context.js';
+import { ThemeProvider } from './Content/context.js';
 import Syllabus from './components/page4/syllabus.js';
 
 
@@ -56,105 +56,104 @@ const router = createBrowserRouter([
   //   path: "syllabus",
   //   element: <Syllabus/>
   //  },
-   {
-    path:"fstsyllabus",
-    element:<Fstsyllabus/>
-   },
-   {
-    path:"sndsyllabus",
-    element:<Sndsyllabus/>
-   },
-   {
-    path:"trdsyllabus",
-    element:<TrdSyllabus/>
-   },
-   {
-    path:"frthsyllabus",
-    element:<Frthsyllabus/>
-   },
-   {
+  {
+    path: "fstsyllabus",
+    element: <Fstsyllabus />
+  },
+  {
+    path: "sndsyllabus",
+    element: <Sndsyllabus />
+  },
+  {
+    path: "trdsyllabus",
+    element: <TrdSyllabus />
+  },
+  {
+    path: "frthsyllabus",
+    element: <Frthsyllabus />
+  },
+  {
     path: "timetable",
-    element: <Timetable/>
-   },
-   {
+    element: <Timetable />
+  },
+  {
     path: "notes",
-    element: <Notes/>
-   },
-   {
+    element: <Notes />
+  },
+  {
     path: "pyq/:id",
     element: <Pyq />
-   },
-   {
+  },
+  {
     path: "quantum",
-    element: <Quantum/>
-   },
+    element: <Quantum />
+  },
 
-   {
+  {
     path: "1syllabus",
-    element: <Syllabus/>
-   },
-   {
+    element: <Syllabus />
+  },
+  {
     path: "1timetable",
-    element: <Timetable/>
-   },
-   {
+    element: <Timetable />
+  },
+  {
     path: "fstlecture",
-    element: <FstLecture/>
-   },
-   {
+    element: <FstLecture />
+  },
+  {
     path: "fstquantum",
-    element: <FstQuantum/>
-   },
-   {
-     path : "fsttimetable",
-     element: <Fsttimetable/>
-   },
-   {
+    element: <FstQuantum />
+  },
+  {
+    path: "fsttimetable",
+    element: <Fsttimetable />
+  },
+  {
     path: "sndquantum",
     element: <SndQuantum />
-   },
-   {
-   path: "sndlecture",
-   element: <SndLecture/>
-   },
+  },
+  {
+    path: "sndlecture",
+    element: <SndLecture />
+  },
 
-   {
-    path: " sndtimetable",
-    element: <Sndtimetable/>
-    },
-
-   {
+  {
+    path: "sndyeartt",
+    element: <Sndtimetable />
+  },
+  {
     path: "trdlecture",
-    element: <Trdlecture/>
-   },
-   {
+    element: <Trdlecture />
+  },
+  {
     path: "fstyear",
-    element: <Frtyear/>
-   },
-   {
+    element: <Frtyear />
+  },
+  {
     path: "sndyear",
-    element: <Sndyear/>
-   },
-   {
+    element: <Sndyear />
+  },
+  {
     path: "trdyear",
-    element: <Trdyear/>
-   },
-   {
+    element: <Trdyear />
+  },
+  {
     path: "fothyear",
-    element: <Fothyear/>
-   },
-   {
+    element: <Fothyear />
+  },
+  {
     path: "/login",
-    element: <LoginSignup/>
-   },
-   {
+    element: <LoginSignup />
+  },
+  {
     path: "/Review",
-    element: <ReviewPage/>
-   },
-   {
+    element: <ReviewPage />
+  },
+  {
     path: "/about",
     element: <About />
-   },
+  },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
@@ -163,14 +162,14 @@ ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <ThemeProvider>
 
-    <RouterProvider router={router} />
+      <RouterProvider router={router} />
     </ThemeProvider>
 
     {/* <ThemeContext.Provider value={{ isDarkMode, toggleTheme }}>
       {children}
     </ThemeContext.Provider> */}
 
- </React.StrictMode>
+  </React.StrictMode>
 
 
 );
