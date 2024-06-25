@@ -13,6 +13,7 @@ import Imgelectronics from '../../assets/electronics.png';
 import Imgmech from '../../assets/mechanical.jpg';
 import {FaMagnifyingGlass } from 'react-icons/fa6';
 import {Link} from 'react-router-dom';
+import Footer from './../../pages/footer.js';
 
 const books = [
   { img: Imgphy, title: "Engineering Physics", file: "physics" },
@@ -100,6 +101,7 @@ function Quantum() {
           ))}
         </div> : <NoResultsFound />}
       </div>
+    <Footer/>
     </div>
   );
 }

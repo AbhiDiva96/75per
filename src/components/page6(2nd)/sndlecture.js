@@ -15,6 +15,7 @@ import Imgtafl from '../../assets/ltafl.jpg';
 import ssii from '../../assets/ssii.jpg';
 import {FaMagnifyingGlass } from 'react-icons/fa6'
 import {Link} from 'react-router-dom';
+import Footer from './../../pages/footer.js';
 
 const lectures = [
   { img: Imgmath4, title: "Engineering Mathematics-4", link: "https://www.youtube.com/watch?v=14bNduEh9ag&list=PL5Dqs90qDljXYjZ8kDHtpMqPGKNGb2dxu" },
@@ -95,6 +96,7 @@ function SndLecture() {
           </div>
         ))}
       </div> : <NoResultsFound />}
+      <Footer/>
     </div>
   );
 }

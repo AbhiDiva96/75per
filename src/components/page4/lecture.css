@@ -14,7 +14,7 @@
     flex-wrap: wrap;
     gap: 15px;
     
-    height: 50vh;
+    height: 100% !important;
     margin-bottom: 0px;
   }
   

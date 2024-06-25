@@ -3,6 +3,8 @@ import Imgdata from '../imgdata';
 import '../page4/timetable.css';
 import Header from "../../pages/header.js"
 import {Link} from 'react-router-dom';
+import Footer from './../../pages/footer.js';
+
 function Timetable() {
 
     const [selectedSection, setSelectedSection] = useState(null);
@@ -12,7 +14,7 @@ function Timetable() {
 
   return (
     <div>
-       <Link to="/trdyear" className="back-icon" style={{ position: 'absolute', top: '75px !important', left: '35px', fontSize: '42px' }}>
+    <Link to="/trdyear" className="back-icon" style={{ position: 'absolute', top: '75px !important', left: '35px', fontSize: '42px' }}>
         <svg 
           xmlns="http://www.w3.org/2000/svg" 
           width="42" 
@@ -32,8 +34,8 @@ function Timetable() {
           />
         </svg>
       </Link>
-       <Header/>
-    
+    <Header/>
+    <div style={{height:"69vh"}} >
        <div className="trdyr">
       <center>
         <h3> 3rd year time table</h3>
@@ -49,8 +51,10 @@ function Timetable() {
    
       {/* apering section of timetable */}
       {selectedSection && <Imgdata section={selectedSection}/>}
-  
+ 
     </div>
+     <Footer/>
+     </div>
   )
 
 

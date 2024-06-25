@@ -3,6 +3,7 @@ import Header from '../../pages/header';
 import './fstlecture.css';
 import NoResultsFound from '../noResultsFound/index.js'
 import {Link} from 'react-router-dom';
+import Footer from './../../pages/footer.js';
 
 // Import images
 import ec from '../../assets/ec.jpg';
@@ -97,6 +98,7 @@ function Lecture() {
           </div>
         ))}
       </div> : <NoResultsFound /> }
+      <Footer />
     </div>
   );
 }

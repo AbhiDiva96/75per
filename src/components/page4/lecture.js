@@ -13,7 +13,9 @@ import se from '../../assets/se.jpg';
 import bd from '../../assets/bd.jpg';
 import {FaMagnifyingGlass } from 'react-icons/fa6'
 import NoResultsFound from '../noResultsFound/index.js'
+
 import {Link} from 'react-router-dom';
+import Footer from './../../pages/footer.js';
 
 function Lecture() {
   // State for search query
@@ -91,6 +93,7 @@ function Lecture() {
         ))}
       </div>
       : <NoResultsFound />}
+      <Footer />
     </div>
   );
 }
