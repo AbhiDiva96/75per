@@ -16,7 +16,7 @@ import Imgos from '../../assets/os.jpg';
 import Imgtafl from '../../assets/autometa.png';
 import {FaMagnifyingGlass } from 'react-icons/fa6'
 import { FilterBAndW } from '@mui/icons-material';
-
+import Footer from './../../pages/footer.js';
 const books = [
   { img: Imgmath4, title: "Engineering Math4", file: "Mathematics4" },
   { img: Imgdsa, title: "Data Structure", file: "dsa" },
@@ -83,6 +83,7 @@ function SndQuantum() {
           ))}
         </div> : <NoResultsFound />}
       </div>
+      <Footer/>
     </div>
   );
 }
