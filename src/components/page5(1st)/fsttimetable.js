@@ -27,7 +27,7 @@ function Fsttimetable() {
        <div className='secbtn'>
         <button onClick={() => handleSectionClick('sec 1A')} className ="button-86 red" > Sec-1A</button>
         <button onClick={() => handleSectionClick('sec 1C')} className ="button-86" > Sec-1C</button>
-        <button onClick={() => handleSectionClick('sec 1D')}  className ="button-86 blue"> Sec-1D</button>
+        <button onClick={() => handleSectionClick('se 1D')}  className ="button-86 blue"> Sec-1D</button>
         <button onClick={() => handleSectionClick('sec 1E') } className ="button-86 pink"> Sec-1E </button>
         <button onClick={() => handleSectionClick('sec 1G') } className ="button-86 red"> Sec-1G </button>
        </div>
