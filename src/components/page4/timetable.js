@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import Imgdata from '../imgdata';
 import '../page4/timetable.css';
 import Header from "../../pages/header.js"
+import MyChatbot from '../ChatBot/chatbot.jsx';
 function Timetable() {
 
     const [selectedSection, setSelectedSection] = useState(null);
@@ -28,7 +29,7 @@ function Timetable() {
        </div>
    
       {/* apering section of timetable */}
-      {selectedSection && <Imgdata section={selectedSection}/>}
+      {selectedSection && <Imgdata section={selectedSection}/>} <MyChatbot />
   
     </div>
   )

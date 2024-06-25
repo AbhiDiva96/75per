@@ -5,6 +5,7 @@ import Footer from "../../pages/footer";
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import DownloadIcon from '@mui/icons-material/Download';
 import './Pyq.css'; 
+import MyChatbot from '../ChatBot/chatbot';
 
 function Pyq() {
   const yearFiles = [
@@ -226,7 +227,7 @@ function Pyq() {
           </div>
         </div>
       </div>
-      <Footer />
+      <Footer /> <MyChatbot />
     </div>
   );
 }

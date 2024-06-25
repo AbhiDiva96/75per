@@ -16,6 +16,7 @@ import Imgos from '../../assets/os.jpg';
 import Imgtafl from '../../assets/autometa.png';
 import {FaMagnifyingGlass } from 'react-icons/fa6'
 import { FilterBAndW } from '@mui/icons-material';
+import MyChatbot from '../ChatBot/chatbot.jsx';
 
 const books = [
   { img: Imgmath4, title: "Engineering Math4", file: "Mathematics4" },
@@ -82,7 +83,7 @@ function SndQuantum() {
             </div>
           ))}
         </div> : <NoResultsFound />}
-      </div>
+      </div> <MyChatbot />
     </div>
   );
 }
