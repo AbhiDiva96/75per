@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Header from '../../pages/header';
 import './fstlecture.css';
 import NoResultsFound from '../noResultsFound/index.js'
-
+import Footer from './../../pages/footer.js';
 // Import images
 import ec from '../../assets/ec.jpg';
 import mtwo from '../../assets/mtwo.jpg';
@@ -77,6 +77,7 @@ function Lecture() {
       </div> : <NoResultsFound /> }
       <MyChatbot />
 
+      <Footer />
     </div>
   );
 }
