@@ -8,30 +8,12 @@ class MyChatbot extends Component {
     this.state = {
       opened: false, // State to manage chatbot visibility
     };
-    this.chatBotRef = React.createRef();
+    this.toggleChatbot = this.toggleChatbot.bind(this); // Binding the method
   }
 
-  componentDidMount() {
-    const closeIcon = document.querySelector('.kMqZix');
-    if (closeIcon) {
-      closeIcon.addEventListener('click', this.toggleChatbot);
-    }
+  toggleChatbot() {
+    this.setState({ opened: !this.state.opened });
   }
-
-  componentWillUnmount() {
-    const closeIcon = document.querySelector('.kMqZix');
-    if (closeIcon) {
-      closeIcon.removeEventListener('click', this.toggleChatbot);
-    }
-  }
-
-  toggleChatbot = () => {
-    this.setState((prevState) => ({
-      opened: !prevState.opened,
-    }));
-  };
-
-
 
   render() {
     const steps = [
@@ -147,59 +129,56 @@ class MyChatbot extends Component {
     };
 
     return (
-      <div className="App">
       <ThemeProvider theme={theme}>
-        <div ref={this.chatBotRef}>
+        <div>
           {/* Chatbot component */}
           <ChatBot
             headerTitle="75Bot"
             steps={steps}
             floating
             opened={this.state.opened}
+            toggleFloating={() => this.toggleChatbot()} 
+            openedByDefault={true}
             botDelay={0}
             botAvatarStyle={{ left: '10px' }}
             userDelay={0}
             userAvatarStyle={{ left: '10px' }}
           />
-        </div>
-
-        {/* Button to toggle chatbot visibility */}
-        <div
-          className="chatbot-icon"
-          style={{
-            position: 'fixed',
-            bottom: '20px',
-            right: '20px',
-            zIndex: '1000',
-            cursor: 'pointer',
-          }}
-          onClick={this.toggleChatbot}
-        >
-       
+          <style>
+            {`
+              .rsc-os-option-element {
+                display: inline-block;
+                margin-right: 10px;
+              }
+              .rsc-os-option-element button {
+                background-color: #000000;
+                color: #FFFFFF;
+                border-radius: 5px;
+                padding: 10px;
+                margin: 5px;
+              }
+              .rsc-os-option-element button:hover {
+                background-color: #555555;
+              }
+            `}
+          </style>
+          {/* Button to toggle chatbot visibility */}
+          <div
+            className="chatbot-icon"
+            style={{
+              position: 'fixed',
+              bottom: '20px',
+              right: '20px',
+              zIndex: '1000',
+              cursor: 'pointer',
+            }}
+            onClick={this.toggleChatbot}
+          >
+            {/* Placeholder for chatbot toggle button */}
+            <img src="chatbot-icon.png" alt="Chatbot Icon" />
+          </div>
         </div>
       </ThemeProvider>
-
-      {/* Custom styles */}
-      <style>
-        {`
-          .rsc-os-option-element {
-            display: inline-block;
-            margin-right: 10px;
-          }
-          .rsc-os-option-element button {
-            background-color: #000000;
-            color: #FFFFFF;
-            border-radius: 5px;
-            padding: 10px;
-            margin: 5px;
-          }
-          .rsc-os-option-element button:hover {
-            background-color: #555555;
-          }
-        `}
-      </style>
-    </div>
-      
     );
   }
 }
