@@ -44,7 +44,7 @@ isOpen?setIsOpen(false): setIsOpen(true)
             <b>About Us</b>
             </a>
                     {
-                        theme === 'dark' ? <HiSun size={"3rem"} onClick={handleClick} style={{ paddingRight: '20px' }} /> : <HiMoon size={"3rem"} onClick={handleClick} style={{ paddingRight: '20px' }} />
+                        theme === 'dark' ? <HiSun size={"3rem"} onClick={handleClick} style={{ paddingRight: '20px' }} /> : <HiMoon size={"3rem"} onClick={handleClick} style={{ paddingRight: '30px' }} />
                     }
     </div>
     {
