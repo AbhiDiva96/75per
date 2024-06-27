@@ -27,7 +27,7 @@ function SndTimetable() {
        <div className='secbtn'>
         <button onClick={() => handleSectionClick('sec 2A')} className ="button-86 red" > Sec-2A</button>
         <button onClick={() => handleSectionClick('sec 2B')}  className ="button-86 blue"> Sec-2B</button>
-        <button onClick={() => handleSectionClick('sec 2C')} className ="button-86" > Sec-2C</button>
+        <button onClick={() => handleSectionClick('Sec 2C')} className ="button-86" > Sec-2C</button>
         <button onClick={() => handleSectionClick('sec 2D') } className ="button-86 pink"> Sec-2D</button>
        </div>
    
