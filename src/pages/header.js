@@ -42,11 +42,10 @@ isOpen?setIsOpen(false): setIsOpen(true)
         </a>
         <a href="/about" className="logo link1" style={{ padding: 10, margin: 5, height: 30, width: 80 }}>
             <b>About Us</b>
-        </a>
-     {
-
-     theme=='dark'? <HiSun size={"3rem"} onClick={handleClick}/>:<HiMoon size={"3rem"} onClick={handleClick}/>
-     }  
+            </a>
+                    {
+                        theme === 'dark' ? <HiSun size={"3rem"} onClick={handleClick} style={{ paddingRight: '20px' }} /> : <HiMoon size={"3rem"} onClick={handleClick} style={{ paddingRight: '20px' }} />
+                    }
     </div>
     {
 
