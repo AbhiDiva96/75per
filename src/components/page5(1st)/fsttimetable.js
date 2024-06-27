@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import Imgdata from '../imgdata.js';
 import '../page4/timetable.css';
 import Header from "../../pages/header.js"
-import Footer from '../../pages/footer.js';
+
 
 function Fsttimetable() {
 
@@ -16,11 +16,7 @@ function Fsttimetable() {
     <Header/>
     <div style={{height:"69vh"}} >
        
-       
-    
-       <div className="trdyr">
-      <center>
-        <h3> 1st year time table</h3>
+
         </center>
      </div>
 
@@ -32,8 +28,6 @@ function Fsttimetable() {
         <button onClick={() => handleSectionClick('sec 1G') } className ="button-86 red"> Sec-1G </button>
        </div>
 
-      {selectedSection && <Imgdata section={selectedSection}/>}
- 
     </div>
      <Footer/>
      </div>
