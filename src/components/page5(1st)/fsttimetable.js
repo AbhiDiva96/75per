@@ -15,7 +15,7 @@ function  Fsttimetable() {
   return (
     <div>
        
-       <Header/>
+      
 
 
         <ComingSoon />
