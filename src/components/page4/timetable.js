@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import Imgdata from '../imgdata';
 import '../page4/timetable.css';
 import Header from "../../pages/header.js"
+import MyChatbot from '../ChatBot/chatbot.jsx';
 import Footer from './../../pages/footer.js';
 function Timetable() {
 
@@ -34,7 +35,7 @@ function Timetable() {
       {selectedSection && <Imgdata section={selectedSection}/>}
  
     </div>
-     <Footer/>
+     <Footer/> <MyChatbot/>
      </div>
   )
 

@@ -5,6 +5,7 @@ import ThumbUpIcon from '@mui/icons-material/ThumbUp';
 import header from '../pages/header';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
+import MyChatbot from './ChatBot/chatbot';
 
 const timetableData = {
   secA: [
@@ -407,7 +408,7 @@ function App() {
           </a>
       </div>
     </div>
-     
+    <MyChatbot />
     </div>
 
     

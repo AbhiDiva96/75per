@@ -3,6 +3,7 @@ import Imgdata from '../imgdata';
 import '../page4/timetable.css';
 import Header from "../../pages/header.js"
 import ComingSoon from '../../pages/cs.js';
+import MyChatbot from '../ChatBot/chatbot.jsx';
 
 function  Fsttimetable() {
 
@@ -37,7 +38,7 @@ function  Fsttimetable() {
     
       {/* apering section of timetable */}
       {/* {selectedSection && <Imgdata section={selectedSection}/>} */} 
-
+      <MyChatbot />
     </div>
   )
 

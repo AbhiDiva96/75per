@@ -14,6 +14,7 @@ import Imgos from '../../assets/los.jpg';
 import Imgtafl from '../../assets/ltafl.jpg';
 import ssii from '../../assets/ssii.jpg';
 import {FaMagnifyingGlass } from 'react-icons/fa6'
+import MyChatbot from '../ChatBot/chatbot.jsx';
 import Footer from './../../pages/footer.js';
 
 const lectures = [
@@ -74,7 +75,7 @@ function SndLecture() {
             </a>
           </div>
         ))}
-      </div> : <NoResultsFound />}
+      </div> : <NoResultsFound />} <MyChatbot />
       <Footer/>
     </div>
   );

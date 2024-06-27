@@ -5,6 +5,7 @@ import { FaStar } from "react-icons/fa";
 import 'react-toastify/dist/ReactToastify.css';
 import './review.css';
 import { ThemeContext } from "../../Content/context";
+import MyChatbot from "../ChatBot/chatbot";
 
 const ReviewPage = () => {
   const {theme}=useContext(ThemeContext)
@@ -141,7 +142,7 @@ const ReviewPage = () => {
           </form>
         </div>
       </div>
-      <ToastContainer />
+      <ToastContainer /> <MyChatbot />
     </section>
   );
 };

@@ -7,6 +7,7 @@ import resource from '../../assets/resource.png'
 import benefit from '../../assets/benefits.png'
 import { Link } from 'react-router-dom';
 import { ThemeContext } from '../../Content/context';
+import MyChatbot from '../ChatBot/chatbot';
 
 // import sun from './images/sun.png'; // Example image import
 // import moon from './images/moon.png'; // Example image import
@@ -91,7 +92,7 @@ const About = () => {
             </div>
         </div>
     </div>
-        
+    <MyChatbot />
      </> 
     );
 };
