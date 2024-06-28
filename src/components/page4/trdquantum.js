@@ -11,6 +11,7 @@ import Imgwt from '../../assets/wt.png';
 import Imgitcs from '../../assets/itcsimg.jpg';
 import {FaMagnifyingGlass } from 'react-icons/fa6'
 import NoResultsFound from '../noResultsFound/index.js'
+import MyChatbot from '../ChatBot/chatbot.jsx';
 import Footer from './../../pages/footer.js';
 const quantumBooks = [
   { img: Imgcd, title: "Compiler Design", file: "cd" },
@@ -79,9 +80,9 @@ function Quantum() {
             </div>
           ))}
         </div> : <NoResultsFound />}
+      </div> 
+      <Footer/><MyChatbot />
       </div>
-      <Footer/>
-    </div>
   )
 }
 

@@ -2,6 +2,7 @@ import React  from 'react'
 import Header from "../../pages/header";
 import Footer from "../../pages/footer";
 import '../page4/syllabus.css';
+import MyChatbot from '../ChatBot/chatbot';
 
 
 const trdsyllabus =() => {
@@ -71,7 +72,7 @@ const trdsyllabus =() => {
     </div>
   </div>
 </div>
-      <Footer/>
+      <Footer/> <MyChatbot />
     </div>
   )
 }
