@@ -3,7 +3,7 @@ import Header from "../../pages/header";
 import Footer from "../../pages/footer";
 import '../page4/syllabus.css';
 import {Link} from 'react-router-dom';
-
+import MyChatbot from "../ChatBot/chatbot";
 
 const fstsyllabus = () => {
   // const [selectSem, setSelectSem] = useState(null);
@@ -84,7 +84,7 @@ const fstsyllabus = () => {
           </div>
         </div>
       </div>
-      <Footer />
+      <Footer /> <MyChatbot />
     </div>
   );
 };

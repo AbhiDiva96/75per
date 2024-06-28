@@ -9,6 +9,7 @@ import youtube from "../../assets/icons8-youtube-64.png";
 import Footer from '../../pages/footer.js';
 import quantumImage from '../../assets/icons8-book-64.png';
 import timetable from '../../assets/icons8-timetable-64.png';
+import MyChatbot from '../ChatBot/chatbot.jsx';
 function fothYear() {
   return (
     <div>
@@ -88,7 +89,7 @@ function fothYear() {
 </div>
 </div>
 </div>
-<Footer />
+<Footer /> <MyChatbot />
   </div>
   )
 }

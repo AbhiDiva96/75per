@@ -17,6 +17,7 @@ import Imgtafl from '../../assets/autometa.png';
 import {FaMagnifyingGlass } from 'react-icons/fa6'
 import { FilterBAndW } from '@mui/icons-material';
 import {Link} from 'react-router-dom';
+import MyChatbot from '../ChatBot/chatbot.jsx';
 import Footer from './../../pages/footer.js';
 
 const books = [
@@ -104,9 +105,10 @@ function SndQuantum() {
             </div>
           ))}
         </div> : <NoResultsFound />}
-      </div>
+
+      </div> <MyChatbot />
       <Footer/>
-    </div>
+      </div>
   );
 }
 

@@ -4,6 +4,7 @@ import { FaArrowLeft } from "react-icons/fa"; // Import Font Awesome arrow left 
 import "./LoginSignup.css";
 import { FaEye, FaEyeSlash } from 'react-icons/fa6'
 import { ThemeContext } from "../../Content/context";
+import MyChatbot from "../ChatBot/chatbot";
 const LoginSignup = () => {
   let {theme}=useContext(ThemeContext)
   const [state, setState] = useState("Sign Up");
@@ -142,6 +143,7 @@ const LoginSignup = () => {
             <button onClick={handleSignInWithGoogle}>Login with Google</button>}
         </div>
       </div>
+      <MyChatbot />
     </div>
   );
 };
