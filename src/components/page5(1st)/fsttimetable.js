@@ -1,24 +1,19 @@
-import React, {useState} from 'react'
-import Imgdata from '../imgdata';
-import '../page4/timetable.css';
-import Header from "../../pages/header.js"
-import ComingSoon from '../../pages/cs.js';
+import React, { useState } from "react";
+import Imgdata from "../imgdata";
+import "../page4/timetable.css";
+import Header from "../../pages/header.js";
+import ComingSoon from "../../pages/cs.js";
 
-function  Fsttimetable() {
-
-    const [selectedSection, setSelectedSection] = useState(null);
-    const handleSectionClick = (section) => {
-        setSelectedSection(section);
-    };
+function Fsttimetable() {
+  const [selectedSection, setSelectedSection] = useState(null);
+  const handleSectionClick = (section) => {
+    setSelectedSection(section);
+  };
 
   return (
     <div>
-       
-      
-
-
-        <ComingSoon />
-       {/* <div className="trdyr"> */}
+      <ComingSoon />
+      {/* <div className="trdyr"> */}
 
       {/* <center>
         <h3> 1st year timeatable</h3>
@@ -36,12 +31,9 @@ function  Fsttimetable() {
        </div>
     
       {/* apering section of timetable */}
-      {/* {selectedSection && <Imgdata section={selectedSection}/>} */} 
-
+      {/* {selectedSection && <Imgdata section={selectedSection}/>} */}
     </div>
-  )
-
-
+  );
 }
 
-export default Fsttimetable
+export default Fsttimetable;
