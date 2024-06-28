@@ -14,6 +14,8 @@ import Imgos from '../../assets/los.jpg';
 import Imgtafl from '../../assets/ltafl.jpg';
 import ssii from '../../assets/ssii.jpg';
 import {FaMagnifyingGlass } from 'react-icons/fa6'
+import MyChatbot from '../ChatBot/chatbot.jsx';
+import Footer from './../../pages/footer.js';
 
 const lectures = [
   { img: Imgmath4, title: "Engineering Mathematics-4", link: "https://www.youtube.com/watch?v=14bNduEh9ag&list=PL5Dqs90qDljXYjZ8kDHtpMqPGKNGb2dxu" },
@@ -73,7 +75,8 @@ function SndLecture() {
             </a>
           </div>
         ))}
-      </div> : <NoResultsFound />}
+      </div> : <NoResultsFound />} <MyChatbot />
+      <Footer/>
     </div>
   );
 }

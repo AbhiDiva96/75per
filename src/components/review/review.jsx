@@ -5,6 +5,7 @@ import { FaStar } from "react-icons/fa";
 import 'react-toastify/dist/ReactToastify.css';
 import './review.css';
 import { ThemeContext } from "../../Content/context";
+import MyChatbot from "../ChatBot/chatbot";
 
 const ReviewPage = () => {
   const {theme}=useContext(ThemeContext)
@@ -102,11 +103,11 @@ const ReviewPage = () => {
             <div className="formBox">
               <div className="inputBox w100">
               <label>Name</label>
-                <input placeholder="Manav Malhotra" type="text" name="name" value={formData.name} onChange={handleChange} required />
+                <input className="input-review" placeholder="Manav Malhotra" type="text" name="name" value={formData.name} onChange={handleChange} required />
               </div>
               <div className="inputBox w100">
               <label>Email Address</label>
-                <input placeholder="manav@example.com" type="email" name="email" value={formData.email} onChange={handleChange} required />
+                <input  className="input-review" placeholder="manav@example.com" type="email" name="email" value={formData.email} onChange={handleChange} required />
               </div>
               <label>Rate Us</label>
               <div className="inputBox w100">
@@ -141,7 +142,7 @@ const ReviewPage = () => {
           </form>
         </div>
       </div>
-      <ToastContainer />
+      <ToastContainer /> <MyChatbot />
     </section>
   );
 };

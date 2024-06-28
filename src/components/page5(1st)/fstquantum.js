@@ -12,7 +12,8 @@ import Imgmath2 from '../../assets/math2.jpg';
 import Imgelectronics from '../../assets/electronics.png';
 import Imgmech from '../../assets/mechanical.jpg';
 import {FaMagnifyingGlass } from 'react-icons/fa6'
-
+import MyChatbot from '../ChatBot/chatbot.jsx';
+import Footer from './../../pages/footer.js';
 const books = [
   { img: Imgphy, title: "Engineering Physics", file: "physics" },
   { img: Imgmath1, title: "Engineering Mathematics-I", file: "Mathematics1" },
@@ -79,6 +80,8 @@ function Quantum() {
           ))}
         </div> : <NoResultsFound />}
       </div>
+      <MyChatbot />
+    <Footer/>
     </div>
   );
 }

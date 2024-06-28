@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Header from '../../pages/header';
 import './fstlecture.css';
 import NoResultsFound from '../noResultsFound/index.js'
-
+import Footer from './../../pages/footer.js';
 // Import images
 import ec from '../../assets/ec.jpg';
 import mtwo from '../../assets/mtwo.jpg';
@@ -17,6 +17,7 @@ import ai from '../../assets/ai.jpg';
 import ssi from '../../assets/ssi.jpg';
 import ssii from '../../assets/ssii.jpg';
 import {FaMagnifyingGlass } from 'react-icons/fa6'
+import MyChatbot from '../ChatBot/chatbot.jsx';
 
 function Lecture() {
   // State for search query
@@ -74,6 +75,9 @@ function Lecture() {
           </div>
         ))}
       </div> : <NoResultsFound /> }
+      <MyChatbot />
+
+      <Footer />
     </div>
   );
 }

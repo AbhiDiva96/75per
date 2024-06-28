@@ -9,6 +9,7 @@ import syllabus from '../../assets/icons8-syllabus-80 (1).png';
 import pyq from "../../assets/icons8-minus-1-year-80.png"
 import Notes from "../../assets/icons8-notes-80.png"
 import youtube from "../../assets/icons8-youtube-64.png";
+import MyChatbot from '../ChatBot/chatbot';
 function sndYear() {
   return (
     <div>
@@ -43,7 +44,7 @@ function sndYear() {
               </div>
             </Link>
 
-            <Link class="link" to="/notes">
+            <Link class="link" to="/SndTimetable">
               <div class="card syan">
                 <img src={timetable} alt="" />
                 <p class="second-text">Timetable</p>
@@ -69,6 +70,7 @@ function sndYear() {
         </div>
       </div>
       <Footer />
+      <MyChatbot />
     </div>
   )
 }

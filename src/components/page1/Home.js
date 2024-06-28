@@ -30,7 +30,7 @@ function Home() {
          <h2>Visit your year</h2>
         </div>
 
-      <div class={` container`}>
+      <div class={`container-main`}>
 
       <div class="main">
   <div class="up">
