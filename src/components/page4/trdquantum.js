@@ -9,9 +9,9 @@ import Imgdaa from '../../assets/daa1.jpg';
 import Imgcn from '../../assets/cn.webp';
 import Imgwt from '../../assets/wt.png';
 import Imgitcs from '../../assets/itcsimg.jpg';
-import {FaMagnifyingGlass } from 'react-icons/fa6'
-import NoResultsFound from '../noResultsFound/index.js'
-import {Link} from 'react-router-dom';
+import { FaMagnifyingGlass } from 'react-icons/fa6';
+import NoResultsFound from '../noResultsFound/index.js';
+import { Link } from 'react-router-dom';
 import MyChatbot from '../ChatBot/chatbot.jsx';
 import Footer from './../../pages/footer.js';
 
@@ -32,6 +32,13 @@ const quantumBooks = [
 function Quantum() {
   const [searchQuery, setSearchQuery] = useState('');
   const [filteredBooks, setFilteredBooks] = useState(quantumBooks);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 1000); // Simulate loading time
+  }, []);
 
   useEffect(() => {
     setFilteredBooks(
@@ -79,33 +86,47 @@ function Quantum() {
         <div className="quantum-head">
           <h2>Download Quantum</h2>
         </div>
-        <div class='inputDiv1'>
-          <FaMagnifyingGlass className='left'/>
-    <input
-      type='text'
-      class='inputField'
-      placeholder='Search For Quantum...'
-      value={searchQuery}
-      onChange={(e) => setSearchQuery(e.target.value)}
-    />
-   
-</div>
+        <div className='inputDiv1'>
+          <FaMagnifyingGlass className='left' />
+          <input
+            type='text'
+            className='inputField'
+            placeholder='Search For Quantum...'
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+          />
+        </div>
 
-        { filteredBooks.length !== 0 ? <div className="content" style={{ height: "auto", overflow: "auto" }}>
-          {filteredBooks.map(book => (
-            <div className="book" key={book.title}>
-              <img src={book.img} alt={book.title} />
-              <button onClick={() => handleDownload(book.file)}>Download</button>
-              <div className="cover">
-                <p>{book.title}</p>
+        { isLoading ? (
+          <div className="content" style={{ height: "auto", overflow: "auto" }}>
+            {Array.from({ length: 11 }).map((_, index) => (
+              <div className="skeleton-book" key={index}>
+              
               </div>
+            ))}
+          </div>
+        ) : (
+          filteredBooks.length !== 0 ? (
+            <div className="content" style={{ height: "auto", overflow: "auto" }}>
+              {filteredBooks.map(book => (
+                <div className="book" key={book.title}>
+                  <img src={book.img} alt={book.title} />
+                  <button onClick={() => handleDownload(book.file)}>Download</button>
+                  <div className="cover">
+                    <p>{book.title}</p>
+                  </div>
+                </div>
+              ))}
             </div>
-          ))}
-        </div> : <NoResultsFound />}
-      </div> 
-      <Footer/><MyChatbot />
+          ) : (
+            <NoResultsFound />
+          )
+        )}
       </div>
-  )
+      <Footer />
+      <MyChatbot />
+    </div>
+  );
 }
 
 export default Quantum;
