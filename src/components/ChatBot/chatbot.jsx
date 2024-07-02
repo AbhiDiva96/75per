@@ -187,7 +187,7 @@ class MyChatbot extends Component {
             />
           </div>
 
-          {/* Button to toggle chatbot visibility */}
+          {/* Icon using Font Awesome */}
           <div
             className="chatbot-icon"
             style={{
@@ -199,7 +199,7 @@ class MyChatbot extends Component {
             }}
             onClick={this.toggleChatbot}
           >
-            <img src="https://example.com/chatbot-icon.png" alt="Chatbot Icon" />
+            <i className="fas fa-comment"></i>
           </div>
         </ThemeProvider>
 
