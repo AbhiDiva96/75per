@@ -199,7 +199,7 @@ class MyChatbot extends Component {
             }}
             onClick={this.toggleChatbot}
           >
-            <img src="https://via.placeholder.com/50" alt="Chatbot Icon" />
+            <img src="https://example.com/chatbot-icon.png" alt="Chatbot Icon" />
           </div>
         </ThemeProvider>
 
