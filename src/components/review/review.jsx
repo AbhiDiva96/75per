@@ -73,12 +73,11 @@ const ReviewPage = () => {
           height="42" 
           fill="currentColor" 
           viewBox="0 0 16 16" 
-          style={{ 
+          style={{
             fontWeight: 'bold',
             position: 'fixed', 
             top: 20, 
-            left: 20
-          }}
+            left: 20}}
         >
           <path 
             fillRule="evenodd" 
