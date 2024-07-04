@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import NoResultsFound from '../noResultsFound/index.js'
+import NoResultsFound from '../noResultsFound/index.js';
 import Header from '../../pages/header.js';
 import Aquantum from '../../assets/5th.png';
 import Imgphy from '../../assets/physics.webp';
@@ -11,8 +11,8 @@ import Imgchem from '../../assets/chemistry.webp';
 import Imgmath2 from '../../assets/math2.jpg';
 import Imgelectronics from '../../assets/electronics.png';
 import Imgmech from '../../assets/mechanical.jpg';
-import {FaMagnifyingGlass } from 'react-icons/fa6';
-import {Link} from 'react-router-dom';
+import { FaMagnifyingGlass } from 'react-icons/fa6';
+import { Link } from 'react-router-dom';
 import MyChatbot from '../ChatBot/chatbot.jsx';
 import Footer from './../../pages/footer.js';
 
@@ -34,6 +34,13 @@ const books = [
 function Quantum() {
   const [searchQuery, setSearchQuery] = useState('');
   const [filteredBooks, setFilteredBooks] = useState(books);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 1000); // Simulate loading time
+  }, []);
 
   useEffect(() => {
     setFilteredBooks(
@@ -79,31 +86,43 @@ function Quantum() {
       <Header />
       <div>
         <h2 className="quantum-head">1st year quantum book</h2>
-        <div class='inputDiv1'>
-        <FaMagnifyingGlass className='left'/>
-
-<input
-  type='text'
-  className='inputField'
-  placeholder='Search For Quantum ...'
-  value={searchQuery}
-  onChange={(e) => setSearchQuery(e.target.value)}
-/>
-</div>
-        { filteredBooks.length !== 0 ? <div className="content" style={{ height: "auto" }}>
-          {filteredBooks.map(book => (
-            <div className="book" key={book.title}>
-              <img src={book.img} alt={book.title} />
-              <button onClick={() => handleDownload(book.file)}>Download</button>
-              <div className="cover">
-                <p>{book.title}</p>
-              </div>
+        <div className='inputDiv1'>
+          <FaMagnifyingGlass className='left'/>
+          <input
+            type='text'
+            className='inputField'
+            placeholder='Search For Quantum ...'
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+          />
+        </div>
+        
+        { isLoading ? (
+          <div className="content" style={{ height: "auto", overflow: "auto" }}>
+            {Array.from({ length: 11 }).map((_, index) => (
+              <div className="skeleton-book" key={index}></div>
+            ))}
+          </div>
+        ) : (
+          filteredBooks.length !== 0 ? (
+            <div className="content" style={{ height: "auto" }}>
+              {filteredBooks.map(book => (
+                <div className="book" key={book.title}>
+                  <img src={book.img} alt={book.title} />
+                  <button onClick={() => handleDownload(book.file)}>Download</button>
+                  <div className="cover">
+                    <p>{book.title}</p>
+                  </div>
+                </div>
+              ))}
             </div>
-          ))}
-        </div> : <NoResultsFound />}
+          ) : (
+            <NoResultsFound />
+          )
+        )}
       </div>
       <MyChatbot />
-    <Footer/>
+      <Footer />
     </div>
   );
 }

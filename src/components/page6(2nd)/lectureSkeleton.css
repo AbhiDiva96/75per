@@ -1,0 +1,36 @@
+/* LectureSkeleton.css */
+.skeleton-box {
+    width: 300px;
+   height: 300px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    box-shadow: 1px 1px 12px #0b0b0b;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    gap: 10px;
+    animation: skeleton-loading 1.2s infinite linear;
+  }
+  
+  .skeleton-img {
+    width: 100%;
+    height: 220px;
+    animation: skeleton-loading 1.2s infinite linear;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+  }
+  
+  .skeleton-title,
+  .skeleton-link {
+    width: 80%;
+    animation: skeleton-loading 1.2s infinite linear;
+    height: 20px;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+  }
+  
+  .skeleton-link {
+    width: 60%;
+  }
+  
