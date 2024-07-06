@@ -259,7 +259,7 @@ table {
     background-color: #f8f8f8;
     padding: 10px;
     text-align: center;
-    position: fixed;
+    position: absolute;
     bottom: 0;
     width: 100%;
   
@@ -282,6 +282,7 @@ table {
      inset 0px 0px 0px 0px #fff9,        inset 0px 0px 0px 0px #0001;
    transition:box-shadow 0.6s cubic-bezier(.79,.21,.06,.81);
      border-radius: 10px;
+
   }
   
     .github{
