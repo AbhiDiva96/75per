@@ -5,7 +5,9 @@ import Footer from "../../pages/footer";
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import DownloadIcon from '@mui/icons-material/Download';
 import './Pyq.css'; 
+import {Link} from 'react-router-dom';
 import MyChatbot from '../ChatBot/chatbot';
+
 
 function Pyq() {
   const yearFiles = [
@@ -153,9 +155,30 @@ function Pyq() {
   const { id } = useParams();
   const yearItem = yearFiles.find((item) => item.year === id);
   const [selectedSemester, setSelectedSemester] = useState(null);
+  const yearLink={"1st":"/fstyear","2nd":"/sndyear","3rd":"/trdyear","4th":"/fothyear"};
 
   return (
     <div className="page-container">
+      <Link to={yearLink[yearItem.year]} className="back-icon" style={{ position: 'absolute', top: '75px !important', left: '35px', fontSize: '42px' }}>
+        <svg 
+          xmlns="http://www.w3.org/2000/svg" 
+          width="42" 
+          height="42" 
+          fill="currentColor" 
+          viewBox="0 0 16 16" 
+          style={{ 
+            fontWeight: 'bold',
+            position: 'fixed', 
+            top: 130, 
+            left: 20
+          }}
+        >
+          <path 
+            fillRule="evenodd" 
+            d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-4.5-.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5z"
+          />
+        </svg>
+      </Link>
       <Header />
       <div className="container-pyq">
         <h2 className="year-heading">Download Previous Year Questions - {id} Year</h2>

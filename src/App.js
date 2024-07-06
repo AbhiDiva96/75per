@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { ThemeProvider } from './Content/context';
+
 import Dashboard1 from './pages/Dashboard1.jsx';
 import Fstsyllabus from './components/page5(1st)/fstsyllabus.js';
 import Sndsyllabus from './components/page6(2nd)/sndsyllabus.js';
@@ -25,6 +26,7 @@ import Fothyear from "./components/page3/4Year";
 import LoginSignup from './components/login/LoginSignup.jsx';
 import ReviewPage from './components/review/review.jsx';
 import About from './components/about/About.jsx';
+import ScrollToTop from './Content/ScrollToTop.jsx';
 
 function App() {
   const [theme, setTheme] = useState('dark');
@@ -37,6 +39,7 @@ function App() {
     <div className={`maintain ${theme}`}>
       <ThemeProvider>
         <Router>
+          <ScrollToTop/>
           <Routes>
             <Route path="/" element={<Dashboard1 />} />
             <Route path="fstsyllabus" element={<Fstsyllabus />} />

@@ -31,8 +31,6 @@ class MyChatbot extends Component {
     }));
   };
 
-
-
   render() {
     const steps = [
       {
@@ -110,7 +108,7 @@ class MyChatbot extends Component {
         id: 'endOptions',
         options: [
           { value: 'restart', label: 'Restart Chat', trigger: 'restart' },
-          { value: 'end', label: 'End Chat', trigger: 'end' },
+          { value: 'end', label: 'End Chat', trigger: 'feedback' }, // Trigger feedback before ending
         ],
         hideInput: true,
       },
@@ -120,10 +118,36 @@ class MyChatbot extends Component {
         trigger: '1',
       },
       {
+        id: 'feedback',
+        message: 'Please rate your experience with this chat (1-5)',
+        trigger: 'rating',
+      },
+      {
+        id: 'rating',
+        user: true,
+        validator: (value) => {
+          if (isNaN(value) || value < 1 || value > 5) {
+            return 'Please enter a number between 1 and 5';
+          }
+          return true;
+        },
+        trigger: 'comments',
+      },
+      {
+        id: 'comments',
+        message: 'Any comments or suggestions?',
+        trigger: 'feedbackComment',
+      },
+      {
+        id: 'feedbackComment',
+        user: true,
+        trigger: 'end',
+      },
+      {
         id: 'end',
         component: (
           <div>
-            Perfect! All the Best with your Exam Preparation!<br />
+            Thank you for your feedback! All the Best with your Exam Preparation!<br />
             <button onClick={() => window.location.reload()} className="text-blue-500">
               End Chat
             </button>
@@ -148,58 +172,57 @@ class MyChatbot extends Component {
 
     return (
       <div className="App">
-      <ThemeProvider theme={theme}>
-        <div ref={this.chatBotRef}>
-          {/* Chatbot component */}
-          <ChatBot
-            headerTitle="75Bot"
-            steps={steps}
-            floating
-            opened={this.state.opened}
-            botDelay={0}
-            botAvatarStyle={{ left: '10px' }}
-            userDelay={0}
-            userAvatarStyle={{ left: '10px' }}
-          />
-        </div>
+        <ThemeProvider theme={theme}>
+          <div ref={this.chatBotRef}>
+            {/* Chatbot component */}
+            <ChatBot
+              headerTitle="75Bot"
+              steps={steps}
+              floating
+              opened={this.state.opened}
+              botDelay={0}
+              botAvatarStyle={{ left: '10px' }}
+              userDelay={0}
+              userAvatarStyle={{ left: '10px' }}
+            />
+          </div>
 
-        {/* Button to toggle chatbot visibility */}
-        <div
-          className="chatbot-icon"
-          style={{
-            position: 'fixed',
-            bottom: '20px',
-            right: '20px',
-            zIndex: '1000',
-            cursor: 'pointer',
-          }}
-          onClick={this.toggleChatbot}
-        >
-       
-        </div>
-      </ThemeProvider>
+          {/* Icon using Font Awesome */}
+          <div
+            className="chatbot-icon"
+            style={{
+              position: 'fixed',
+              bottom: '20px',
+              right: '20px',
+              zIndex: '1000',
+              cursor: 'pointer',
+            }}
+            onClick={this.toggleChatbot}
+          >
+            <i className="fas fa-comment"></i>
+          </div>
+        </ThemeProvider>
 
-      {/* Custom styles */}
-      <style>
-        {`
-          .rsc-os-option-element {
-            display: inline-block;
-            margin-right: 10px;
-          }
-          .rsc-os-option-element button {
-            background-color: #000000;
-            color: #FFFFFF;
-            border-radius: 5px;
-            padding: 10px;
-            margin: 5px;
-          }
-          .rsc-os-option-element button:hover {
-            background-color: #555555;
-          }
-        `}
-      </style>
-    </div>
-      
+        {/* Custom styles */}
+        <style>
+          {`
+            .rsc-os-option-element {
+              display: inline-block;
+              margin-right: 10px;
+            }
+            .rsc-os-option-element button {
+              background-color: #000000;
+              color: #FFFFFF;
+              border-radius: 5px;
+              padding: 10px;
+              margin: 5px;
+            }
+            .rsc-os-option-element button:hover {
+              background-color: #555555;
+            }
+          `}
+        </style>
+      </div>
     );
   }
 }
