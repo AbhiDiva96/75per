@@ -15,6 +15,7 @@
     "cors": "^2.8.5",
     "express": "^4.19.2",
     "express-session": "^1.18.0",
+    "firebase": "^10.12.2",
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.4.0",
     "passport": "^0.7.0",
