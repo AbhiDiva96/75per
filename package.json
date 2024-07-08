@@ -29,7 +29,7 @@
     "react-scripts": "^5.0.1",
     "react-simple-chatbot": "^0.5.0",
     "react-toastify": "^10.0.5",
-    "styled-components": "^6.1.11",
+"styled-components": "^6.1.11",
 "urix": "^0.1.0",
     "web-vitals": "^2.1.4"
   },
