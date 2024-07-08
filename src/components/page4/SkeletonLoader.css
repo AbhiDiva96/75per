@@ -1,0 +1,71 @@
+.skeleton-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .skeleton-heading,
+  .skeleton-semester-card,
+  .skeleton-subject-title,
+  .skeleton-file {
+    background-color: #e0e0e0;
+    border-radius: 4px;
+    margin: 10px 0;
+  }
+  
+  .skeleton-heading {
+    width: 60%;
+    height: 24px;
+  }
+  
+  .skeleton-semester {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .skeleton-semester-card {
+    width: 150px;
+    height: 80px;
+  }
+  
+  .skeleton-subject {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 3em 0em;
+    width: 100%;
+  }
+  
+  .skeleton-subject-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2px;
+    height: auto;
+    width: 200px;
+    border-radius: 8px;
+  }
+  
+  .skeleton-subject-title {
+    width: 80%;
+    height: 24px;
+  }
+  
+  .skeleton-file {
+    width: 80%;
+    height: 24px;
+  }
+  
+  @media screen and (max-width: 600px) {
+    .skeleton-semester-card {
+      width: 100px;
+      height: 60px;
+    }
+  
+    .skeleton-subject-box {
+      width: 100%;
+    }
+  }
+  

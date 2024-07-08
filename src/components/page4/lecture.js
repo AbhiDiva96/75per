@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Header from '../../pages/header';
 import '../page4/lecture.css';
 import cn from '../../assets/computerNetwork.jpg';
@@ -11,15 +11,16 @@ import oops from '../../assets/oops.jpg';
 import wt from '../../assets/wt.jpg';
 import se from '../../assets/se.jpg';
 import bd from '../../assets/bd.jpg';
-import {FaMagnifyingGlass } from 'react-icons/fa6'
-import NoResultsFound from '../noResultsFound/index.js'
-
-import {Link} from 'react-router-dom';
+import { FaMagnifyingGlass } from 'react-icons/fa6';
+import NoResultsFound from '../noResultsFound/index.js';
+import { Link } from 'react-router-dom';
 import Footer from './../../pages/footer.js';
+import LectureSkeleton from '../page6(2nd)/LectureSkeleton.jsx'; // Import the skeleton component
 
 function Lecture() {
   // State for search query
   const [searchQuery, setSearchQuery] = useState('');
+  const [loading, setLoading] = useState(true); // Loading state
 
   // Array of lecture items
   const lectureItems = [
@@ -40,6 +41,13 @@ function Lecture() {
   const filteredItems = lectureItems.filter(item =>
     item.title.toLowerCase().includes(searchQuery.toLowerCase())
   );
+
+  useEffect(() => {
+    // Simulate a loading delay
+    setTimeout(() => {
+      setLoading(false);
+    }, 1000);
+  }, []);
 
   return (
     <div>
@@ -68,9 +76,8 @@ function Lecture() {
         <h1>Lecture</h1>
       </div>
       {/* Input field for search */}
-      <div class='inputDiv'>
-      <FaMagnifyingGlass className='left'/>
-
+      <div className='inputDiv'>
+        <FaMagnifyingGlass className='left' />
         <input
           type='text'
           className='inputField'
@@ -80,19 +87,27 @@ function Lecture() {
         />
       </div>
       {/* Display filtered lecture items */}
-      { filteredItems.length !== 0 ?
-      <div className="container">
-        {filteredItems.map((item, index) => (
-          <div className="box" key={index}>
-            <div className="upper">
-              <img src={item.image} alt={item.title} />
+      {loading ? (
+        <div className="container">
+          {Array(lectureItems.length).fill().map((_, index) => (
+            <LectureSkeleton key={index} />
+          ))}
+        </div>
+      ) : filteredItems.length !== 0 ? (
+        <div className="container">
+          {filteredItems.map((item, index) => (
+            <div className="box" key={index}>
+              <div className="upper">
+                <img src={item.image} alt={item.title} />
+              </div>
+              <span className="text-box-in">{item.title}</span>
+              <a href={item.link}>View Content</a>
             </div>
-            <span className="text-box-in">{item.title}</span>
-            <a href={item.link}>View Content</a>
-          </div>
-        ))}
-      </div>
-      : <NoResultsFound />}
+          ))}
+        </div>
+      ) : (
+        <NoResultsFound />
+      )}
       <Footer />
     </div>
   );

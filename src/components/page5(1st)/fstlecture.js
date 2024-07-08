@@ -1,9 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Header from '../../pages/header';
 import './fstlecture.css';
-import NoResultsFound from '../noResultsFound/index.js'
-import {Link} from 'react-router-dom';
+import NoResultsFound from '../noResultsFound/index.js';
+import { Link } from 'react-router-dom';
 import Footer from './../../pages/footer.js';
+import { FaMagnifyingGlass } from 'react-icons/fa6';
+import MyChatbot from '../ChatBot/chatbot.jsx';
+import LectureSkeleton from '../page6(2nd)/LectureSkeleton.jsx'; // Import the skeleton component
 
 // Import images
 import ec from '../../assets/ec.jpg';
@@ -18,12 +21,11 @@ import pps from '../../assets/pps.jpg';
 import ai from '../../assets/ai.jpg';
 import ssi from '../../assets/ssi.jpg';
 import ssii from '../../assets/ssii.jpg';
-import {FaMagnifyingGlass } from 'react-icons/fa6'
-import MyChatbot from '../ChatBot/chatbot.jsx';
 
 function Lecture() {
-  // State for search query
+  // State for search query and loading
   const [searchQuery, setSearchQuery] = useState('');
+  const [loading, setLoading] = useState(true);
 
   // Array of lecture items
   const lectureItems = [
@@ -47,9 +49,15 @@ function Lecture() {
     item.title.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
+  useEffect(() => {
+    // Simulate a loading delay
+    setTimeout(() => {
+      setLoading(false);
+    }, 1000);
+  }, []);
+
   return (
     <div>
-
       <Link to="/fstyear" className="back-icon" style={{ position: 'absolute', top: '75px !important', left: '35px', fontSize: '42px' }}>
         <svg 
           xmlns="http://www.w3.org/2000/svg" 
@@ -76,9 +84,8 @@ function Lecture() {
         <h1>1st year lecture</h1>
       </div>
       {/* Input field for search */}
-      <div class='inputDiv'>
-      <FaMagnifyingGlass className='left'/>
-
+      <div className='inputDiv'>
+        <FaMagnifyingGlass className='left'/>
         <input
           type='text'
           className='inputField'
@@ -87,20 +94,29 @@ function Lecture() {
           onChange={(e) => setSearchQuery(e.target.value)}
         />
       </div>
-      {/* Display filtered lecture items */}
-      {  filteredItems.length !== 0 ? <div className="container">
-        {filteredItems.map((item, index) => (
-          <div className="box" key={index}>
-            <div className="upper">
-              <img src={item.image} alt={item.title} />
+      {/* Display filtered lecture items or loading state */}
+      {loading ? (
+        <div className="container">
+          {Array(lectureItems.length).fill().map((_, index) => (
+            <LectureSkeleton key={index} />
+          ))}
+        </div>
+      ) : filteredItems.length !== 0 ? (
+        <div className="container">
+          {filteredItems.map((item, index) => (
+            <div className="box" key={index}>
+              <div className="upper">
+                <img src={item.image} alt={item.title} />
+              </div>
+              <span className="text-box-in">{item.title}</span>
+              <a href={item.link}>View Content</a>
             </div>
-            <span className="text-box-in">{item.title}</span>
-            <a href={item.link}>View Content</a>
-          </div>
-        ))}
-      </div> : <NoResultsFound /> }
+          ))}
+        </div>
+      ) : (
+        <NoResultsFound />
+      )}
       <MyChatbot />
-
       <Footer />
     </div>
   );
