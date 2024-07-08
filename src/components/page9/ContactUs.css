@@ -1,0 +1,156 @@
+.contact-page .contact {
+    display: grid;
+    color: black;
+    grid-template-columns: 0.5fr 3fr 3fr;
+    grid-template-rows: 200px 300px;
+    gap: 20px;
+}
+
+.contact-page .title {
+    margin-left: 80px;
+    grid-row: 1;
+    grid-column: 2 / 3;
+    font-size: 20px;
+}
+
+.contact-page .image {
+    height: auto;
+    grid-column: 2 / 3;
+    grid-row: 1 / 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-page .image img {
+    width: 90%; 
+    height: 90%; 
+    object-fit: cover; 
+    border-radius: 10px; 
+}
+
+.contact-page .contact-box {
+    margin-top: 10px;
+    grid-column: 3 / 5;
+    grid-row: 1 / 3;
+    max-width: 430px;
+    height: auto; /* Adjust to auto height for better responsiveness */
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    border: 2px solid #dfd3d3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px; /* Added padding for inner spacing */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 0 6px 6px rgba(0, 0, 0, 0.3);
+}
+
+.contact-page .contact-box div {
+    margin-right: 60px;
+    width: 90%;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.contact-page .contact-box input {
+    background-color: lightgray;
+}
+
+.contact-page .contact-box .name svg, 
+.contact-page .contact-box .email svg {
+    position: absolute;
+    left: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: #b4adad;
+}
+
+.contact-page .contact-box input, 
+.contact-page .contact-box textarea {
+    width: 100%;
+    padding: 20px 20px 20px 40px; /* Adjusted padding for input/textarea */
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    font-size: 18px;
+}
+
+.contact-page textarea {
+    resize: none;
+    height: 150px; /* Set height for textarea */
+    background-color: lightgrey;
+}
+
+.contact-page button {
+    width: 100%;
+    cursor: pointer;
+    padding: 15px;
+    font-size: 20px;
+    border: none;
+    background-color: #375e7d;
+    color: white;
+    border-radius: 40px;
+    transition: background-color 0.3s;
+    margin-left: 30px;
+}
+
+.contact-page button:hover {
+    background-color: #218838;
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+    .contact-page .contact {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, auto);
+    }
+    .contact-page .title, span {
+        margin-left: 20px;
+        grid-column: 1 / -1;
+    }
+    .contact-page .image {
+        grid-column: 1 / -1;
+    }
+    .contact-page .contact-box {
+        grid-column: 1 / -1;
+        max-width: 100%;
+        margin: 0 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-page .title, span {
+        margin-left: 10px;
+    }
+    .contact-page .contact-box div {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-page .contact {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, auto);
+    }
+    .contact-page .title, span {
+        margin-left: 10px;
+        font-size: 18px;
+    }
+    .contact-page .contact-box {
+        max-width: 100%;
+        margin: 0 10px;
+        padding: 15px;
+    }
+    .contact-page .contact-box input, 
+    .contact-page .contact-box textarea {
+        padding: 15px;
+        padding-left: 35px;
+        font-size: 16px;
+    }
+    .contact-page button {
+        font-size: 18px;
+        padding: 10px;
+    }
+}

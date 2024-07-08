@@ -27,7 +27,7 @@ import LoginSignup from './components/login/LoginSignup.jsx';
 import ReviewPage from './components/review/review.jsx';
 import About from './components/about/About.jsx';
 import ScrollToTop from './Content/ScrollToTop.jsx';
-
+import ContactUs from './components/page9/ContactUs.js'
 function App() {
   const [theme, setTheme] = useState('dark');
 
@@ -66,6 +66,7 @@ function App() {
             <Route path="/login" element={<LoginSignup />} />
             <Route path="/Review" element={<ReviewPage />} />
             <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<ContactUs />} />
           </Routes>
         </Router>
       </ThemeProvider>
