@@ -26,7 +26,7 @@ function handleHamClick(){
 isOpen?setIsOpen(false): setIsOpen(true)
 }
     return (
-        <div className="frame">
+        <div className={`frame ${theme=="dark"?'dark':'light'}`}>
             <div className="header">
                 <div className="logo">
                     <Link to="/" className="link1">
