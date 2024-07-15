@@ -15,7 +15,7 @@ function Header() {
     }
 
     function handleClick(e){
-        if(theme=="dark"){
+        if(theme==="dark"){
             toggleTheme('light')
         }else{
             toggleTheme('dark')
@@ -26,7 +26,7 @@ function handleHamClick(){
 isOpen?setIsOpen(false): setIsOpen(true)
 }
     return (
-        <div className="frame">
+        <div className={`frame ${theme=="dark"?'dark':'light'}`}>
             <div className="header">
                 <div className="logo">
                     <Link to="/" className="link1">
@@ -43,13 +43,16 @@ isOpen?setIsOpen(false): setIsOpen(true)
         <a href="/about" className="logo link1" style={{ padding: 10, margin: 5, height: 30, width: 80 }}>
             <b>About Us</b>
             </a>
+            <a href="/ProfilePage" className="logo link1" style={{ padding: 10, margin: 5, height: 30, width: 80 }}>
+            <b>Profile</b>
+            </a>
                     {
                         theme === 'dark' ? <HiSun size={"3rem"} onClick={handleClick} style={{ paddingRight: '20px' }} /> : <HiMoon size={"3rem"} onClick={handleClick} style={{ paddingRight: '30px' }} />
                     }
     </div>
     {
 
-theme=='dark'? <HiSun className='mode' size={"3rem"} onClick={handleClick}/>:<HiMoon className='mode' size={"3rem"} onClick={handleClick}/>
+theme==='dark'? <HiSun className='mode' size={"3rem"} onClick={handleClick}/>:<HiMoon className='mode' size={"3rem"} onClick={handleClick}/>
 } 
         <div class="hamburger" id="hamburger" onClick={handleHamClick}>
                 <div></div>

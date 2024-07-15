@@ -108,8 +108,36 @@
   align-items: center;
   width: 1.5rem;
   height: 1.5rem;
+  color:rgba(0,0,0,0.5);
+  transition: all 0.3s ease-in-out;
 }
 
 .footer-icons .icon:last-child {
   margin-right: 0;
+}
+
+body.active .footer-icons .icon{
+color: white;
+}
+.footer-icons .git:hover{
+  color: #000016;
+  transform: scale(1.2);
+  background-color: white;
+  border-radius: 50%;
+}
+.footer-icons .linkedin:hover{
+  color: #0077B5;
+  transform: scale(1.2);
+  background-color: white;
+}
+body.active .footer-icons .git:hover{
+  color: #000016;
+  transform: scale(1.2);
+  background-color: white;
+  border-radius: 50%;
+}
+body.active .footer-icons .linkedin:hover{
+  color: #0077B5;
+  transform: scale(1.2);
+  background-color: white;
 }

@@ -64,7 +64,7 @@ const ReviewPage = () => {
   };
 
   return (
-    <section className={`${theme=='dark'?"active":""} `}>
+    <section className={`${theme==='dark'?"active":""} `}>
 
 <Link to="/" className="back-icon" style={{ position: 'absolute', top: '15px', left: '35px', fontSize: '42px' }}>
         <svg 
@@ -87,7 +87,7 @@ const ReviewPage = () => {
         </svg>
       </Link>
 
-      <div className={`${theme=='dark'?"active":""} review-container`}>
+      <div className={`${theme==='dark'?"active":""} review-container`}>
         <div className="reviewInfo">
           <div>
             {/* Review info section */}

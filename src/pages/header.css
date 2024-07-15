@@ -21,6 +21,12 @@
     inset 0px 0px 0px 0px #0001;
   transition: box-shadow 0.6s cubic-bezier(0.79, 0.21, 0.06, 0.81);
   border-radius: 0px;
+  position: sticky;
+  background-color: var(--background-color-light);
+  z-index: 999999;
+}
+.frame.dark{
+  background-color: var(--background-color-dark);
 }
 
 .header {
