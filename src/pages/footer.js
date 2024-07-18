@@ -17,10 +17,10 @@ const Footer = () => {
             Copyright @ 75%
           </div>
           <div className="footer-item footer-icons">
-            <a href="https://github.com/AbhiDiva96/75per">
+            <a href="https://github.com/AbhiDiva96/75per" target="_blank">
               <GitHubIcon className="icon git" />
             </a>
-            <a href="https://www.linkedin.com/in/abhishek-kumar-062231198/">
+            <a href="https://www.linkedin.com/in/abhishek-kumar-062231198/" target="_blank">
               <LinkedInIcon className="icon linkedin" />
             </a>
           </div>
