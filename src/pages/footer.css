@@ -1,5 +1,5 @@
-.footer {
 
+.footer {
   bottom: 0;
   width: 100%;
   background-color: lavender;
@@ -115,6 +115,7 @@
 .footer-icons .icon:last-child {
   margin-right: 0;
 }
+
 body.active .footer-icons .icon{
 color: white;
 }
