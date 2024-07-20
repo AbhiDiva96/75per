@@ -1,33 +1,35 @@
-import GitHubIcon from '@mui/icons-material/GitHub';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import React, { useContext } from 'react';
+import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from 'react-icons/fa';
 import './footer.css';
+import { ThemeContext } from '../Content/context';
 
-const Footer = () => {
+function Footer() {
+    const { theme } = useContext(ThemeContext);
 
-  return (
-    <div className="footer">
-      <div className="footer-content">
-        <div className="footer-flex-container">
-          <div className="footer-item">
-            <span className="footer-text">
-              75%
-            </span>
-          </div>
-          <div className="footer-item footer-copyright">
-            Copyright @ 75%
-          </div>
-          <div className="footer-item footer-icons">
-            <a href="https://github.com/AbhiDiva96/75per">
-              <GitHubIcon className="icon" />
-            </a>
-            <a href="https://www.linkedin.com/in/abhishek-kumar-062231198/">
-              <LinkedInIcon className="icon" />
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
+    return (
+        <footer className={`footer ${theme === 'dark' ? 'dark-mode' : ''}`}>
+            <div className="social-icons">
+                <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+                    <FaFacebook />
+                </a>
+                <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">
+                    <FaTwitter />
+                </a>
+                <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+                    <FaInstagram />
+                </a>
+                <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
+                    <FaLinkedin />
+                </a>
+            </div>
+            <div className="links">
+                <a href="/Review" className="link">Review Us</a>
+                <a href="/Login" className="link">Login</a>
+                <a href="/about" className="link">About Us</a>
+            </div>
+            <p className="text">&copy; {new Date().getFullYear()} 75per. All rights reserved.</p>
+        </footer>
+    );
 }
 
 export default Footer;

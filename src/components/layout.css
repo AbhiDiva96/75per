@@ -257,14 +257,13 @@ table {
   
   .footer{
     background-color: #f8f8f8;
+   
     padding: 10px;
     text-align: center;
-    position: fixed;
     bottom: 0;
     width: 100%;
-  
     display: flex;
-  
+    position:absolute;
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-end;
