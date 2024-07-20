@@ -25,6 +25,7 @@ import Trdyear from "./components/page3/3Year";
 import Fothyear from "./components/page3/4Year";
 import LoginSignup from './components/login/LoginSignup.jsx';
 import ReviewPage from './components/review/review.jsx';
+import ProfilePage from './components/ProfilePage/ProfilePage.jsx'
 import About from './components/about/About.jsx';
 import ScrollToTop from './Content/ScrollToTop.jsx';
 
@@ -66,6 +67,7 @@ function App() {
             <Route path="/login" element={<LoginSignup />} />
             <Route path="/Review" element={<ReviewPage />} />
             <Route path="/about" element={<About />} />
+            <Route path="/ProfilePage" element={<ProfilePage />} />
           </Routes>
         </Router>
       </ThemeProvider>

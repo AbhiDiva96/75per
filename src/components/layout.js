@@ -389,30 +389,28 @@ function App() {
       {selectedSection && <Timetable data={timetableData[selectedSection]} />}
       </div>
     {/*footer  */}
-
     <div className="footer">
 
-       <div className="github">
-         <a href=" ">
-          <GitHubIcon/>
-         </a>
-        </div>
+<div className="github">
+  <a href=" ">
+   <GitHubIcon/>
+  </a>
+ </div>
 
-     <div className="founder">
-      <h4>made by @AbhiDiva</h4>
-      </div>
+<div className="founder">
+<h4>made by @AbhiDiva</h4>
+</div>
 
-      <div className="linkedin">
-        <a href="https://www.linkedin.com/in/abhishek-kumar-062231198/">
-          <LinkedInIcon/>
-          </a>
-      </div>
-    </div>
+<div className="linkedin">
+ <a href="https://www.linkedin.com/in/abhishek-kumar-062231198/">
+   <LinkedInIcon/>
+   </a>
+</div>
+    
     <MyChatbot />
     </div>
 
+</div>
     
   );
 }
-
-export default App;

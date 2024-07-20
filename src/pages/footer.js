@@ -5,7 +5,6 @@ import { ThemeContext } from '../Content/context';
 
 function Footer() {
     const { theme } = useContext(ThemeContext);
-
     return (
         <footer className={`footer ${theme === 'dark' ? 'dark-mode' : ''}`}>
             <div className="social-icons">
@@ -30,6 +29,7 @@ function Footer() {
             <p className="text">&copy; {new Date().getFullYear()} 75per. All rights reserved.</p>
         </footer>
     );
+
 }
 
 export default Footer;

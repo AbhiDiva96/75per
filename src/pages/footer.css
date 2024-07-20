@@ -1,83 +1,3 @@
-/* :root {
-  --background-color-light: lavender;
-  --text-color-light: black;
-  --icon-hover-color-light: red;
-  --background-color-dark: #1e1e1e;
-  --text-color-dark: #ccc;
-  --icon-hover-color-dark: #ff6347;
-}
-
-.footer {
-  position: relative;
-  bottom: 0;
-  width: 100%;
-  background-color: var(--background-color-light);
-  box-shadow:
-    -7px -7px 20px 0px #fff9,
-    -4px -4px 5px 0px #fff9,
-    7px 7px 20px 0px #0002,
-    4px 4px 5px 0px #0001,
-    inset 0px 0px 0px 0px #fff9,
-    inset 0px 0px 0px 0px #0001,
-    inset 0px 0px 0px 0px #fff9,
-    inset 0px 0px 0px 0px #0001;
-  transition: box-shadow 0.6s cubic-bezier(.79,.21,.06,.81), background-color 0.3s, color 0.3s;
-  text-align: center;
-  padding: 20px 0;
-  color: var(--text-color-light);
-}
-
-.social-icons {
-  margin-bottom: 10px;
-}
-
-.social-icons a {
-  color: var(--text-color-light);
-  margin: 0 10px;
-  font-size: 24px;
-  transition: color 0.3s;
-}
-
-.social-icons a:hover {
-  color: var(--icon-hover-color-light);
-}
-
-.text {
-  font-size: large;
-  color: var(--text-color-light);
-}
-
-.footer.dark-mode {
-  background-color: var(--background-color-dark);
-  color: var(--text-color-dark);
-  box-shadow:
-    -7px -7px 20px 0px #3339,
-    -4px -4px 5px 0px #3339,
-    7px 7px 20px 0px #0002,
-    4px 4px 5px 0px #0001,
-    inset 0px 0px 0px 0px #3339,
-    inset 0px 0px 0px 0px #0001,
-    inset 0px 0px 0px 0px #3339,
-    inset 0px 0px 0px 0px #0001;
-}
-
-.footer.dark-mode .social-icons a {
-  color: var(--text-color-dark);
-}
-
-.footer.dark-mode .social-icons a:hover {
-  color: var(--icon-hover-color-dark);
-}
-
-.footer.dark-mode .text {
-  color: var(--text-color-dark);
-}
-.links .link{
-  color: black;
-  padding-left: 2rem;
-  font-size: 1rem;
-  font-weight: bold;
-} */
 
 :root {
   --background-color-light: lavender;
@@ -156,11 +76,11 @@
 .footer.dark-mode .social-icons a:hover {
   color: var(--icon-hover-color-dark);
 }
-
 .footer.dark-mode .text {
   color: var(--text-color-dark);
 }
 
 .footer.dark-mode .links .link {
   color: var(--text-color-dark);
+
 }
