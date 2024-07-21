@@ -4,12 +4,14 @@ import Footer from './footer';
 import Home from '../components/page1/Home';
 import Notice from '../components/page2/notice';
 import MyChatbot from '../components/ChatBot/chatbot';
+import CalendarComponent from '../components/CalendarComponent';
 const Dashboard1 = () => {
   return (
     <div >
     <Header />
     <Notice />
     <Home />
+    <CalendarComponent />
     <MyChatbot />
     <Footer />
   </div>
